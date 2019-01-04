@@ -1,0 +1,13 @@
+Xcursor.theme: Adwaita
+
+xterm*termName: screen-256color
+xterm*faceName: Source Code Pro Medium
+xterm*faceSize: 11
+xterm*background:  #303030
+xterm*foreground:  White
+xterm*scrollBar: false
+
+URxvt*termName: screen-256color
+URxvt*font: xft:Monospace:pixelsize:16
+URxvt*background: Black
+URxvt*foreground: White
