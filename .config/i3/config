@@ -163,22 +163,24 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-exec_always compton -CGb 
-
 # System settings
 exec xinput --set-prop "ETPS/2 Elantech Touchpad" "libinput Natural Scrolling Enabled" 1
 exec setxkbmap -layout "pt,us" -option "grp:alt_shift_toggle" 
+exec_always --no-startup-id nm-applet
+
+# Pulse audio system tray 
+exec_always --no-startup-id pasystray
 
 bindsym XF86Sleep exec betterlockscreen -s
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% #decrease sound volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +2% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -2% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 
 # Touchpad controls
 bindsym XF86TouchpadToggle exec ~/scripts/touchpad.sh # toggle touchpad
@@ -189,7 +191,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 exec_always --no-startup-id ~/.config/polybar/launch.sh
-exec_always ~/polybar-scripts/spotify/launchlistener.sh
+exec_always --no-startup-id ~/polybar-scripts/spotify/launchlistener.sh
 
 exec_always feh --bg-scale /windows/ARMAZEM/Coises/Imagens/re\ creators\ wallpaper.jpg
 
@@ -198,13 +200,12 @@ for_window [floating] border pixel 2
 
 workspace_layout tabbed
 
-smart_gaps on
+gaps inner 2
+gaps outer 4
 
-gaps inner 5
-gaps outer 5
-
-hide_edge_borders smart
+hide_edge_borders smart_no_gaps
 smart_gaps on
+smart_borders no_gaps
 popup_during_fullscreen smart
 
 # Disable discord tking focus
