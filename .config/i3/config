@@ -43,10 +43,10 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id rofi -show run
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+ccedilla focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -55,10 +55,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+ccedilla move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -67,10 +67,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+# bindsym $mod+h split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+v split h
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -164,14 +164,10 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # System settings
-exec xinput --set-prop "ETPS/2 Elantech Touchpad" "libinput Natural Scrolling Enabled" 1
-exec setxkbmap -layout "pt,us" -option "grp:alt_shift_toggle" 
-exec_always --no-startup-id nm-applet
+exec_always xinput --set-prop "ETPS/2 Elantech Touchpad" "libinput Natural Scrolling Enabled" 1
+exec_always setxkbmap -layout "pt,us" -option "grp:alt_shift_toggle" 
 
-# Pulse audio system tray 
-exec_always --no-startup-id pasystray
-
-bindsym XF86Sleep exec betterlockscreen -s
+bindsym XF86Sleep exec betterlockscreen -s blur
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +2% #increase sound volume
@@ -189,6 +185,10 @@ bindsym XF86TouchpadToggle exec ~/scripts/touchpad.sh # toggle touchpad
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+
+#Screen shots
+bindsym $mod+Shift+Print exec escrotum ~/Pictures/%Y-%m-%d-%H%M%S_$wx$h_escrotum.png
+bindsym $mod+Print exec escrotum -s ~/Pictures/%Y-%m-%d-%H%M%S_$wx$h_escrotum.png
 
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id ~/polybar-scripts/spotify/launchlistener.sh

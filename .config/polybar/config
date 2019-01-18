@@ -52,11 +52,11 @@ module-margin-left = 1
 module-margin-right = 2
 
 font-0 = fixed:pixelsize=10
-font-1 = "Material Design Icons:size=14:antialias=false;2"
+font-1 = "Material Design Icons:size=14:antialias=true;2"
 
 modules-left = i3 spotify
 modules-center = 
-modules-right = filesystem xbacklight pulseaudio xkeyboard cpu wlan eth battery temperature date powermenu
+modules-right = filesystem xbacklight pulseaudio-tail xkeyboard cpu memory wlan eth battery temperature date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -185,6 +185,7 @@ label-song-ellipsis = true
 type = internal/xbacklight
 
 format = <label>
+format-underline = #ffffff
 label =  %percentage%%
 
 bar-width = 10
@@ -209,7 +210,7 @@ interval = 2
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #f90000
-label =  %percentage:2%%
+label =  %percentage%%
 
 [module/memory]
 type = internal/memory
@@ -217,7 +218,7 @@ interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
-label = %percentage_used%%
+label = %gb_used%
 
 [module/wlan]
 type = internal/network
@@ -228,7 +229,7 @@ format-connected = <ramp-signal> <label-connected>
 format-connected-underline = #9f78e1
 label-connected = %essid%
 
-format-disconnected = WI-FI - disc
+format-disconnected = 來
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
@@ -275,13 +276,14 @@ label = %date% %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
-click-right = pavucontrol
 
 format-volume = <label-volume> 
 label-volume =  %percentage%%
+label-volume-underline = #ff5400
 label-volume-foreground = ${root.foreground}
 
 label-muted = 
+label-muted-underline = #ff5400
 label-muted-foreground = ${root.foreground} 
 
 bar-volume-width = 10
@@ -393,7 +395,7 @@ expand-right = true
 
 format-spacing = 1
 
-label-open = >
+label-open = 
 label-open-foreground = ${colors.secondary}
 label-close =  cancel
 label-close-foreground = ${colors.secondary}
@@ -449,3 +451,26 @@ format-prefix = " "
 format = <label>
 exec = python ~/.scripts/spotify/spotify_status.py -f '{artist}: {song}'
 format-underline = #1db954
+
+[module/pulseaudio-tail]
+type = custom/script
+format-underline = #ff5400
+exec = ~/.scripts/pulseaudio-tail.sh
+tail = true
+click-right = exec pavucontrol &
+click-left = ~/.scripts/pulseaudio-tail.sh --mute
+scroll-up = ~/.scripts/pulseaudio-tail.sh --up
+scroll-down = ~/.scripts/pulseaudio-tail.sh --down
+
+[module/wlan-custom]
+type=custom/script
+format = <label>
+format-prefix =蠟 
+format-underline = #9f78e1
+exec = ~/.scripts/wlan-get.sh 
+tail = true
+
+double-click-left = exec nm-connection-editor &
+
+
+

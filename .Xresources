@@ -1,13 +1,13 @@
 Xcursor.theme: Adwaita
 
-xterm*termName: screen-256color
-xterm*faceName: Source Code Pro Medium
-xterm*faceSize: 11
+xterm*termName: xterm-256color
+xterm*faceName: Fira Code
+xterm*faceSize: 10
 xterm*background:  #303030
 xterm*foreground:  White
 xterm*scrollBar: false
 
-URxvt*termName: screen-256color
-URxvt*font: xft:Monospace:pixelsize:16
-URxvt*background: Black
+URxvt*termName: rxvt-unicode-256colors
+URxvt*font: xft:Terminus:pixelsize:11
+URxvt*background: #303030
 URxvt*foreground: White

@@ -25,6 +25,8 @@ Plugin 'roosta/srcery'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'kaicataldo/material.vim'
 Plugin 'nlknguyen/papercolor-theme'
+Plugin 'mkarmona/colorsbox'
+Plugin 'chriskempson/base16-vim'
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -83,6 +85,8 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
+set t_ut=
+
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -103,12 +107,13 @@ set completeopt-=preview
 
 " Syntax hl and line numbers
 syntax on
-set number
+set number relativenumber
 set laststatus=2
+set cursorline
 
 " Theme
 set t_co=256
 set background=dark
-colorscheme PaperColor
+colorscheme colorsbox-stnight
 let g:airline_theme = 'papercolor'
 
