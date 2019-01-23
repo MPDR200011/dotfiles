@@ -18,13 +18,11 @@ Plugin 'tpope/vim-surround'
 Plugin 'valloric/youcompleteme'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'rhysd/vim-clang-format'
+Plugin 'majutsushi/tagbar'
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
 
-Plugin 'https://github.com/ErichDonGubler/vim-sublime-monokai.git'
-Plugin 'connorholyday/vim-snazzy'
-Plugin 'roosta/srcery'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'kaicataldo/material.vim'
-Plugin 'nlknguyen/papercolor-theme'
+Plugin 'morhetz/gruvbox'
 Plugin 'mkarmona/colorsbox'
 Plugin 'chriskempson/base16-vim'
 
@@ -97,10 +95,12 @@ let g:clang_format#style_options={
 let g:clang_format#auto_format=1
 
 "Key Binds
-map <C-UP> <C-W>k
-map <C-DOWN> <C-W>j
-map <C-RIGHT> <C-W>l
-map <C-LEFT> <C-W>h
+nnoremap <C-K> <C-W>k
+nnoremap <C-J> <C-W>j
+nnoremap <C-L> <C-W>l
+nnoremap <C-H> <C-W>h
+nnoremap <A-l> :tabn<CR>
+nnoremap <A-h> :tabp<CR>
 
 set completeopt-=preview
 
@@ -110,10 +110,12 @@ syntax on
 set number relativenumber
 set laststatus=2
 set cursorline
+set scrolloff=5
 
 " Theme
 set t_co=256
 set background=dark
-colorscheme colorsbox-stnight
-let g:airline_theme = 'papercolor'
+colorscheme gruvbox
+let g:airline_theme = 'gruvbox'
+let g:gruvbox_contrast_dark = 'hard'
 
