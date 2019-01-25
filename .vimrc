@@ -2,7 +2,7 @@
 " Package manager stuff
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
 " This is the Vundle package, which can be found on GitHub.
@@ -25,6 +25,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'mkarmona/colorsbox'
 Plugin 'chriskempson/base16-vim'
+Plugin 'kaicataldo/material.vim'
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -103,6 +104,7 @@ nnoremap <A-l> :tabn<CR>
 nnoremap <A-h> :tabp<CR>
 
 set completeopt-=preview
+set encoding=utf-8
 
 
 " Syntax hl and line numbers
@@ -115,7 +117,9 @@ set scrolloff=5
 " Theme
 set t_co=256
 set background=dark
-colorscheme gruvbox
-let g:airline_theme = 'gruvbox'
+colorscheme material
+let g:airline_theme = 'material'
+let g:material_theme_style = 'dark'
+let g:material_terminal_italics = 1
 let g:gruvbox_contrast_dark = 'hard'
 
