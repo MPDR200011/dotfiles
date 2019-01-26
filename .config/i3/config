@@ -193,7 +193,7 @@ bindsym $mod+Print exec escrotum -s ~/Pictures/%Y-%m-%d-%H%M%S_$wx$h_escrotum.pn
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id ~/polybar-scripts/spotify/launchlistener.sh
 
-exec_always feh --bg-scale ~/WAREHOUSE/Coises/Imagens/re\ creators\ wallpaper.jpg
+exec_always feh --bg-scale ~/WHAREHOUSE/Coises/Imagens/re\ creators\ wallpaper.jpg
 
 for_window [class="^.*"] border pixel 2
 for_window [floating] border pixel 2

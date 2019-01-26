@@ -3,15 +3,15 @@
 sink=$(pacmd list-sinks | grep "* index: " | awk '{print $3}')
 
 volume_up() {
-    pactl set-sink-volume $sink +1%
+    pactl set-sink-volume @DEFAULT_SINK@ +1%
 }
 
 volume_down() {
-    pactl set-sink-volume $sink -1%
+    pactl set-sink-volume @DEFAULT_SINK@ -1%
 }
 
 volume_mute() {
-    pactl set-sink-mute $sink toggle
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
 }
 
 volume_print() {
@@ -36,8 +36,9 @@ listen() {
     volume_print
 
     pactl subscribe | while read -r event; do
-        if echo "$event" | grep -q -e "'remove' on client" -e "'change' on sink"; then
+        if echo "$event" | grep -q -E "('new'|'remove'|'change') on card|('change'|'remove') on sink"; then
             sink=$(pacmd list-sinks | grep "* index: " | awk '{print $3}')
+            volume_print
         fi
         if echo "$event" | grep -q "#$sink"; then
             volume_print
