@@ -31,7 +31,7 @@ ZSH_THEME="miloshadzic"
 # export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
+ DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
@@ -97,5 +97,8 @@ export LANG=en_US.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias progfiles="cd /windows/ARMAZEM/Programacao/"
-
+alias progfiles="cd ~/WHAREHOUSE/Programacao/"
+alias advent="cd ~/WHAREHOUSE/Programacao/Java/AdventOfCode2018"
+alias nim="cd ~/WHAREHOUSE/Programacao/Website\ Projects/noideaman"
+alias sshfeuphome="sshfs up201707329@yoda.fe.up.pt: ~/feup-home"
+alias umountfeuphome="fusermount3 -u ~/feup-home"

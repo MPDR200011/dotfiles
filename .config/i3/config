@@ -163,9 +163,13 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+exec_always compton
+
 # System settings
-exec_always xinput --set-prop "ETPS/2 Elantech Touchpad" "libinput Natural Scrolling Enabled" 1
-exec_always setxkbmap -layout "pt,us" -option "grp:alt_shift_toggle" 
+exec_always xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Natural Scrolling Enabled" 1
+exec_always xinput set-prop "ETPS/2 Elantech Touchpad" 307 1
+exec_always xinput set-prop "ETPS/2 Elantech Touchpad" 290 1
+exec_always setxkbmap -layout "pt,us"
 
 bindsym XF86Sleep exec betterlockscreen -s blur
 
@@ -190,21 +194,31 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+Shift+Print exec escrotum ~/Pictures/%Y-%m-%d-%H%M%S_$wx$h_escrotum.png
 bindsym $mod+Print exec escrotum -s ~/Pictures/%Y-%m-%d-%H%M%S_$wx$h_escrotum.png
 
+#rofi calc
+bindsym $mod+c exec rofi -show calc
+
+#rofi powermenu
+bindsym $mod+Shift+x exec powermenu
+
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id ~/polybar-scripts/spotify/launchlistener.sh
 
-exec_always feh --bg-scale ~/WHAREHOUSE/Coises/Imagens/re\ creators\ wallpaper.jpg
+exec_always feh --bg-scale ~/WHAREHOUSE/Coises/Imagens/Backgrounds/re\ creators\ wallpaper.jpg
 
 for_window [class="^.*"] border pixel 2
 for_window [floating] border pixel 2
+for_window [class="net-ftb-main-Main"] move to workspace 5
+for_window [class="jetbrains-idea"] move to workspace 2
+for_window [class="discord"] move to workspace 3
+for_window [class="Franz"] move to workspace 3
+
+no_focus [class="jetbrains-idea"]
 
 workspace_layout tabbed
 
-gaps inner 2
-gaps outer 4
+gaps inner 5
 
 hide_edge_borders smart_no_gaps
-smart_gaps on
 smart_borders no_gaps
 popup_during_fullscreen smart
 

@@ -36,11 +36,10 @@ listen() {
     volume_print
 
     pactl subscribe | while read -r event; do
-        if echo "$event" | grep -q -E "('new'|'remove'|'change') on card|('change'|'remove') on sink"; then
+        if echo "$event" | grep -q -E "('change'|'remove') on sink"; then
             sink=$(pacmd list-sinks | grep "* index: " | awk '{print $3}')
             volume_print
-        fi
-        if echo "$event" | grep -q "#$sink"; then
+        elif echo "$event" | grep -q "#$sink"; then
             volume_print
         fi
     done
