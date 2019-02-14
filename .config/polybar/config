@@ -27,7 +27,7 @@ primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
 
-[bar/bar1]
+[bar/main]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 24
@@ -42,7 +42,7 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = #f00
 
-border-size = 0
+border-size = 3
 border-color = #00000000
 
 padding-left = 0
@@ -56,7 +56,7 @@ font-1 = "Material Design Icons:size=14:antialias=true;2"
 
 modules-left = i3 spotify
 modules-center = xwindow 
-modules-right = filesystem backlight-acpi pulseaudio-tail xkeyboard cpu memory wlan eth battery temperature date 
+modules-right = filesystem backlight-acpi pulseaudio xkeyboard cpu memory battery temperature date 
 
 tray-position = right
 tray-padding = 2
@@ -108,6 +108,28 @@ label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
+[module/bspwm]
+type = internal/bspwm
+
+label-focused = %index%
+label-focused-background = ${colors.background-alt}
+label-focused-underline= ${colors.primary}
+label-focused-padding = 2
+
+label-occupied = %index%
+label-occupied-padding = 2
+
+label-urgent = %index%!
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+
+label-empty = %index%
+label-empty-foreground = ${colors.foreground-alt}
+label-empty-padding = 2
+
+; Separator in between workspaces
+; label-separator = |
+
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
@@ -144,6 +166,7 @@ label-urgent-padding = ${module/bspwm.label-urgent-padding}
 
 ; Separator in between workspaces
 ; label-separator = |
+
 
 [module/xbacklight]
 type = internal/xbacklight
@@ -378,8 +401,6 @@ screenchange-reload = true
 margin-top = 5
 margin-bottom = 5
 
-; vim:ft=dosini
-
 [module/spotify]
 type = custom/script
 interval = 1
@@ -408,5 +429,4 @@ tail = true
 
 double-click-left = exec nm-connection-editor &
 
-
-
+; vim:ft=dosini

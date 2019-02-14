@@ -30,7 +30,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec tilix
+bindsym $mod+Return exec xfce4-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -163,14 +163,16 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+exec_always pkill compton
 exec_always compton
 
 # System settings
 exec_always xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Natural Scrolling Enabled" 1
 exec_always xinput set-prop "ETPS/2 Elantech Touchpad" 307 1
-exec_always xinput set-prop "ETPS/2 Elantech Touchpad" 290 1
+exec_always xinput set-prop "ETPS/2 Elantech Touchpad" 289 1
 exec_always setxkbmap -layout "pt,us"
 
+# suspend button
 bindsym XF86Sleep exec betterlockscreen -s blur
 
 # Pulse Audio controls
@@ -201,7 +203,10 @@ bindsym $mod+c exec rofi -show calc
 bindsym $mod+Shift+x exec powermenu
 
 exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always pkill pasystray
 exec_always --no-startup-id ~/polybar-scripts/spotify/launchlistener.sh
+exec_always nm-applet
+exec_always pasystray
 
 exec_always feh --bg-scale ~/WHAREHOUSE/Coises/Imagens/Backgrounds/re\ creators\ wallpaper.jpg
 
@@ -216,7 +221,7 @@ no_focus [class="jetbrains-idea"]
 
 workspace_layout tabbed
 
-gaps inner 5
+gaps inner 3
 
 hide_edge_borders smart_no_gaps
 smart_borders no_gaps

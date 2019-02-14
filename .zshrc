@@ -67,6 +67,10 @@ plugins=(
   git
 )
 
+__git_files () { 
+    _wanted files expl 'local files' _files     
+}
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
