@@ -20,6 +20,7 @@ if dein#load_state('/home/mpdr/.cache/dein')
 
   call dein#add('tpope/vim-surround')
   call dein#add('rhysd/vim-clang-format')
+  call dein#add('kana/vim-operator-user')
   call dein#add('majutsushi/tagbar')
   call dein#add('scrooloose/nerdtree')
   call dein#add('kien/ctrlp.vim')
@@ -41,6 +42,13 @@ if dein#load_state('/home/mpdr/.cache/dein')
     call dein#add('roxma/nvim-yarp')
     call dein#add('roxma/vim-hug-neovim-rpc')
   endif
+  call dein#add('Shougo/deoplete-clangx')
+  call dein#add('deoplete-plugins/deoplete-jedi')
+  call dein#add('natebosch/vim-lsc')
+  call dein#add('autozimu/LanguageClient-neovim', {
+    \ 'rev': 'next',
+    \ 'build': 'bash install.sh',
+    \ })
    
   call dein#end()
   call dein#save_state()
@@ -111,9 +119,14 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+" Java language server stuff
+let g:lsc_server_commands = {'java': '~/DevTools/java-language-server/dist/mac/bin/launcher --quiet'}
+
+
 " Clear keybinds
 nmapc
 imapc
+tmapc
 
 " Deoplete 
 let g:deoplete#enable_at_startup = 1
@@ -154,6 +167,6 @@ let g:material_terminal_italics = 1
 let g:gruvbox_contrast_dark = 'hard'
 
 set t_co=256
-colorscheme material
+colorscheme gruvbox
 set background=dark
 

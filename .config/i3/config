@@ -164,13 +164,14 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 exec_always pkill compton
-exec_always compton
+exec_always pkill pasystray
 
 # System settings
 exec_always xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Natural Scrolling Enabled" 1
-exec_always xinput set-prop "ETPS/2 Elantech Touchpad" 307 1
-exec_always xinput set-prop "ETPS/2 Elantech Touchpad" 289 1
-exec_always setxkbmap -layout "pt,us"
+exec_always xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Tapping Enabled" 1
+exec_always xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Disable While Typing Enabled" 0
+
+exec_always setxkbmap -layout "us,pt" -option "grp:alt_space_toggle"
 
 # suspend button
 bindsym XF86Sleep exec betterlockscreen -s blur
@@ -203,21 +204,25 @@ bindsym $mod+c exec rofi -show calc
 bindsym $mod+Shift+x exec powermenu
 
 exec_always --no-startup-id ~/.config/polybar/launch.sh
-exec_always pkill pasystray
 exec_always --no-startup-id ~/polybar-scripts/spotify/launchlistener.sh
 exec_always nm-applet
 exec_always pasystray
 
-exec_always feh --bg-scale ~/WHAREHOUSE/Coises/Imagens/Backgrounds/re\ creators\ wallpaper.jpg
+exec_always --no-startup-id feh --bg-scale ~/WHAREHOUSE/Coises/Imagens/Backgrounds/re\ creators\ wallpaper.jpg
 
+# Window management
 for_window [class="^.*"] border pixel 2
 for_window [floating] border pixel 2
 for_window [class="net-ftb-main-Main"] move to workspace 5
 for_window [class="jetbrains-idea"] move to workspace 2
 for_window [class="discord"] move to workspace 3
 for_window [class="Franz"] move to workspace 3
+for_window [title="Eclipse IDE "] move to workspace 2
+for_window [title="Eclipse"] move to workspace 2
 
+# Disable certain apps from taking focus
 no_focus [class="jetbrains-idea"]
+no_focus [class="discord"]
 
 workspace_layout tabbed
 
@@ -227,9 +232,6 @@ hide_edge_borders smart_no_gaps
 smart_borders no_gaps
 popup_during_fullscreen smart
 
-# Disable discord tking focus
-no_focus [class="discord"]
-
 # class                 border  backgr. text    indicator child_border
 client.focused          #4c7899 #285577 #ffffff #500068   #ff2e00
 client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
@@ -238,3 +240,5 @@ client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
+
+exec_always compton 
