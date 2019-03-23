@@ -1,5 +1,6 @@
 Xcursor.theme: Adwaita
 
+
 xterm*termName: xterm-256color
 xterm*faceName: Fira Code
 xterm*faceSize: 10
