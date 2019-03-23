@@ -2,6 +2,7 @@ set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 
 
+
 if &compatible
   set nocompatible               " Be iMproved
 endif
