@@ -1,0 +1,12 @@
+[user]
+	email = mpdr200011@gmail.com
+	name = MPDR
+[core]
+	editor = nvim
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = true
+  pager = true

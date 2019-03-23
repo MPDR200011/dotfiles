@@ -2,6 +2,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+
 # Path to your oh-my-zsh installation.
   export ZSH="/home/mpdr/.oh-my-zsh"
 
@@ -81,6 +82,12 @@ source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+
+# Default compiler settings for cmake
+# export CC=clang
+# export CXX=clang++
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -110,3 +117,5 @@ alias advent="cd ~/WHAREHOUSE/Programacao/Java/AdventOfCode2018"
 alias nim="cd ~/WHAREHOUSE/Programacao/Website\ Projects/noideaman"
 alias sshfeuphome="sshfs up201707329@yoda.fe.up.pt: ~/feup-home"
 alias umountfeuphome="fusermount3 -u ~/feup-home"
+alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+

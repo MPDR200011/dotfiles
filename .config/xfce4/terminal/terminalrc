@@ -1,5 +1,5 @@
 [Configuration]
-FontName=FuraCode Nerd Font weight=453 11
+FontName=Input 9
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBellUrgent=FALSE
@@ -26,8 +26,8 @@ MiscUseShiftArrowsToScroll=FALSE
 MiscSlimTabs=FALSE
 MiscNewTabAdjacent=FALSE
 Encoding=UTF-8
-ColorPalette=#282828;#cc241d;#98971a;#d79921;#458588;#b16286;#689d6a;#a89984;#928374;#fb4934;#b8bb26;#fabd2f;#83a598;#d3869b;#8ec07c;#ebdbb2
-ColorForeground=#ebdbb2
-ColorBackground=#1d2021
-TabActivityColor=#bf4040
+ColorForeground=#EEFFFF
+ColorBackground=#212121
+ColorPalette=#212121;#F07178;#C3E88D;#FFCB6B;#82AAFF;#C792EA;#89DDFF;#EEFFFF;#4A4A4A;#F07178;#C3E88D;#FFCB6B;#82AAFF;#C792EA;#89DDFF;#FFFFFF
+ColorCursor=x
 

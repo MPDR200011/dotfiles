@@ -165,6 +165,7 @@ bindsym $mod+r mode "resize"
 
 exec_always pkill compton
 exec_always pkill pasystray
+exec_always pkill redshift-gtk
 
 # System settings
 exec_always xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Natural Scrolling Enabled" 1
@@ -207,6 +208,7 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id ~/polybar-scripts/spotify/launchlistener.sh
 exec_always nm-applet
 exec_always pasystray
+exec_always redshift-gtk
 
 exec_always --no-startup-id feh --bg-scale ~/WHAREHOUSE/Coises/Imagens/Backgrounds/re\ creators\ wallpaper.jpg
 
@@ -215,13 +217,15 @@ for_window [class="^.*"] border pixel 2
 for_window [floating] border pixel 2
 for_window [class="net-ftb-main-Main"] move to workspace 5
 for_window [class="jetbrains-idea"] move to workspace 2
+for_window [class="jetbrains-clion"] move to workspace 2
 for_window [class="discord"] move to workspace 3
 for_window [class="Franz"] move to workspace 3
 for_window [title="Eclipse IDE "] move to workspace 2
 for_window [title="Eclipse"] move to workspace 2
+for_window [class="Steam"] move to workspace 4
 
 # Disable certain apps from taking focus
-no_focus [class="jetbrains-idea"]
+#no_focus [class="jetbrains-idea"]
 no_focus [class="discord"]
 
 workspace_layout tabbed
