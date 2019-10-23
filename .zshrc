@@ -4,9 +4,9 @@
 
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/mpdr/.oh-my-zsh"
+export ZSH="/home/mpdr/.oh-my-zsh"
 
-export JAVA_HOME="/usr/lib/jvm/java-11-openjdk"
+export JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -34,7 +34,7 @@ ZSH_THEME="miloshadzic"
 # export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line to disable colors in ls.
- DISABLE_LS_COLORS="true"
+DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
@@ -112,10 +112,16 @@ export LC_ALL=en_US.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias progfiles="cd ~/WHAREHOUSE/Programacao/"
+export EDITOR='nvim'
+export VISUAL='nvim'
+
+alias l="ls -la"
+alias pf="cd ~/WHAREHOUSE/Programacao/"
 alias advent="cd ~/WHAREHOUSE/Programacao/Java/AdventOfCode2018"
 alias nim="cd ~/WHAREHOUSE/Programacao/Website\ Projects/noideaman"
 alias sshfeuphome="sshfs up201707329@yoda.fe.up.pt: ~/feup-home"
 alias umountfeuphome="fusermount3 -u ~/feup-home"
 alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
-
+alias term='xfce4-terminal'
+alias v="nvim"
+alias vzsh="nvim ~/.zshrc"

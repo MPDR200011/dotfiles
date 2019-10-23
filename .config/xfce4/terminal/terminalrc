@@ -1,5 +1,5 @@
 [Configuration]
-FontName=Input 9
+FontName=FuraMono Nerd Font 10
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBellUrgent=FALSE
@@ -26,8 +26,9 @@ MiscUseShiftArrowsToScroll=FALSE
 MiscSlimTabs=FALSE
 MiscNewTabAdjacent=FALSE
 Encoding=UTF-8
-ColorForeground=#EEFFFF
-ColorBackground=#212121
-ColorPalette=#212121;#F07178;#C3E88D;#FFCB6B;#82AAFF;#C792EA;#89DDFF;#EEFFFF;#4A4A4A;#F07178;#C3E88D;#FFCB6B;#82AAFF;#C792EA;#89DDFF;#FFFFFF
-ColorCursor=x
+ColorForeground=#f8f8f8f8f2f2
+ColorBackground=#272728282222
+ColorPalette=#272728282222;#f9f926267272;#a6a6e2e22e2e;#f4f4bfbf7575;#6666d9d9efef;#aeae8181ffff;#a1a1efefe4e4;#f8f8f8f8f2f2;#757571715e5e;#f9f926267272;#a6a6e2e22e2e;#f4f4bfbf7575;#6666d9d9efef;#aeae8181ffff;#a1a1efefe4e4;#f9f9f8f8f5f5
+ColorCursor=#f8f8f8f8f2f2
+TabActivityColor=#a6a6e2e22e2e
 

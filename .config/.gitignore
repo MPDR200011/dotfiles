@@ -1,0 +1,13 @@
+**/*
+!.gitignore
+!Code/User/settings.json
+!dunst/
+!fontconfig/
+!gtk-3.0
+!i3/
+!nvim/
+!polybar/
+!ranger/
+!rofi/
+!xfce4/terminal/
+!compton.conf

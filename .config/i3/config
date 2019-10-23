@@ -220,9 +220,9 @@ for_window [class="jetbrains-idea"] move to workspace 2
 for_window [class="jetbrains-clion"] move to workspace 2
 for_window [class="discord"] move to workspace 3
 for_window [class="Franz"] move to workspace 3
-for_window [title="Eclipse IDE "] move to workspace 2
-for_window [title="Eclipse"] move to workspace 2
 for_window [class="Steam"] move to workspace 4
+for_window [class="VirtualBox"] move to workspace 2
+for_window [class="jetbrains-studio"] move to workspace 2
 
 # Disable certain apps from taking focus
 #no_focus [class="jetbrains-idea"]
@@ -230,7 +230,7 @@ no_focus [class="discord"]
 
 workspace_layout tabbed
 
-gaps inner 3
+#gaps inner 3
 
 hide_edge_borders smart_no_gaps
 smart_borders no_gaps
@@ -245,4 +245,4 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
 
-exec_always compton 
+exec_always compton --config ~/.config/compton.conf -b

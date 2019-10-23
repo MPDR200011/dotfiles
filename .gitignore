@@ -1,0 +1,10 @@
+**/*
+!.config/
+!.scripts/
+!.gitignore
+!.Xresources
+!.bash_profile
+!.bashrc
+!.gitconfig
+!.gtkrc-2.0
+!.zshrc

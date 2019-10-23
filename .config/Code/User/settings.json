@@ -1,13 +1,9 @@
 {
-    "workbench.colorTheme": "Material Theme Darker High Contrast",
-    "editor.fontFamily": "'FuraCode Nerd Font', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.fontLigatures": true,
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.iconTheme": "Monokai Pro Icons",
     "files.autoSave": "afterDelay",
     "editor.acceptSuggestionOnEnter": "off",
     "editor.lineNumbers": "relative",
-    "editor.fontSize": 15,
-    "editor.fontWeight": "400",
     "java.configuration.checkProjectSettingsExclusions": false,
     "terminal.integrated.rendererType": "dom",
     "workbench.colorCustomizations": {
@@ -32,6 +28,30 @@
         "menubar.selectionForeground": "#7CB342"
     },
     "materialTheme.accent": "Lime",
-    "workbench.activityBar.visible": false,
-    "extensions.ignoreRecommendations": false
+    "extensions.ignoreRecommendations": false,
+    "editor.minimap.enabled": true,
+    "editor.tabCompletion": "on",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "C_Cpp.updateChannel": "Insiders",
+    "workbench.colorTheme": "Flatland Monokai",
+    "zenMode.hideLineNumbers": false,
+    "zenMode.hideStatusBar": false,
+    "zenMode.hideTabs": false,
+    "workbench.activityBar.visible": true,
+    "zenMode.fullScreen": false,
+    "zenMode.centerLayout": false,
+    "terminal.integrated.fontSize": 12,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "terminal.external.linuxExec": "xfce4-terminal",
+    "breadcrumbs.enabled": false,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "jshint.options": {
+        "esversion": 6
+    },
+    "editor.fontFamily": "'FuraMono Nerd Font', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "liveServer.settings.donotVerifyTags": true,
 }

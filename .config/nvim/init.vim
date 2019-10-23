@@ -1,8 +1,6 @@
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 
-
-
 if &compatible
   set nocompatible               " Be iMproved
 endif
@@ -29,8 +27,8 @@ if dein#load_state('/home/mpdr/.cache/dein')
 
   call dein#add('morhetz/gruvbox')
   call dein#add('mkarmona/colorsbox')
-  call dein#add('chriskempson/base16-vim')
   call dein#add('kaicataldo/material.vim')
+  call dein#add('Erichain/vim-monokai-pro')
 
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')
@@ -112,8 +110,9 @@ set shiftwidth=4
 set expandtab
 
 " Java language server stuff
+" \'cpp': ['/home/mpdr/LanguageServers/ccls/Release/ccls', '--log-file=/tmp/cc.log', '--init={"cache":{"directory":"/tmp/ccls/"}}'],
 let g:LanguageClient_serverCommands = {
-            \'cpp': ['/home/mpdr/LanguageServers/ccls/Release/ccls', '--log-file=/tmp/cc.log', '--init={"cache":{"directory":"/tmp/ccls/"}}'],
+            \'cpp': ['clangd'],
             \'c': ['/home/mpdr/LanguageServers/ccls/Release/ccls', '--log-file=/tmp/cc.log', '--init={"cache":{"directory":"/tmp/ccls/"}}'],
             \}
 let g:lsc_server_commands = {'java': '/home/mpdr/LanguageServers/java-language-server/dist/mac/bin/launcher --quiet'}
@@ -196,7 +195,7 @@ let g:material_terminal_italics = 1
 let g:gruvbox_contrast_dark = 'hard'
 
 set t_co=256
-colorscheme base16-default-dark
+colorscheme gruvbox
 set background=dark
 
 " Status line stuff
