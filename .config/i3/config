@@ -30,7 +30,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -233,7 +233,7 @@ workspace_layout tabbed
 #gaps inner 3
 
 hide_edge_borders smart_no_gaps
-smart_borders no_gaps
+#smart_borders no_gaps
 popup_during_fullscreen smart
 
 # class                 border  backgr. text    indicator child_border

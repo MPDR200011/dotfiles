@@ -1,6 +1,6 @@
 {
     "editor.fontLigatures": true,
-    "workbench.iconTheme": "Monokai Pro Icons",
+    "workbench.iconTheme": "vscode-icons",
     "files.autoSave": "afterDelay",
     "editor.acceptSuggestionOnEnter": "off",
     "editor.lineNumbers": "relative",
@@ -33,7 +33,6 @@
     "editor.tabCompletion": "on",
     "liveServer.settings.donotShowInfoMsg": true,
     "C_Cpp.updateChannel": "Insiders",
-    "workbench.colorTheme": "Flatland Monokai",
     "zenMode.hideLineNumbers": false,
     "zenMode.hideStatusBar": false,
     "zenMode.hideTabs": false,
@@ -54,4 +53,11 @@
     },
     "editor.fontFamily": "'FuraMono Nerd Font', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "liveServer.settings.donotVerifyTags": true,
+    "editor.fontSize": 15,
+    "material-icon-theme.folders.theme": "specific",
+    "workbench.colorTheme": "βui - Ayu Dark",
+    "gitlens.views.lineHistory.enabled": false,
+    "gitlens.currentLine.enabled": false,
+    "sqltools.useNodeRuntime": true,
+    "editor.codeLens": false,
 }
