@@ -1,11 +1,12 @@
 {
+    "editor.lineHeight" : 24,
     "editor.fontLigatures": true,
     "workbench.iconTheme": "vscode-icons",
     "files.autoSave": "afterDelay",
     "editor.acceptSuggestionOnEnter": "off",
     "editor.lineNumbers": "relative",
     "java.configuration.checkProjectSettingsExclusions": false,
-    "terminal.integrated.rendererType": "dom",
+    "terminal.integrated.rendererType": "experimentalWebgl",
     "workbench.colorCustomizations": {
         "activityBarBadge.background": "#7CB342",
         "list.activeSelectionForeground": "#7CB342",
@@ -39,11 +40,10 @@
     "workbench.activityBar.visible": true,
     "zenMode.fullScreen": false,
     "zenMode.centerLayout": false,
-    "terminal.integrated.fontSize": 12,
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "terminal.external.linuxExec": "xfce4-terminal",
+    "terminal.external.linuxExec": "alacritty",
     "breadcrumbs.enabled": false,
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -51,13 +51,23 @@
     "jshint.options": {
         "esversion": 6
     },
-    "editor.fontFamily": "'FuraMono Nerd Font', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "liveServer.settings.donotVerifyTags": true,
-    "editor.fontSize": 15,
     "material-icon-theme.folders.theme": "specific",
     "workbench.colorTheme": "βui - Ayu Dark",
     "gitlens.views.lineHistory.enabled": false,
     "gitlens.currentLine.enabled": false,
     "sqltools.useNodeRuntime": true,
     "editor.codeLens": false,
+    "window.zoomLevel": -1,
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.fontFamily": "'JetBrains Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "clangd.semanticHighlighting": false,
+    "terminal.explorerKind": "external",
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Chromium, UseTab: Never, IndentWidth: 4, TabWidth: 4, AllowShortIfStatementsOnASingleLine: false, IndentCaseLabels: false, ColumnLimit: 0, AccessModifierOffset: -4 }",
+    "editor.fontSize": 15,
 }

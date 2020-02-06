@@ -1,6 +1,8 @@
+export CC=/usr/bin/gcc
+export CXX=/usr/bin/g++
 
 # If you come from bash you might have to change your $PATH.
-export PATH=/opt/dotnet:$PATH
+export PATH=~/.local/bin:/opt/dotnet:$PATH
 
 
 # Path to your oh-my-zsh installation.
@@ -8,11 +10,13 @@ export ZSH="/home/mpdr/.oh-my-zsh"
 
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
 
+export PATH=$JAVA_HOME/bin:$PATH
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="amuse"
+ZSH_THEME="avit"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -35,6 +39,9 @@ ZSH_THEME="amuse"
 
 # Uncomment the following line to disable colors in ls.
 DISABLE_LS_COLORS="true"
+
+LS_COLORS=$(cat ~/.dircolors)
+export LS_COLORS
 
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
@@ -102,6 +109,7 @@ export LC_ALL=en_US.UTF-8
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+pkill ssh-agent
 [ -z "$SSH_AUTH_SOCK" ] && eval "$(ssh-agent -s)" > /dev/null
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
@@ -112,16 +120,19 @@ export LC_ALL=en_US.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+zstyle ':completion:*' list-colors
+
 export EDITOR='nvim'
 export VISUAL='nvim'
 
-alias l="ls -la"
+alias l="ls -l"
+alias la="ls -la"
 alias pf="cd ~/WHAREHOUSE/Programacao/"
 alias advent="cd ~/WHAREHOUSE/Programacao/Java/AdventOfCode2018"
 alias nim="cd ~/WHAREHOUSE/Programacao/Website\ Projects/noideaman"
 alias sshfeuphome="sshfs up201707329@yoda.fe.up.pt: ~/feup-home"
 alias umountfeuphome="fusermount3 -u ~/feup-home"
-alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 alias term='xfce4-terminal'
 alias v="nvim"
 alias vzsh="nvim ~/.zshrc"

@@ -1,4 +1,4 @@
 #!/bin/sh
 
-java -jar ~/FTB/FeedTheBeast.jar
+~/FTB/FTBLauncher_64bit
 
