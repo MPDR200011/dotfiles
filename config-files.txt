@@ -1,0 +1,15 @@
+.bash_profile
+.bashrc
+.dircolors
+.gitconfig
+.gtkrc-2.0
+.zshrc
+.config/Code/User/settings.json
+.config/dunst/dunstrc
+.config/fontconfig/fonts.conf
+.config/gtk-3.0/
+.config/i3/
+.config/nvim/
+.config/polybar/
+.config/rofi/config.rasi
+.config/picom.conf

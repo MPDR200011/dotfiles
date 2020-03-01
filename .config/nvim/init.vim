@@ -1,16 +1,16 @@
-set runtimepath^=~/.vim runtimepath+=~/.vim/after
-let &packpath = &runtimepath
-
 if &compatible
   set nocompatible               " Be iMproved
 endif
 
+" Required:
 set runtimepath+=/home/mpdr/.cache/dein/repos/github.com/Shougo/dein.vim
 
+" Required:
 if dein#load_state('/home/mpdr/.cache/dein')
   call dein#begin('/home/mpdr/.cache/dein')
 
   " Let dein manage dein
+  " Required:
   call dein#add('/home/mpdr/.cache/dein/repos/github.com/Shougo/dein.vim')
 
   " Editor tools
@@ -23,30 +23,35 @@ if dein#load_state('/home/mpdr/.cache/dein')
   call dein#add('sheerun/vim-polyglot')
   call dein#add('jiangmiao/auto-pairs')
   call dein#add('mattn/emmet-vim')
+  call dein#add('kana/vim-operator-user')
 
   " Color Themes
   call dein#add('morhetz/gruvbox')
-  call dein#add('mkarmona/colorsbox')
-  call dein#add('kaicataldo/material.vim')
-  call dein#add('Erichain/vim-monokai-pro')
+  call dein#add('ayu-theme/ayu-vim')
+  call dein#add('chriskempson/base16-vim')
+  call dein#add('tomasr/molokai')
 
   " Airline
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')
 
+  " coc.nvim
   call dein#add('neoclide/coc.nvim', {'merged':0, 'rev': 'release'})
-   
+
+
+  " Required:
   call dein#end()
   call dein#save_state()
 endif
 
+" Required:
 filetype plugin indent on
 syntax enable
 
 " If you want to install not installed plugins on startup.
-if dein#check_install()
-  call dein#install()
-endif
+"if dein#check_install()
+"  call dein#install()
+"endif
 
 " Remove all auto commands
 autocmd!
@@ -156,16 +161,15 @@ set scrolloff=5
 set guicursor=a:block-blinkon0
 set guicursor=r:hor20-blinkon0
 
-let g:airline_theme = 'material'
-let g:material_theme_style = 'dark'
-let g:material_terminal_italics = 1
-let g:gruvbox_contrast_dark = 'hard'
+set termguicolors     " enable true colors support
+let ayucolor="dark"   " for dark version of theme
+let g:gruvbox_contrast_dark="hard"
+colorscheme ayu
 
-set t_8f=\e[38;2;%lu;%lu;%lum
-set t_8b=\e[48;2;%lu;%lu;%lum
-set t_Co=256
-colorscheme gruvbox
-set background=dark
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='ayu'
+
+set mouse=a
 
 " coc.nvim
 " if hidden is not set, TextEdit might fail.

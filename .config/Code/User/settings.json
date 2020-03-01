@@ -1,7 +1,7 @@
 {
-    "editor.lineHeight" : 24,
+    "editor.lineHeight" : 22,
     "editor.fontLigatures": true,
-    "workbench.iconTheme": "vscode-icons",
+    "workbench.iconTheme": "eq-material-theme-icons-darker",
     "files.autoSave": "afterDelay",
     "editor.acceptSuggestionOnEnter": "off",
     "editor.lineNumbers": "relative",
@@ -53,12 +53,11 @@
     },
     "liveServer.settings.donotVerifyTags": true,
     "material-icon-theme.folders.theme": "specific",
-    "workbench.colorTheme": "βui - Ayu Dark",
     "gitlens.views.lineHistory.enabled": false,
     "gitlens.currentLine.enabled": false,
     "sqltools.useNodeRuntime": true,
     "editor.codeLens": false,
-    "window.zoomLevel": -1,
+    "window.zoomLevel": 0,
     "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -69,5 +68,9 @@
         "editor.defaultFormatter": "ms-vscode.cpptools"
     },
     "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Chromium, UseTab: Never, IndentWidth: 4, TabWidth: 4, AllowShortIfStatementsOnASingleLine: false, IndentCaseLabels: false, ColumnLimit: 0, AccessModifierOffset: -4 }",
-    "editor.fontSize": 15,
+    "editor.fontSize": 13,
+    "todo-tree.tree.showScanModeButton": false,
+    "workbench.colorTheme": "Monokai Vibrant",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 }
