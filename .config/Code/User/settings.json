@@ -6,7 +6,7 @@
     "editor.acceptSuggestionOnEnter": "off",
     "editor.lineNumbers": "relative",
     "java.configuration.checkProjectSettingsExclusions": false,
-    "terminal.integrated.rendererType": "experimentalWebgl",
+    "terminal.integrated.rendererType": "canvas",
     "workbench.colorCustomizations": {
         "activityBarBadge.background": "#7CB342",
         "list.activeSelectionForeground": "#7CB342",
@@ -73,4 +73,8 @@
     "workbench.colorTheme": "Monokai Vibrant",
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "terminal.integrated.shell.linux": "/bin/fish",
+    "python.jediEnabled": false,
+    "kotlin.compiler.jvm.target": "1.8",
+    "window.menuBarVisibility": "toggle",
 }

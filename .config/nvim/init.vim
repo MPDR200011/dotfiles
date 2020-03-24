@@ -15,15 +15,17 @@ if dein#load_state('/home/mpdr/.cache/dein')
 
   " Editor tools
   call dein#add('tpope/vim-surround')
+  call dein#add('jiangmiao/auto-pairs')
+
   call dein#add('rhysd/vim-clang-format')
   call dein#add('kana/vim-operator-user')
-  call dein#add('majutsushi/tagbar')
-  call dein#add('scrooloose/nerdtree')
+
   call dein#add('kien/ctrlp.vim')
-  call dein#add('sheerun/vim-polyglot')
-  call dein#add('jiangmiao/auto-pairs')
+
+  call dein#add('tpope/vim-vinegar')
+
   call dein#add('mattn/emmet-vim')
-  call dein#add('kana/vim-operator-user')
+  call dein#add('sheerun/vim-polyglot')
 
   " Color Themes
   call dein#add('morhetz/gruvbox')
@@ -114,6 +116,11 @@ let g:clang_format#code_style='chromium'
 let g:clang_format#style_options={
 	\ "IndentWidth" : 4}
 
+" netrw settings
+let g:netrw_liststyle = 3
+let g:netrw_winsize = 25
+let g:netrw_browse_split = 0
+
 "Key Binds
 let g:mapleader="\<Space>"
 nnoremap <C-K> <C-W>k
@@ -122,8 +129,8 @@ nnoremap <C-L> <C-W>l
 nnoremap <C-H> <C-W>h
 nnoremap <A-u> :tabp<CR>
 nnoremap <A-i> :tabn<CR>
-nnoremap <Leader>t :TagbarOpenAutoClose<CR>
-nnoremap <Leader>n :NERDTree<CR>
+" nnoremap <Leader>n :NERDTree<CR>
+nnoremap <Leader>n :e<Space>.<CR>
 
 inoremap <C-h> <C-\><C-N><C-w>h
 inoremap <C-j> <C-\><C-N><C-w>j
@@ -158,9 +165,6 @@ set cursorline
 set scrolloff=5
 
 " Theme
-set guicursor=a:block-blinkon0
-set guicursor=r:hor20-blinkon0
-
 set termguicolors     " enable true colors support
 let ayucolor="dark"   " for dark version of theme
 let g:gruvbox_contrast_dark="hard"
