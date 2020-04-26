@@ -1,7 +1,7 @@
 {
     "editor.lineHeight" : 22,
     "editor.fontLigatures": true,
-    "workbench.iconTheme": "eq-material-theme-icons-darker",
+    "workbench.iconTheme": "vscode-icons",
     "files.autoSave": "afterDelay",
     "editor.acceptSuggestionOnEnter": "off",
     "editor.lineNumbers": "relative",
@@ -70,7 +70,7 @@
     "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Chromium, UseTab: Never, IndentWidth: 4, TabWidth: 4, AllowShortIfStatementsOnASingleLine: false, IndentCaseLabels: false, ColumnLimit: 0, AccessModifierOffset: -4 }",
     "editor.fontSize": 13,
     "todo-tree.tree.showScanModeButton": false,
-    "workbench.colorTheme": "Monokai Vibrant",
+    "workbench.colorTheme": "Dracula",
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "terminal.integrated.shell.linux": "/bin/fish",

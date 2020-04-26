@@ -2,8 +2,7 @@
 # It will not be overwritten, so edit it as you like.
 #
 # Should you change your keyboard layout some time, delete
-# this file and re-run i3-config-wizard(1).
-#
+# this file and re-run i3-config-wizard(1).  
 
 # i3 config file (v4)
 #
@@ -177,7 +176,6 @@ bindsym $mod+r mode "resize"
 
 exec_always pkill compton
 exec_always pkill pasystray
-#exec_always pkill redshift-gtk
 exec_always pkill flameshot
 
 # System settings
@@ -217,7 +215,7 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id ~/polybar-scripts/spotify/launchlistener.sh
 exec_always nm-applet
 exec_always pasystray
-#exec_always redshift-gtk
+exec redshift-qt
 exec_always flameshot
 
 exec_always --no-startup-id feh --bg-scale ~/WHAREHOUSE/Coises/Imagens/Backgrounds/re\ creators\ wallpaper.jpg
@@ -242,6 +240,8 @@ for_window [class="net-ftb-main-Bootstrap"] move to workspace 5
 # Disable certain apps from taking focus
 #no_focus [class="jetbrains-idea"]
 no_focus [class="discord"]
+no_focus [class="slack"]
+no_focus [class="zoom"]
 
 workspace_layout tabbed
 
