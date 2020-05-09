@@ -1,6 +1,6 @@
 #!/bin/sh
 
-choice=$(echo -e "logoff\nsuspend\nshutdown\nreboot" | rofi -dmenu -sep '\n')
+choice=$(echo -e "logoff\nsuspend\nshutdown\nreboot" | dmenu)
 
 case $choice in
   logoff)

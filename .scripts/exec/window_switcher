@@ -1,0 +1,11 @@
+#!/bin/sh
+
+WINDOWS_IDS=$(bspc query -N -n .window -d focused)
+
+window_names=$( xtitle -f "%u %s\\\n" -t 20 ${WINDOWS_IDS})
+
+echo -e $window_names
+
+selected=$(echo -e $window_names | dmenu | cut -d ' ' -f 1)
+
+bspc node $selected -f
