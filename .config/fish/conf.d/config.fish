@@ -13,6 +13,9 @@ end
 
 abbr -a -U -- ra ranger
 
+set PATH "$PATH:$HOME/.gem/ruby/2.7.0/bin"
+set GRADLE_HOME "/usr/share/java/gradle"
+
 # XDG
 set XDG_CONFIG_HOME "$HOME/.config"
 set XDG_CACHE_HOME "$HOME/.cache"

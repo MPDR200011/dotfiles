@@ -28,11 +28,9 @@ secondary = #e60053
 alert = #bd2c40
 
 [bar/main]
-;monitor = ${env:MONITOR:HDMI-1}
+monitor = ${env:MAINMONITOR:eDP-1}
 width = 100%
 height = 24
-;offset-x = 1%
-;offset-y = 1%
 radius = 0
 fixed-center = false
 
@@ -42,11 +40,8 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = #f00
 
-;border-size = 3
-;border-color = #00000000
-
 padding-left = 0
-padding-right = 2
+padding-right = 0
 
 module-margin-left = 1
 module-margin-right = 2
@@ -54,25 +49,43 @@ module-margin-right = 2
 font-0 = "Noto Sans:pixelsize=10"
 font-1 = "Material Design Icons:size=14:antialias=true;2"
 
-modules-left = i3 spotify
+modules-left = bspwm i3 spotify
 modules-center = xwindow 
 modules-right = filesystem xbacklight pulseaudio xkeyboard cpu memory battery temperature date 
 
 tray-position = right
 tray-padding = 2
-;tray-transparent = true
-;tray-background = #0063ff
+tray-transparent = true
 
-;wm-restack = bspwm
-;wm-restack = i3
+cursor-click = pointer
+cursor-scroll = ns-resize
+enable-ipc = true
 
-;override-redirect = true
+[bar/secondary]
+monitor = ${env:SECMONITOR}
+width = 100%
+height = 24
+radius = 0
+fixed-center = false
 
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
+background = ${colors.background}
+foreground = ${colors.foreground}
 
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
+line-size = 3
+line-color = #f00
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = "Noto Sans:pixelsize=10"
+font-1 = "Material Design Icons:size=14:antialias=true;2"
+
+modules-left = bspwm i3 spotify
+modules-center = xwindow 
+modules-right = xbacklight pulseaudio xkeyboard date 
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -110,6 +123,7 @@ label-unmounted-foreground = ${colors.foreground-alt}
 
 [module/bspwm]
 type = internal/bspwm
+#pin-workspaces = true
 
 label-focused = %index%
 label-focused-background = ${colors.background-alt}

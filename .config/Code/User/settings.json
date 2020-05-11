@@ -68,7 +68,6 @@
         "editor.defaultFormatter": "ms-vscode.cpptools"
     },
     "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Chromium, UseTab: Never, IndentWidth: 4, TabWidth: 4, AllowShortIfStatementsOnASingleLine: false, IndentCaseLabels: false, ColumnLimit: 0, AccessModifierOffset: -4 }",
-    "editor.fontSize": 13,
     "todo-tree.tree.showScanModeButton": false,
     "workbench.colorTheme": "Dracula",
     "editor.suggestSelection": "first",
@@ -77,4 +76,10 @@
     "python.jediEnabled": false,
     "kotlin.compiler.jvm.target": "1.8",
     "window.menuBarVisibility": "toggle",
+    "java.semanticHighlighting.enabled": true,
+    "editor.cursorBlinking": "solid",
+    "java.import.gradle.home": "~/.gradle",
+    "java.requirements.JDK11Warning": false,
+    "vim.enableNeovim": true,
+    "vim.neovimPath": "/usr/bin/nvim",
 }

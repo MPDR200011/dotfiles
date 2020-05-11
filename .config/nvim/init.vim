@@ -6,7 +6,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'rhysd/vim-clang-format'
 Plug 'kana/vim-operator-user'
 
-Plug 'kien/ctrlp.vim'
+Plug 'junegunn/fzf.vim'
 
 Plug 'preservim/nerdtree'
 Plug 'majutsushi/tagbar'
@@ -35,8 +35,12 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
-Plug 'phpactor/ncm2-phpactor'
-Plug 'phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php'}
+
+" PHP cpmpletion
+Plug 'noahfrederick/vim-laravel'
+
+" Js completion
+Plug 'ncm2/ncm2-tern',  {'do': 'npm install'}
 
 " Java
 "Plug 'ObserverOfTime/ncm2-jc2', {'for': ['java', 'jsp']}
@@ -79,6 +83,9 @@ nnoremap <A-u> :tabp<CR>
 nnoremap <A-i> :tabn<CR>
 nnoremap <Leader>n :NERDTreeFind<CR>
 nnoremap <Leader>t :TagbarToggle<CR>
+nnoremap <c-p> :Files<CR>
+nnoremap <leader>g :GFiles<CR>
+nnoremap <leader>r :Rg! 
 
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
@@ -138,10 +145,13 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 """" LSP
 set hidden
 
+let g:LanguageClient_settingsPath='/home/mpdr/.config/nvim/settings.json'
+
 let g:LanguageClient_serverCommands = {
             \'c': ['clangd'],
             \'cpp': ['clangd'],
-            \'java': ['jdtls', '-data', getcwd()]
+            \'java': ['jdtls', '-data', getcwd()],
+            \ 'php': ['intelephense', '--stdio'],
             \}
 
 """" Filetypes
