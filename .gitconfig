@@ -10,3 +10,5 @@
   interactive = auto
   ui = true
   pager = true
+[credential]
+	helper = /usr/share/git/credential/gnome-keyring/git-credential-gnome-keyring

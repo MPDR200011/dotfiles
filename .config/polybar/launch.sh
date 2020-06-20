@@ -8,7 +8,7 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch bar1 and bar2
 my_laptop_external_monitor=$(xrandr --query | grep 'DP-1')
-if [[ $my_laptop_external_monitor = *connected* ]]; then
+if [[ $my_laptop_external_monitor != *disconnected* ]]; then
     export MAINMONITOR="DP-1"
     export SECMONITOR="eDP-1"
     polybar main &

@@ -4,7 +4,7 @@ Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 
 Plug 'rhysd/vim-clang-format'
-Plug 'kana/vim-operator-user'
+Plug 'kana/vim-operator-user' " Required by clang-format
 
 Plug 'junegunn/fzf.vim'
 
@@ -15,7 +15,7 @@ Plug 'mattn/emmet-vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'airblade/vim-rooter'
 
-Plug 'rbgrouleff/bclose.vim'
+Plug 'rbgrouleff/bclose.vim' " Required by ranger.vim
 Plug 'francoiscabrol/ranger.vim'
 
 " Color Themes
@@ -37,14 +37,15 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ }
 
 " PHP cpmpletion
+Plug 'phpactor/phpactor', {'for': 'php', 'branch': 'master', 'do': 'composer install --no-dev -o'}
+Plug 'phpactor/ncm2-phpactor'
 Plug 'noahfrederick/vim-laravel'
 
 " Js completion
 Plug 'ncm2/ncm2-tern',  {'do': 'npm install'}
 
-" Java
-"Plug 'ObserverOfTime/ncm2-jc2', {'for': ['java', 'jsp']}
-"Plug 'artur-shaik/vim-javacomplete2', {'for': ['java', 'jsp']}
+" COC.nvim
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
@@ -54,6 +55,7 @@ nohls
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set colorcolumn=120
 
 " Clear keybinds
 nmapc
@@ -82,26 +84,22 @@ nnoremap <C-H> <C-W>h
 nnoremap <A-u> :tabp<CR>
 nnoremap <A-i> :tabn<CR>
 nnoremap <Leader>n :NERDTreeFind<CR>
-nnoremap <Leader>t :TagbarToggle<CR>
-nnoremap <c-p> :Files<CR>
-nnoremap <leader>g :GFiles<CR>
-nnoremap <leader>r :Rg! 
+nnoremap <Leader>t :TagbarOpenAutoClose<CR>
+nnoremap <c-p> :GFiles<CR>
+nnoremap <leader>ff :Files<CR>
+nnoremap <leader>fr :Rg! 
+nnoremap <leader>fb :Buffers<CR>
+nnoremap <leader>s :update<CR>
+
+nnoremap <leader>nte :tabe<CR>:terminal<CR>
 
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
-inoremap <C-h> <C-\><C-N><C-w>h
-inoremap <C-j> <C-\><C-N><C-w>j
-inoremap <C-k> <C-\><C-N><C-w>k
-inoremap <C-l> <C-\><C-N><C-w>l
 inoremap <A-u> <C-\><C-n>:tabp<CR>
 inoremap <A-i> <C-\><C-n>:tabn<CR>
+inoremap jj <esc>
 
-tnoremap <Esc> <C-\><C-n>
-tnoremap <C-h> <C-\><C-N><C-w>h
-tnoremap <C-j> <C-\><C-N><C-w>j
-tnoremap <C-k> <C-\><C-N><C-w>k
-tnoremap <C-l> <C-\><C-N><C-w>l
 tnoremap <A-u> <C-\><C-n>:tabp<CR>
 tnoremap <A-i> <C-\><C-n>:tabn<CR>
 
@@ -133,29 +131,93 @@ let g:airline_theme='dracula'
 
 set mouse=a
 
+"""" Coc
+function EnableCOC()
+    set hidden
+    set nobackup
+    set nowritebackup
+    set cmdheight=2
+
+    set updatetime=300
+
+    set shortmess+=c
+
+    set signcolumn=yes
+
+    inoremap <silent><expr> <TAB>
+                \ pumvisible() ? "\<C-n>" :
+                \ <SID>check_back_space() ? "\<TAB>" :
+                \ coc#refresh()
+    inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+    function! s:check_back_space() abort
+        let col = col('.') - 1
+        return !col || getline('.')[col - 1]  =~# '\s'
+    endfunction
+
+    " Use <c-space> to trigger completion.
+    inoremap <silent><expr> <c-space> coc#refresh()
+
+    if exists('*complete_info')
+        inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+    else
+        inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+    endif
+
+    nmap <silent> <leader>ld <Plug>(coc-definition)
+    nmap <silent> <leader>lt <Plug>(coc-type-definition)
+    nmap <silent> <leader>li <Plug>(coc-implementation)
+    nmap <silent> <leader>lr <Plug>(coc-references)
+    nmap <silent> <leader>ln <Plug>(coc-diagnostic-next)
+    nmap <silent> <leader>lp <Plug>(coc-diagnostic-prev)
+endfunction()
+
+augroup COC
+    autocmd!
+    autocmd FileType java,json call EnableCOC()
+augroup END
+
 """" NCM2
-autocmd BufEnter * call ncm2#enable_for_buffer()
+function EnableNCM()
+    autocmd BufEnter * call ncm2#enable_for_buffer()
 
-" IMPORTANT: :help Ncm2PopupOpen for more information
-set completeopt=noinsert,menuone,noselect
+    set signcolumn=yes
 
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+    " IMPORTANT: :help Ncm2PopupOpen for more information
+    set completeopt=noinsert,menuone,noselect
+
+    inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+    inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+    call EnableLSP()
+endfunction()
+
+augroup NCM
+    autocmd!
+    autocmd FileType c,cpp,python,php call EnableNCM()
+    autocmd FileType php call SetupPHPactor()
+augroup END
+
+function SetupPHPactor()
+    let $PATH .= ":" . stdpath('data') . '/plugged/phpactor/bin'
+    let g:phpactorUseOpenWindows="true"
+endfunction()
 
 """" LSP
-set hidden
+function EnableLSP()
+    set hidden
 
-let g:LanguageClient_settingsPath='/home/mpdr/.config/nvim/settings.json'
+    nnoremap <silent> <leader>ld :call LanguageClient#textDocument_definition()<CR>
+    nnoremap <silent> <leader>lt :call LanguageClient#textDocument_typeDefinition()<CR>
+    nnoremap <silent> <leader>lr :call LanguageClient#textDocument_references()<CR>
+    nnoremap <silent> <leader>lm :call LanguageClient_contextMenu()<CR>
+    nnoremap <silent> <leader>ls :call LanguageClient#textDocument_documentSymbol()<CR>
 
-let g:LanguageClient_serverCommands = {
-            \'c': ['clangd'],
-            \'cpp': ['clangd'],
-            \'java': ['jdtls', '-data', getcwd()],
-            \ 'php': ['intelephense', '--stdio'],
-            \}
+    let g:LanguageClient_settingsPath='/home/mpdr/.config/nvim/settings.json'
 
-"""" Filetypes
-" Java completion
-"autocmd FileType java setlocal omnifunc=javacomplete#Complete
-"autocmd FileType java JCEnable
-"let g:JavaComplete_GradleExecutable = 'gradle'
+    let g:LanguageClient_serverCommands = {
+                \'c': ['clangd'],
+                \'cpp': ['clangd'],
+                \'python': ['pyls'],
+                \}
+    " \ 'php': [ 'phpactor', 'server:start', '--stdio']
+endfunction()

@@ -75,7 +75,7 @@
     "terminal.integrated.shell.linux": "/bin/fish",
     "python.jediEnabled": false,
     "kotlin.compiler.jvm.target": "1.8",
-    "window.menuBarVisibility": "toggle",
+    "window.menuBarVisibility": "default",
     "java.semanticHighlighting.enabled": true,
     "editor.cursorBlinking": "solid",
     "java.import.gradle.home": "~/.gradle",
