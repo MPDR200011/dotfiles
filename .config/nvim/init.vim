@@ -3,9 +3,6 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'tpope/vim-surround' 
 Plug 'jiangmiao/auto-pairs'
 
-Plug 'rhysd/vim-clang-format'
-Plug 'kana/vim-operator-user' " Required by clang-format
-
 Plug 'junegunn/fzf.vim'
 
 Plug 'preservim/nerdtree'
@@ -26,24 +23,6 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-" NCM2
-Plug 'ncm2/ncm2'
-Plug 'roxma/nvim-yarp'
-Plug 'ncm2/ncm2-bufword'
-Plug 'ncm2/ncm2-path'
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
-
-" PHP cpmpletion
-Plug 'phpactor/phpactor', {'for': 'php', 'branch': 'master', 'do': 'composer install --no-dev -o'}
-Plug 'phpactor/ncm2-phpactor'
-Plug 'noahfrederick/vim-laravel'
-
-" Js completion
-Plug 'ncm2/ncm2-tern',  {'do': 'npm install'}
-
 " COC.nvim
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -52,8 +31,8 @@ call plug#end()
 set nocompatible
 
 nohls
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set colorcolumn=120
 
@@ -64,11 +43,6 @@ tmapc
 xmapc
 smapc
 vmapc
-
-" Clang formatting
-let g:clang_format#code_style='chromium'
-let g:clang_format#style_options={
-	\ "IndentWidth" : 4}
 
 " netrw settings
 let g:netrw_liststyle = 3
@@ -91,7 +65,7 @@ nnoremap <leader>fr :Rg!
 nnoremap <leader>fb :Buffers<CR>
 nnoremap <leader>s :update<CR>
 
-nnoremap <leader>nte :tabe<CR>:terminal<CR>
+nnoremap <leader>cte :tabe<CR>:terminal<CR>
 
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
@@ -174,7 +148,7 @@ endfunction()
 
 augroup COC
     autocmd!
-    autocmd FileType java,json call EnableCOC()
+    autocmd FileType c,cpp,java,json,javascript call EnableCOC()
 augroup END
 
 """" NCM2
@@ -183,41 +157,18 @@ function EnableNCM()
 
     set signcolumn=yes
 
+    " CTRL-C doesn't trigger the InsertLeave autocmd . map to <ESC> instead.
+    inoremap <c-c> <ESC>
+
     " IMPORTANT: :help Ncm2PopupOpen for more information
     set completeopt=noinsert,menuone,noselect
+
+    " When the <Enter> key is pressed while the popup menu is visible, it only
+    " hides the menu. Use this mapping to close the menu and also start a new
+    " line.
+    inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
 
     inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
     inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
     call EnableLSP()
-endfunction()
-
-augroup NCM
-    autocmd!
-    autocmd FileType c,cpp,python,php call EnableNCM()
-    autocmd FileType php call SetupPHPactor()
-augroup END
-
-function SetupPHPactor()
-    let $PATH .= ":" . stdpath('data') . '/plugged/phpactor/bin'
-    let g:phpactorUseOpenWindows="true"
-endfunction()
-
-"""" LSP
-function EnableLSP()
-    set hidden
-
-    nnoremap <silent> <leader>ld :call LanguageClient#textDocument_definition()<CR>
-    nnoremap <silent> <leader>lt :call LanguageClient#textDocument_typeDefinition()<CR>
-    nnoremap <silent> <leader>lr :call LanguageClient#textDocument_references()<CR>
-    nnoremap <silent> <leader>lm :call LanguageClient_contextMenu()<CR>
-    nnoremap <silent> <leader>ls :call LanguageClient#textDocument_documentSymbol()<CR>
-
-    let g:LanguageClient_settingsPath='/home/mpdr/.config/nvim/settings.json'
-
-    let g:LanguageClient_serverCommands = {
-                \'c': ['clangd'],
-                \'cpp': ['clangd'],
-                \'python': ['pyls'],
-                \}
-    " \ 'php': [ 'phpactor', 'server:start', '--stdio']
 endfunction()
