@@ -2,7 +2,7 @@
     "editor.lineHeight" : 22,
     "editor.fontLigatures": true,
     "workbench.iconTheme": "vscode-icons",
-    "files.autoSave": "afterDelay",
+    "files.autoSave": "off",
     "editor.acceptSuggestionOnEnter": "off",
     "editor.lineNumbers": "relative",
     "java.configuration.checkProjectSettingsExclusions": false,
@@ -69,7 +69,7 @@
     },
     "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Chromium, UseTab: Never, IndentWidth: 4, TabWidth: 4, AllowShortIfStatementsOnASingleLine: false, IndentCaseLabels: false, ColumnLimit: 0, AccessModifierOffset: -4 }",
     "todo-tree.tree.showScanModeButton": false,
-    "workbench.colorTheme": "Dracula",
+    "workbench.colorTheme": "Material Theme Ocean High Contrast",
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "terminal.integrated.shell.linux": "/bin/fish",
@@ -82,4 +82,5 @@
     "java.requirements.JDK11Warning": false,
     "vim.enableNeovim": true,
     "vim.neovimPath": "/usr/bin/nvim",
+    "editor.fontSize": 17,
 }

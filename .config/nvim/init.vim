@@ -2,11 +2,13 @@ call plug#begin(stdpath('data') . '/plugged')
 " Editor tools 
 Plug 'tpope/vim-surround' 
 Plug 'jiangmiao/auto-pairs'
+Plug 'jackguo380/vim-lsp-cxx-highlight'
 
 Plug 'junegunn/fzf.vim'
 
 Plug 'preservim/nerdtree'
 Plug 'majutsushi/tagbar'
+Plug 'ap/vim-css-color'
 
 Plug 'mattn/emmet-vim'
 Plug 'sheerun/vim-polyglot'
@@ -18,6 +20,7 @@ Plug 'francoiscabrol/ranger.vim'
 " Color Themes
 Plug 'morhetz/gruvbox'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'kaicataldo/material.vim'
 
 " Airline
 Plug 'vim-airline/vim-airline'
@@ -96,12 +99,12 @@ set scrolloff=5
 
 " Theme
 set termguicolors     " enable true colors support
-let g:gruvbox_contrast_dark="hard"
-let g:gruvbox_bold='0'
-colorscheme dracula
+let g:material_theme_style='ocean'
+let g:material_terminal_italics = 1
 set background=dark
+colorscheme material
 
-let g:airline_theme='dracula'
+let g:airline_theme='material'
 
 set mouse=a
 
@@ -148,7 +151,7 @@ endfunction()
 
 augroup COC
     autocmd!
-    autocmd FileType c,cpp,java,json,javascript call EnableCOC()
+    autocmd FileType c,cpp,java,json,javascript,typescript,typescriptreact call EnableCOC()
 augroup END
 
 """" NCM2

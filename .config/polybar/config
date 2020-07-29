@@ -284,7 +284,7 @@ label-volume = 󰕾 %percentage%%
 label-volume-underline = #ff5400
 label-volume-foreground = ${root.foreground}
 
-label-muted = 
+label-muted = 󰝟
 label-muted-underline = #ff5400
 label-muted-foreground = ${root.foreground} 
 
