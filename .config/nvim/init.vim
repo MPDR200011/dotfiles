@@ -2,12 +2,10 @@ call plug#begin(stdpath('data') . '/plugged')
 " Editor tools 
 Plug 'tpope/vim-surround' 
 Plug 'jiangmiao/auto-pairs'
-Plug 'jackguo380/vim-lsp-cxx-highlight'
 
 Plug 'junegunn/fzf.vim'
 
 Plug 'preservim/nerdtree'
-Plug 'majutsushi/tagbar'
 Plug 'ap/vim-css-color'
 
 Plug 'mattn/emmet-vim'
@@ -20,7 +18,9 @@ Plug 'francoiscabrol/ranger.vim'
 " Color Themes
 Plug 'morhetz/gruvbox'
 Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'kaicataldo/material.vim'
+Plug 'MPDR200011/material.vim', {'branch': 'main'}
+Plug 'ayu-theme/ayu-vim'
+
 
 " Airline
 Plug 'vim-airline/vim-airline'
@@ -61,7 +61,6 @@ nnoremap <C-H> <C-W>h
 nnoremap <A-u> :tabp<CR>
 nnoremap <A-i> :tabn<CR>
 nnoremap <Leader>n :NERDTreeFind<CR>
-nnoremap <Leader>t :TagbarOpenAutoClose<CR>
 nnoremap <c-p> :GFiles<CR>
 nnoremap <leader>ff :Files<CR>
 nnoremap <leader>fr :Rg! 
@@ -101,10 +100,13 @@ set scrolloff=5
 set termguicolors     " enable true colors support
 let g:material_theme_style='ocean'
 let g:material_terminal_italics = 1
+let g:gruvbox_bold=0
+let g:gruvbox_contrast_dark='hard'
+let ayucolor='dark'
 set background=dark
-colorscheme material
+colorscheme ayu
 
-let g:airline_theme='material'
+let g:airline_theme='ayu'
 
 set mouse=a
 
@@ -149,29 +151,4 @@ function EnableCOC()
     nmap <silent> <leader>lp <Plug>(coc-diagnostic-prev)
 endfunction()
 
-augroup COC
-    autocmd!
-    autocmd FileType c,cpp,java,json,javascript,typescript,typescriptreact call EnableCOC()
-augroup END
-
-"""" NCM2
-function EnableNCM()
-    autocmd BufEnter * call ncm2#enable_for_buffer()
-
-    set signcolumn=yes
-
-    " CTRL-C doesn't trigger the InsertLeave autocmd . map to <ESC> instead.
-    inoremap <c-c> <ESC>
-
-    " IMPORTANT: :help Ncm2PopupOpen for more information
-    set completeopt=noinsert,menuone,noselect
-
-    " When the <Enter> key is pressed while the popup menu is visible, it only
-    " hides the menu. Use this mapping to close the menu and also start a new
-    " line.
-    inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
-
-    inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-    inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-    call EnableLSP()
-endfunction()
+call EnableCOC()
