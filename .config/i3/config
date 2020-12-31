@@ -254,7 +254,7 @@ no_focus [class="zoom"]
 
 workspace_layout tabbed
 
-#gaps inner 3
+#gaps inner 5
 
 hide_edge_borders smart_no_gaps
 #smart_borders no_gaps

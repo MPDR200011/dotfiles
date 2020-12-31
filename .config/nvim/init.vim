@@ -1,26 +1,23 @@
 call plug#begin(stdpath('data') . '/plugged')
 " Editor tools 
 Plug 'tpope/vim-surround' 
+Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
-
 Plug 'junegunn/fzf.vim'
-
 Plug 'preservim/nerdtree'
+
+" For colors in css files, very helpful
 Plug 'ap/vim-css-color'
 
 Plug 'mattn/emmet-vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'airblade/vim-rooter'
 
-Plug 'rbgrouleff/bclose.vim' " Required by ranger.vim
-Plug 'francoiscabrol/ranger.vim'
-
 " Color Themes
 Plug 'morhetz/gruvbox'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'MPDR200011/material.vim', {'branch': 'main'}
 Plug 'ayu-theme/ayu-vim'
-
 
 " Airline
 Plug 'vim-airline/vim-airline'
@@ -34,8 +31,8 @@ call plug#end()
 set nocompatible
 
 nohls
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set expandtab
 set colorcolumn=120
 
@@ -66,6 +63,7 @@ nnoremap <leader>ff :Files<CR>
 nnoremap <leader>fr :Rg! 
 nnoremap <leader>fb :Buffers<CR>
 nnoremap <leader>s :update<CR>
+nnoremap <leader>g :G
 
 nnoremap <leader>cte :tabe<CR>:terminal<CR>
 
@@ -98,14 +96,23 @@ set scrolloff=5
 
 " Theme
 set termguicolors     " enable true colors support
+
+" Settings for themes I normally use
+
+" Material Theme settings
 let g:material_theme_style='ocean'
 let g:material_terminal_italics = 1
+
+" Gruvbox settings
 let g:gruvbox_bold=0
 let g:gruvbox_contrast_dark='hard'
+
+" Ayu settings
 let ayucolor='dark'
 set background=dark
-colorscheme ayu
 
+" Setting actual theme
+colorscheme material
 let g:airline_theme='ayu'
 
 set mouse=a
