@@ -14,6 +14,7 @@
 .config/picom.conf
 .config/fish/
 .config/alacritty/
+.config/termite/
 .config/pulse/daemon.conf
 .config/fontconfig/
 .config/picom.conf

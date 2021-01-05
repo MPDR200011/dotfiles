@@ -61,7 +61,7 @@
     "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "editor.fontFamily": "'JetBrains Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontFamily": "'Meslo LG S', 'JetBrains Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "clangd.semanticHighlighting": false,
     "terminal.explorerKind": "external",
     "[cpp]": {
@@ -92,4 +92,6 @@
     "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "editor.fontSize": 15,
+    "workbench.statusBar.visible": true,
 }
