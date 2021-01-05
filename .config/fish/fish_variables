@@ -1,8 +1,8 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR __fish_initialized:3100
-SETUVAR __git_plugin_abbreviations:g\x1ega\x1egaa\x1egapa\x1egap\x1egb\x1egba\x1egban\x1egbd\x1egbD\x1egbl\x1egbs\x1egbsb\x1egbsg\x1egbsr\x1egbss\x1egc\x1egc\x21\x1egcn\x21\x1egca\x1egca\x21\x1egcan\x21\x1egcv\x1egcav\x1egcav\x21\x1egcm\x1egcam\x1egscam\x1egcl\x1egcount\x1egcp\x1egcpa\x1egcpc\x1egd\x1egdca\x1egds\x1egdsc\x1egdw\x1egdwc\x1egignore\x1egf\x1egfa\x1egfm\x1egfo\x1egl\x1egll\x1eglr\x1eglg\x1eglgg\x1eglgga\x1eglo\x1eglog\x1eglom\x1eglod\x1egloo\x1egm\x1egmt\x1egp\x1egp\x21\x1egpo\x1egpo\x21\x1egpv\x1egpv\x21\x1eggp\x21\x1egpu\x1egr\x1egra\x1egrb\x1egrba\x1egrbc\x1egrbi\x1egrbm\x1egrbmi\x1egrbmia\x1egrbd\x1egrbdi\x1egrbdia\x1egrbs\x1egrev\x1egrh\x1egrhh\x1egrm\x1egrmc\x1egrmv\x1egrrm\x1egrs\x1egrset\x1egrss\x1egrup\x1egrv\x1egsh\x1egsd\x1egsr\x1egss\x1egst\x1egsta\x1egstd\x1egstp\x1egsts\x1egsu\x1egsur\x1egsuri\x1egts\x1egtv\x1egsw\x1egswc\x1egunignore\x1egup\x1egwch\x1egco\x1egcb\x1egcod\x1egcom\x1egfb\x1egff\x1egfr\x1egfh\x1egfs\x1egfbs\x1egffs\x1egfrs\x1egfhs\x1egfss\x1egfbt\x1egfft\x1egfrt\x1egfht\x1egfst\x1egfp
-SETUVAR __git_plugin_initialized:Tue\x2002\x20Jun\x202020\x2004\x3a55\x3a13\x20PM\x20WEST
+SETUVAR __git_plugin_abbreviations:g\x1ega\x1egaa\x1egapa\x1egap\x1egb\x1egba\x1egban\x1egbd\x1egbD\x1egbl\x1egbs\x1egbsb\x1egbsg\x1egbsr\x1egbss\x1egc\x1egc\x21\x1egcn\x21\x1egca\x1egca\x21\x1egcan\x21\x1egcv\x1egcav\x1egcav\x21\x1egcm\x1egcam\x1egscam\x1egcfx\x1egcf\x1egcl\x1egclean\x1egclean\x21\x1egclean\x21\x21\x1egcount\x1egcp\x1egcpa\x1egcpc\x1egd\x1egdca\x1egds\x1egdsc\x1egdw\x1egdwc\x1egignore\x1egf\x1egfa\x1egfm\x1egfo\x1egl\x1egll\x1eglr\x1eglg\x1eglgg\x1eglgga\x1eglo\x1eglog\x1eglom\x1eglod\x1egloo\x1egm\x1egmt\x1egp\x1egp\x21\x1egpo\x1egpo\x21\x1egpv\x1egpv\x21\x1eggp\x21\x1egpu\x1egr\x1egra\x1egrb\x1egrba\x1egrbc\x1egrbi\x1egrbm\x1egrbmi\x1egrbmia\x1egrbd\x1egrbdi\x1egrbdia\x1egrbs\x1egrev\x1egrh\x1egrhh\x1egrm\x1egrmc\x1egrmv\x1egrrm\x1egrs\x1egrset\x1egrss\x1egrup\x1egrv\x1egsh\x1egsd\x1egsr\x1egss\x1egst\x1egsta\x1egstd\x1egstp\x1egsts\x1egsu\x1egsur\x1egsuri\x1egts\x1egtv\x1egsw\x1egswc\x1egunignore\x1egup\x1egwch\x1egco\x1egcb\x1egcod\x1egcom\x1egfb\x1egff\x1egfr\x1egfh\x1egfs\x1egfbs\x1egffs\x1egfrs\x1egfhs\x1egfss\x1egfbt\x1egfft\x1egfrt\x1egfht\x1egfst\x1egfp
+SETUVAR __git_plugin_initialized:Tue\x20Jan\x20\x205\x2010\x3a40\x3a54\x20PM\x20WET\x202021
 SETUVAR _fish_abbr_cfg:fish_config
 SETUVAR _fish_abbr_copy:alacritty
 SETUVAR _fish_abbr_dup:alacritty\x26\x20\x26\x26\x20disown
@@ -31,7 +31,12 @@ SETUVAR _fish_abbr_gcan_21_:git\x20commit\x20\x2dv\x20\x2da\x20\x2d\x2dno\x2dedi
 SETUVAR _fish_abbr_gcav:git\x20commit\x20\x2da\x20\x2dv\x20\x2d\x2dno\x2dverify
 SETUVAR _fish_abbr_gcav_21_:git\x20commit\x20\x2da\x20\x2dv\x20\x2d\x2dno\x2dverify\x20\x2d\x2damend
 SETUVAR _fish_abbr_gcb:git\x20checkout\x20\x2db
+SETUVAR _fish_abbr_gcf:git\x20config\x20\x2d\x2dlist
+SETUVAR _fish_abbr_gcfx:git\x20commit\x20\x2d\x2dfixup
 SETUVAR _fish_abbr_gcl:git\x20clone
+SETUVAR _fish_abbr_gclean:git\x20clean\x20\x2ddi
+SETUVAR _fish_abbr_gclean_21_:git\x20clean\x20\x2ddfx
+SETUVAR _fish_abbr_gclean_21_21_:git\x20reset\x20\x2d\x2dhard\x3b\x20and\x20git\x20clean\x20\x2ddfx
 SETUVAR _fish_abbr_gcm:git\x20commit\x20\x2dm
 SETUVAR _fish_abbr_gcn_21_:git\x20commit\x20\x2dv\x20\x2d\x2dno\x2dedit\x20\x2d\x2damend
 SETUVAR _fish_abbr_gco:git\x20checkout
@@ -145,7 +150,7 @@ SETUVAR _fish_abbr_sshfeuphome:sshfs\x20up201707329\x40yoda\x2efe\x2eup\x2ept\x3
 SETUVAR _fish_abbr_umountfeuphome:fusermount3\x20\x2du\x20\x7e/feup\x2dhome
 SETUVAR _fish_abbr_v:nvim
 SETUVAR _fish_abbr_xo:xdg\x2dopen
-SETUVAR fish_color_autosuggestion:555\x1ebrblack
+SETUVAR fish_color_autosuggestion:969896
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:5f87ff
 SETUVAR fish_color_comment:red
@@ -168,7 +173,7 @@ SETUVAR fish_color_selection:white\x1e\x2d\x2dbold\x1e\x2d\x2dbackground\x3dbrbl
 SETUVAR fish_color_status:red
 SETUVAR fish_color_user:cyan
 SETUVAR fish_color_valid_path:\x2d\x2dunderline
-SETUVAR fish_greeting:Welcome\x20to\x20fish\x2c\x20the\x20friendly\x20interactive\x20shell
+SETUVAR fish_greeting:\x1d
 SETUVAR fish_key_bindings:fish_vi_key_bindings
 SETUVAR fish_pager_color_completion:normal
 SETUVAR fish_pager_color_description:555\x1eyellow

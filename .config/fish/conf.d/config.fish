@@ -1,3 +1,5 @@
+set fish_greeting
+
 abbr -a -U -- l 'ls -l --group-directories-first'
 abbr -a -U -- la 'ls -la --group-directories-first'
 abbr -a -U -- pf 'cd ~/WHAREHOUSE/Programacao'
