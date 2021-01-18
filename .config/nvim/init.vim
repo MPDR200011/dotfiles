@@ -5,6 +5,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
+Plug 'KabbAmine/vCoolor.vim'
 
 " For colors in css files, very helpful
 Plug 'ap/vim-css-color'
@@ -14,7 +15,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'airblade/vim-rooter'
 
 " Color Themes
-Plug 'morhetz/gruvbox'
+Plug 'gruvbox-community/gruvbox'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'MPDR200011/material.vim', {'branch': 'main'}
 Plug 'ayu-theme/ayu-vim'
@@ -30,11 +31,34 @@ call plug#end()
 
 set nocompatible
 
-nohls
+" limits and tabs
 set tabstop=4
+set softtabstop=4
 set shiftwidth=4
 set expandtab
+set smartindent
 set colorcolumn=120
+
+" default settings
+set exrc
+set guicursor=a:block-blinkon0
+set relativenumber
+set nu
+set nohlsearch
+set hidden
+set noerrorbells
+set nowrap
+set noswapfile
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
+set incsearch
+set termguicolors
+set scrolloff=5
+set completeopt-=preview
+set encoding=utf-8
+set signcolumn=yes
+
 
 " Clear keybinds
 nmapc
@@ -44,13 +68,8 @@ xmapc
 smapc
 vmapc
 
-" netrw settings
-let g:netrw_liststyle = 3
-let g:netrw_winsize = 25
-let g:netrw_browse_split = 0
-
 "Key Binds
-let g:mapleader="\<Space>"
+let g:mapleader=" "
 nnoremap <C-K> <C-W>k
 nnoremap <C-J> <C-W>j
 nnoremap <C-L> <C-W>l
@@ -58,10 +77,12 @@ nnoremap <C-H> <C-W>h
 nnoremap <A-u> :tabp<CR>
 nnoremap <A-i> :tabn<CR>
 nnoremap <Leader>n :NERDTreeFind<CR>
+
 nnoremap <c-p> :GFiles<CR>
 nnoremap <leader>ff :Files<CR>
 nnoremap <leader>fr :Rg! 
 nnoremap <leader>fb :Buffers<CR>
+
 nnoremap <leader>s :update<CR>
 nnoremap <leader>g :G
 
@@ -77,8 +98,6 @@ inoremap jj <esc>
 tnoremap <A-u> <C-\><C-n>:tabp<CR>
 tnoremap <A-i> <C-\><C-n>:tabn<CR>
 
-set completeopt-=preview
-set encoding=utf-8
 
 " NERDTree
 let g:NERDTreeQuitOnOpen=1
@@ -89,13 +108,10 @@ let g:ctrlp_by_filename = 1
 " Syntax hl and line numbers
 syntax enable
 filetype plugin indent on
-set number relativenumber
 set laststatus=2
 set cursorline
-set scrolloff=5
 
 " Theme
-set termguicolors     " enable true colors support
 
 " Settings for themes I normally use
 
@@ -104,7 +120,8 @@ let g:material_theme_style='ocean'
 let g:material_terminal_italics = 1
 
 " Gruvbox settings
-let g:gruvbox_bold=0
+let g:gruvbox_bold=1
+let g:gruvbox_italic=1
 let g:gruvbox_contrast_dark='hard'
 
 " Ayu settings
@@ -113,9 +130,7 @@ set background=dark
 
 " Setting actual theme
 colorscheme material
-let g:airline_theme='ayu'
-
-set mouse=a
+let g:airline_theme='material'
 
 """" Coc
 function EnableCOC()
@@ -127,8 +142,6 @@ function EnableCOC()
     set updatetime=300
 
     set shortmess+=c
-
-    set signcolumn=yes
 
     inoremap <silent><expr> <TAB>
                 \ pumvisible() ? "\<C-n>" :
