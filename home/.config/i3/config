@@ -207,6 +207,9 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+# Tool binds
+bindsym $mod+Shift+v exec pavucontrol
+
 #rofi calc
 bindsym $mod+equal exec =
 

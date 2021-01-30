@@ -3,15 +3,25 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'tpope/vim-surround' 
 Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
-Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
 Plug 'KabbAmine/vCoolor.vim'
+
+" treesitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+" telescope
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
+" autocomplete
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim'
 
 " For colors in css files, very helpful
 Plug 'ap/vim-css-color'
 
 Plug 'mattn/emmet-vim'
-Plug 'sheerun/vim-polyglot'
 Plug 'airblade/vim-rooter'
 
 " Color Themes
@@ -24,9 +34,6 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-" COC.nvim
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 call plug#end()
 
 set nocompatible
@@ -38,10 +45,11 @@ set shiftwidth=4
 set expandtab
 set smartindent
 set colorcolumn=120
+set signcolumn=yes
+set scrolloff=5
 
 " default settings
 set exrc
-set guicursor=a:block-blinkon0
 set relativenumber
 set nu
 set nohlsearch
@@ -54,10 +62,11 @@ set undodir=~/.vim/undodir
 set undofile
 set incsearch
 set termguicolors
-set scrolloff=5
-set completeopt-=preview
 set encoding=utf-8
-set signcolumn=yes
+set shortmess+=c
+
+set cmdheight=2
+set updatetime=50
 
 
 " Clear keybinds
@@ -76,12 +85,12 @@ nnoremap <C-L> <C-W>l
 nnoremap <C-H> <C-W>h
 nnoremap <A-u> :tabp<CR>
 nnoremap <A-i> :tabn<CR>
-nnoremap <Leader>n :NERDTreeFind<CR>
+nnoremap <Leader>n <cmd>NERDTreeFind<CR>
 
-nnoremap <c-p> :GFiles<CR>
-nnoremap <leader>ff :Files<CR>
-nnoremap <leader>fr :Rg! 
-nnoremap <leader>fb :Buffers<CR>
+nnoremap <c-p> <cmd>Telescope find_files<cr>
+nnoremap <leader>fr <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 nnoremap <leader>s :update<CR>
 nnoremap <leader>g :G
@@ -129,46 +138,36 @@ let ayucolor='dark'
 set background=dark
 
 " Setting actual theme
-colorscheme material
-let g:airline_theme='material'
+colorscheme gruvbox
+let g:airline_theme='gruvbox'
 
-"""" Coc
-function EnableCOC()
-    set hidden
-    set nobackup
-    set nowritebackup
-    set cmdheight=2
+" autocomplete settings
+set completeopt=menuone,noinsert,noselect
+let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 
-    set updatetime=300
+" Use tab to cicle autocomplete sugestions
+inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-    set shortmess+=c
+lua << EOF
+local lspconfig = require'lspconfig';
 
-    inoremap <silent><expr> <TAB>
-                \ pumvisible() ? "\<C-n>" :
-                \ <SID>check_back_space() ? "\<TAB>" :
-                \ coc#refresh()
-    inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+lspconfig.clangd.setup{
+    on_attach = require'completion'.on_attach
+}
 
-    function! s:check_back_space() abort
-        let col = col('.') - 1
-        return !col || getline('.')[col - 1]  =~# '\s'
-    endfunction
+lspconfig.tsserver.setup {
+    on_attach = require'completion'.on_attach;
+    root_dir = lspconfig.util.root_pattern('tsconfig.json');
+}
+EOF
 
-    " Use <c-space> to trigger completion.
-    inoremap <silent><expr> <c-space> coc#refresh()
-
-    if exists('*complete_info')
-        inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
-    else
-        inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-    endif
-
-    nmap <silent> <leader>ld <Plug>(coc-definition)
-    nmap <silent> <leader>lt <Plug>(coc-type-definition)
-    nmap <silent> <leader>li <Plug>(coc-implementation)
-    nmap <silent> <leader>lr <Plug>(coc-references)
-    nmap <silent> <leader>ln <Plug>(coc-diagnostic-next)
-    nmap <silent> <leader>lp <Plug>(coc-diagnostic-prev)
-endfunction()
-
-call EnableCOC()
+" TreeSitter Settings
+lua << EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = { "cpp", "typescript", "javascript" }; -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  highlight = {
+    enable = true,              -- false will disable the whole extension
+  };
+}
+EOF

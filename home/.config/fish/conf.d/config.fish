@@ -8,7 +8,7 @@ abbr -a -U -- umountfeuphome 'fusermount3 -u ~/feup-home'
 abbr -a -U -- v nvim
 abbr -a -U -- xo xdg-open
 abbr -a -U -- mirrors sudo reflector --protocol https --protocol http --latest 50 --number 50 --sort rate --save /etc/pacman.d/mirrorlist
-abbr -a -U -- dup 'alacritty& && disown'
+abbr -a -U -- dup 'termite & && disown'
 
 function ranger
     command ranger --choosedir={$HOME}/.rangerdir $argv; set LASTDIR (cat {$HOME}/.rangerdir); cd "$LASTDIR"
