@@ -29,6 +29,7 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'MPDR200011/material.vim', {'branch': 'main'}
 Plug 'ayu-theme/ayu-vim'
+Plug 'ajmwagar/vim-deus'
 
 " Airline
 Plug 'vim-airline/vim-airline'
