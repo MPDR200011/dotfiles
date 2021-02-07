@@ -51,7 +51,7 @@ font-1 = "Material Design Icons:size=14:antialias=true;2"
 
 modules-left = herbstluftwm bspwm i3 spotify
 modules-center = xwindow 
-modules-right = filesystem backlight-acpi pulseaudio xkeyboard cpu memory battery temperature date 
+modules-right = gme filesystem backlight-acpi pulseaudio xkeyboard cpu memory battery temperature date 
 
 tray-position = right
 tray-padding = 2
@@ -508,5 +508,20 @@ exec = ~/.scripts/wlan-get.sh
 tail = true
 
 double-click-left = exec nm-connection-editor &
+
+[module/herbstluftwm]
+type = custom/script
+
+exec-if = ps -C herbstluftwm >/dev/null 2>&1
+exec = MONITOR=${env:MONITOR:eDP-1} ~/.config/polybar/herbstluftwm.sh
+tail = true
+
+[module/gme]
+type = custom/script
+format-prefix = 󰇁
+format-underline = #fd0000
+interval = 60
+
+exec = ~/.scripts/get_gamestop.py
 
 ; vim:ft=dosini
