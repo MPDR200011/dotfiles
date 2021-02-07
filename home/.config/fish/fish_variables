@@ -5,7 +5,7 @@ SETUVAR __git_plugin_abbreviations:g\x1ega\x1egaa\x1egapa\x1egap\x1egb\x1egba\x1
 SETUVAR __git_plugin_initialized:Tue\x20Jan\x20\x205\x2010\x3a40\x3a54\x20PM\x20WET\x202021
 SETUVAR _fish_abbr_cfg:fish_config
 SETUVAR _fish_abbr_copy:alacritty
-SETUVAR _fish_abbr_dup:termite\x20\x26\x20\x26\x26\x20disown
+SETUVAR _fish_abbr_dup:\x24TERMINAL\x20\x26\x20\x26\x26\x20disown
 SETUVAR _fish_abbr_g:git
 SETUVAR _fish_abbr_ga:git\x20add
 SETUVAR _fish_abbr_gaa:git\x20add\x20\x2d\x2dall

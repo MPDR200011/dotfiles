@@ -27,14 +27,14 @@ xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Disable While Typing Enable
 setxkbmap -layout "us,pt" -option "grp:alt_space_toggle" -option ctrl:nocaps
 
 # Trey applets
-~/polybar-scripts/spotify/launchlistener.sh
-nm-applet
-pasystray
-flameshot
-blueman-applet
+~/polybar-scripts/spotify/launchlistener.sh &
+nm-applet &
+pasystray &
+flameshot &
+blueman-applet &
 
-redshift-qt
-polychromatic-tray-applet
+#redshift-qt &
+polychromatic-tray-applet &
 
 # Set background
 feh --bg-scale ~/WHAREHOUSE/Coises/Imagens/Backgrounds/re\ creators\ wallpaper.jpg
@@ -48,10 +48,9 @@ hc mouseunbind --all
 # Mod=Mod1    # Use alt as the main modifier
 Mod=Mod4   # Use the super key as the main modifier
 
-hc keybind $Mod-Shift-q quit
 hc keybind $Mod-Shift-r reload
-hc keybind $Mod-Shift-c close
-hc keybind $Mod-Return spawn "${TERMINAL:-xterm}" # use your $TERMINAL with xterm as fallback
+hc keybind $Mod-Shift-q close
+hc keybind $Mod-Return spawn termite
 
 # basic movement in tiling and floating mode
 # focusing clients
@@ -137,7 +136,7 @@ hc keybind $Mod-c cycle
 hc keybind $Mod-i jumpto urgent
 
 # Suspend Keybind
-hc keybind XF86Sleep spawn etterlockscreen -s blur
+hc keybind XF86Sleep spawn betterlockscreen -s blur
 
 # Pulse Audio controls
 hc keybind XF86AudioRaiseVolume spawn pactl set-sink-volume @DEFAULT_SINK@ +2% #increase sound volume
@@ -170,15 +169,15 @@ hc set frame_border_width 1
 hc set always_show_frame on
 hc set frame_bg_transparent on
 hc set frame_transparent_width 5
-hc set frame_gap 4
+hc set frame_gap 0
 
 hc attr theme.active.color '#9fbc00'
 hc attr theme.normal.color '#454545'
 hc attr theme.urgent.color orange
 hc attr theme.inner_width 1
 hc attr theme.inner_color black
-hc attr theme.border_width 3
-hc attr theme.floating.border_width 4
+hc attr theme.border_width 2
+hc attr theme.floating.border_width 2
 hc attr theme.floating.outer_width 1
 hc attr theme.floating.outer_color black
 hc attr theme.active.inner_color '#3E4A00'
@@ -209,9 +208,9 @@ hc set tree_style '╾│ ├└╼─┐'
 hc unlock
 
 # do multi monitor setup here, e.g.:
-# hc set_monitors 1280x1024+0+0 1280x1024+1280+0
+hc set_monitors 1366x744+0+24
 # or simply:
-hc detect_monitors
+# hc detect_monitors
 
 # find the panel
 panel=~/.config/herbstluftwm/panel.sh
