@@ -3,8 +3,9 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'tpope/vim-surround' 
 Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
-Plug 'preservim/nerdtree'
 Plug 'KabbAmine/vCoolor.vim'
+Plug 'preservim/nerdtree'
+
 
 " treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
