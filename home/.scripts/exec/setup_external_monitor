@@ -3,4 +3,5 @@
 connected_external_monitor=$(xrandr --query | grep 'DP-1')
 if [[ $connected_external_monitor = *connected* ]]; then
     xrandr --output DP-1 --primary --mode 1920x1080 --rotate normal --output eDP-1 --mode 1366x768 --rotate normal --right-of DP-1
+    set_monitor_config 1
 fi

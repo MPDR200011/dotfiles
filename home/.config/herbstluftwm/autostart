@@ -226,9 +226,22 @@ hc set tree_style '╾│ ├└╼─┐'
 hc unlock
 
 # do multi monitor setup here, e.g.:
-hc set_monitors 1366x744+0+24
-# or simply:
-# hc detect_monitors
+if [ -e '~/.monitor_config' ]; then
+    monitorConfig=$(cat ~/.monitor_config)
+    case $monitorConfig in
+        0)
+            hc set_monitors 1366x744+0+24
+            ;;
+        1)
+            hc set_monitors 1920x1056+0+24 1366x744+1920+24
+            ;;
+        *)
+            hc set_monitors 1366x744+0+24
+            ;;
+    esac
+else
+    hc set_monitors 1366x744+0+24
+fi
 
 # find the panel
 panel=~/.config/herbstluftwm/panel.sh
