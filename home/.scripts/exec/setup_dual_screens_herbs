@@ -1,0 +1,3 @@
+#!/bin/sh
+
+herbstclient set_monitors 1920x1056+0+24 1366x744+1920+24
