@@ -201,6 +201,24 @@ hc rule floatplacement=smart
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' floating=on
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
+hc rule class='net-ftb-main-Main' tag=6
+hc rule class='jetbrains-idea' tag=2
+hc rule class='jetbrains-clion' tag=2
+hc rule class='jetbrains-studio' tag=2
+hc rule class='jetbrains-phpstorm' tag=2
+hc rule class='jetbrains-webstorm' tag=2
+hc rule class='Code' tag=2
+hc rule class='sun-awt-X11-XWindowPeer' tag=2
+hc rule class='discord' tag=3
+hc rule class='Slack' tag=3
+hc rule class='Steam' tag=4
+hc rule class='Thunderbird' tag=4
+hc rule class='Microsoft Teams - Preview' tag=3
+hc rule class='zoom' tag=3
+hc rule class='spotify' tag=5
+
+hc rule class="ru-turikhay-tlauncher-bootstrap-Bootstrap" tag= 5
+hc rule class="net-ftb-main-Bootstrap" tag= 5
 
 hc set tree_style '╾│ ├└╼─┐'
 
