@@ -226,7 +226,7 @@ hc set tree_style '╾│ ├└╼─┐'
 hc unlock
 
 # do multi monitor setup here, e.g.:
-if [ -e '~/.monitor_config' ]; then
+if [[ -r "$HOME/.monitor_config" ]]; then
     monitorConfig=$(cat ~/.monitor_config)
     case $monitorConfig in
         0)
