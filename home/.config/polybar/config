@@ -28,7 +28,7 @@ secondary = #e60053
 alert = #bd2c40
 
 [bar/main]
-monitor = ${env:MAINMONITOR:eDP-1}
+monitor = ${env:MONITOR:eDP-1}
 width = 100%
 height = 24
 radius = 0
@@ -49,7 +49,7 @@ module-margin-right = 2
 font-0 = "Noto Sans:pixelsize=10"
 font-1 = "Material Design Icons:size=14:antialias=true;2"
 
-modules-left = bspwm i3 spotify
+modules-left = herbstluftwm bspwm i3 spotify
 modules-center = xwindow 
 modules-right = filesystem backlight-acpi pulseaudio xkeyboard cpu memory battery temperature date 
 
