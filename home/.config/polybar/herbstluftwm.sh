@@ -25,7 +25,7 @@ print_tags() {
 			printf '%%{F#cccccc}%%{R} %s %%{R}%%{F-}' "$name"
 			;;
 		'!')
-			printf '%%{F#fe0000}%%{R} %s! %%{R}' "$name"
+			printf '%%{F#fe0000}%%{R} %s! %%{R}%%{F-}' "$name"
 			;;
 		esac
     done
