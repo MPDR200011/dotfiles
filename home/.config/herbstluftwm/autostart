@@ -188,11 +188,10 @@ hc set window_gap 0
 hc set frame_padding 0
 hc set smart_window_surroundings off
 hc set smart_frame_surroundings on
-hc set mouse_recenter_gap 0
+hc set mouse_recenter_gap 1
 
 hc set default_frame_layour 2
-hc set mouse_recenter_gap 1
-hc set focus_follows_mouse true
+hc set focus_follows_mouse false
 
 # rules
 hc unrule -F
