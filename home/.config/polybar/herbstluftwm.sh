@@ -7,20 +7,26 @@ print_tags() {
 		name=${tag#?}
 		state=${tag%$name}
 		case "$state" in
-		'#')
-			printf '%%{R} %s %%{R}' "$name"
+		'.')
 			;;
+		':')
+			printf ' %s ' "$name"
+            ;;
 		'+')
 			printf '%%{F#cccccc}%%{R} %s %%{R}%%{F-}' "$name"
 			;;
+		'#')
+			printf '%%{F#cccccc}%%{R} %s %%{R}%%{F-}' "$name"
+			;;
+		'-')
+			printf '%%{F#cccccc}%%{R} %s %%{R}%%{F-}' "$name"
+			;;
+		'%')
+			printf '%%{F#cccccc}%%{R} %s %%{R}%%{F-}' "$name"
+			;;
 		'!')
-			printf '%%{R} %s! %%{R}' "$name"
+			printf '%%{F#fe0000}%%{R} %s! %%{R}' "$name"
 			;;
-		'.')
-			printf '%%{F#cccccc} %s %%{F-}' "$name"
-			;;
-		*)
-			printf ' %s ' "$name"
 		esac
     done
 	printf '\n'
