@@ -1,6 +1,7 @@
+# vim: ft=sh
 set fish_greeting
 
-set TERMINAL termite
+set TERMINAL alacritty
 
 abbr -a -U -- l 'ls -l --group-directories-first'
 abbr -a -U -- la 'ls -la --group-directories-first'
