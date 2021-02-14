@@ -6,7 +6,7 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 set smartindent
-set colorcolumn=120
+set colorcolumn=80
 set signcolumn=yes
 set scrolloff=5
 
