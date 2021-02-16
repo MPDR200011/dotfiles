@@ -8,6 +8,10 @@ country = sys.argv[1]
 
 response = requests.get(f"https://corona.lmao.ninja/v2/countries/{country}")
 
+if response.status_code != 200:
+    print(f"Invalid country: {country}")
+    exit(1)
+
 data = json.loads(response.text)
 
 active = data['active']
