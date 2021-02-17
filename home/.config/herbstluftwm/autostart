@@ -25,6 +25,8 @@ xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Disable While Typing Enable
 
 # Keyboard layout
 setxkbmap -layout "us,pt" -option "grp:alt_space_toggle" -option ctrl:nocaps
+# Set keyboard repeat rate
+xset r rate 200 30
 
 # Trey applets
 ~/polybar-scripts/spotify/launchlistener.sh &
