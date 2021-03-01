@@ -509,13 +509,6 @@ tail = true
 
 double-click-left = exec nm-connection-editor &
 
-[module/herbstluftwm]
-type = custom/script
-
-exec-if = ps -C herbstluftwm >/dev/null 2>&1
-exec = MONITOR=${env:MONITOR:eDP-1} ~/.config/polybar/herbstluftwm.sh
-tail = true
-
 [module/ewmh]
 type = internal/xworkspaces
 
