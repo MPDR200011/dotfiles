@@ -80,10 +80,10 @@
     "java.import.gradle.home": "~/.gradle",
     "java.requirements.JDK11Warning": false,
     "vim.enableNeovim": true,
-    "vim.neovimPath": "/usr/bin/nvim",
+    "vim.neovimPath": "/usr/local/bin/nvim",
     "dafny.basePath": "/home/mpdr/.vscode/extensions/correctnesslab.dafny-vscode-0.18.0/dafny/dafny",
     "dafny.dafnyServerPath": "/usr/bin/dafny",
-    "workbench.colorTheme": "Ayu Dark Bordered",
+    "workbench.colorTheme": "Gruvbox Dark Hard",
     "editor.fontWeight": 500,
     "stories.username": "coral_Congo",
     "[javascriptreact]": {
@@ -92,6 +92,6 @@
     "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "editor.fontSize": 15,
+    "editor.fontSize": 18,
     "workbench.statusBar.visible": true,
 }
