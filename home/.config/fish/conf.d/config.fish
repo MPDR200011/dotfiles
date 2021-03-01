@@ -20,6 +20,12 @@ end
 abbr -a -U -- ra ranger
 
 set PATH "$PATH:$HOME/.gem/ruby/2.7.0/bin:$HOME/.local/bin"
+set ANDROID_HOME "$HOME/Android/Sdk"
+set ANDROID_SDK_ROOT "$HOME/Android/Sdk"
+set PATH "$PATH:$ANDROID_HOME/emulator"
+set PATH "$PATH:$ANDROID_HOME/tools"
+set PATH "$PATH:$ANDROID_HOME/tools/bin"
+set PATH "$PATH:$ANDROID_HOME/platform-tools"
 set GRADLE_HOME "/usr/share/java/gradle"
 
 # XDG
