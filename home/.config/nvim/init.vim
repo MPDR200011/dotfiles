@@ -5,7 +5,11 @@ Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
 Plug 'KabbAmine/vCoolor.vim'
 Plug 'preservim/nerdtree'
+Plug 'mattn/emmet-vim'
+Plug 'airblade/vim-rooter'
 
+" Proper indentation in tsx/jsx files
+Plug 'maxmellon/vim-jsx-pretty'
 
 " treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -21,9 +25,6 @@ Plug 'nvim-lua/completion-nvim'
 
 " For colors in css files, very helpful
 Plug 'ap/vim-css-color'
-
-Plug 'mattn/emmet-vim'
-Plug 'airblade/vim-rooter'
 
 " Color Themes
 Plug 'gruvbox-community/gruvbox'
