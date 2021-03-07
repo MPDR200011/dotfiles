@@ -1,44 +1,4 @@
-call plug#begin(stdpath('data') . '/plugged')
-" Editor tools 
-Plug 'tpope/vim-surround' 
-Plug 'tpope/vim-fugitive'
-Plug 'jiangmiao/auto-pairs'
-Plug 'KabbAmine/vCoolor.vim'
-Plug 'preservim/nerdtree'
-Plug 'mattn/emmet-vim'
-Plug 'airblade/vim-rooter'
-
-" Proper indentation in tsx/jsx files
-Plug 'maxmellon/vim-jsx-pretty'
-
-" treesitter
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
-" telescope
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-telescope/telescope-fzy-native.nvim'
-
-" autocomplete
-Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-lua/completion-nvim'
-
-" For colors in css files, very helpful
-Plug 'ap/vim-css-color'
-
-" Color Themes
-Plug 'gruvbox-community/gruvbox'
-Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'MPDR200011/material.vim', {'branch': 'main'}
-Plug 'ayu-theme/ayu-vim'
-Plug 'ajmwagar/vim-deus'
-
-" Airline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
-call plug#end()
+lua require('plugins')
 
 " Clear keybinds
 nmapc
