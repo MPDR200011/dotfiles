@@ -16,7 +16,7 @@ let g:material_theme_style='ocean'
 let g:material_terminal_italics = 1
 
 " Gruvbox settings
-let g:gruvbox_bold=1
+let g:gruvbox_bold=0
 let g:gruvbox_italic=1
 let g:gruvbox_contrast_dark='hard'
 
@@ -25,5 +25,5 @@ let ayucolor='dark'
 
 " Setting actual theme
 set background=dark
-colorscheme gruvbox
-let g:airline_theme='gruvbox'
+colorscheme zephyr
+let g:airline_theme='zenburn'
