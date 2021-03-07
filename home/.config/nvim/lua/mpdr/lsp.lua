@@ -1,5 +1,7 @@
 local lspconfig = require('lspconfig');
 
+vim.g['completion_confirm_key'] = ''
+
 lspconfig.clangd.setup{
     on_attach = require'completion'.on_attach,
 }
