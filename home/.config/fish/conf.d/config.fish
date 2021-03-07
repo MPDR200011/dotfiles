@@ -1,7 +1,7 @@
 # vim: ft=sh
 set fish_greeting
 
-set TERMINAL alacritty
+set -x TERMINAL alacritty
 
 abbr -a -U -- l 'ls -l --group-directories-first'
 abbr -a -U -- la 'ls -la --group-directories-first'
@@ -19,26 +19,23 @@ end
 
 abbr -a -U -- ra ranger
 
-set PATH "$PATH:$HOME/.gem/ruby/2.7.0/bin:$HOME/.local/bin"
-set ANDROID_HOME "$HOME/Android/Sdk"
-set ANDROID_SDK_ROOT "$HOME/Android/Sdk"
-set PATH "$PATH:$ANDROID_HOME/emulator"
-set PATH "$PATH:$ANDROID_HOME/tools"
-set PATH "$PATH:$ANDROID_HOME/tools/bin"
-set PATH "$PATH:$ANDROID_HOME/platform-tools"
-set GRADLE_HOME "/usr/share/java/gradle"
+set -x PATH "$PATH:$HOME/.gem/ruby/2.7.0/bin:$HOME/.local/bin"
+set -x ANDROID_HOME "$HOME/Android/Sdk"
+set -x ANDROID_SDK_ROOT "$HOME/Android/Sdk"
+set -x PATH "$PATH:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools"
+set -x GRADLE_HOME "/usr/share/java/gradle"
 
 # XDG
-set XDG_CONFIG_HOME "$HOME/.config"
-set XDG_CACHE_HOME "$HOME/.cache"
-set XDG_DATA_HOME "$HOME/.local/share"
+set -x XDG_CONFIG_HOME "$HOME/.config"
+set -x XDG_CACHE_HOME "$HOME/.cache"
+set -x XDG_DATA_HOME "$HOME/.local/share"
 
-set XDG_DATA_DIRS "/usr/local/share:/usr/share"
-set XDG_CONFIG_DIRS "/etc/xdg"
+set -x XDG_DATA_DIRS "/usr/local/share:/usr/share"
+set -x XDG_CONFIG_DIRS "/etc/xdg"
 
 # config file cleanup
-set GNUPGHOME "$XDG_CONFIG_HOME/gnupg"
-set CCACHE_CONFIGPATH "$XDG_CONFIG_HOME/ccache"
+set -x GNUPGHOME "$XDG_CONFIG_HOME/gnupg"
+set -x CCACHE_CONFIGPATH "$XDG_CONFIG_HOME/ccache"
 
 direnv hook fish | source
 
