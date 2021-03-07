@@ -83,8 +83,7 @@
     "vim.neovimPath": "/usr/local/bin/nvim",
     "dafny.basePath": "/home/mpdr/.vscode/extensions/correctnesslab.dafny-vscode-0.18.0/dafny/dafny",
     "dafny.dafnyServerPath": "/usr/bin/dafny",
-    "workbench.colorTheme": "Gruvbox Dark Hard",
-    "editor.fontWeight": 500,
+    "editor.fontWeight": 450,
     "stories.username": "coral_Congo",
     "[javascriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -92,6 +91,6 @@
     "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "editor.fontSize": 18,
+    "editor.fontSize": 16,
     "workbench.statusBar.visible": true,
 }
