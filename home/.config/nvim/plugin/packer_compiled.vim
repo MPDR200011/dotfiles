@@ -60,6 +60,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mpdr/.local/share/nvim/site/pack/packer/start/gruvbox"
   },
+  ["markdown-preview.nvim"] = {
+    loaded = true,
+    path = "/home/mpdr/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim"
+  },
   ["material.vim"] = {
     loaded = true,
     path = "/home/mpdr/.local/share/nvim/site/pack/packer/start/material.vim"

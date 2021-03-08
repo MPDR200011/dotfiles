@@ -8,6 +8,7 @@ return require('packer').startup(function()
     use {'preservim/nerdtree'}
     use {'mattn/emmet-vim'}
     use {'airblade/vim-rooter'}
+    use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
 
     -- Proper indentation in tsx/jsx files
     use {'maxmellon/vim-jsx-pretty'}
