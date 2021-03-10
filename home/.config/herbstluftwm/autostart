@@ -232,13 +232,13 @@ if [[ -r "$HOME/.monitor_config" ]]; then
     monitorConfig=$(cat ~/.monitor_config)
     case $monitorConfig in
         0)
-            hc set_monitors 1366x744+0+24
+            hc set_monitors 1366x768+0+0
             ;;
         1)
-            hc set_monitors 1920x1056+0+24 1366x744+1920+24
+            hc set_monitors 1920x1080+0+0 1366x768+1920+0
             ;;
         *)
-            hc set_monitors 1366x744+0+24
+            hc set_monitors 1366x768+0+0
             ;;
     esac
 else
