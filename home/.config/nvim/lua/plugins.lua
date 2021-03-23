@@ -1,7 +1,6 @@
 return require('packer').startup(function()
     use {'wbthomason/packer.nvim'}
     -- Editor tools 
-    use {'sheerun/vim-polyglot'}
     use {'tpope/vim-surround' }
     use {'tpope/vim-fugitive'}
     use {'jiangmiao/auto-pairs'}
