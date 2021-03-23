@@ -2,6 +2,11 @@ local lspconfig = require('lspconfig');
 
 vim.g['completion_confirm_key'] = ''
 
+require'snippets'.use_suggested_mappings()
+
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true;
+
 lspconfig.clangd.setup{
     on_attach = require'completion'.on_attach,
 }
@@ -9,6 +14,12 @@ lspconfig.clangd.setup{
 lspconfig.tsserver.setup {
     on_attach = require'completion'.on_attach,
     root_dir = lspconfig.util.root_pattern('tsconfig.json'),
+}
+
+lspconfig.cssls.setup{
+    capabilities = capabilities,
+    on_attach = require'completion'.on_attach,
+    root_dir = lspconfig.util.root_pattern('package.json', 'Gemfile'),
 }
 
 lspconfig.jedi_language_server.setup {

@@ -96,6 +96,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mpdr/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
+  ["snippets.nvim"] = {
+    loaded = true,
+    path = "/home/mpdr/.local/share/nvim/site/pack/packer/start/snippets.nvim"
+  },
   ["telescope-fzy-native.nvim"] = {
     loaded = true,
     path = "/home/mpdr/.local/share/nvim/site/pack/packer/start/telescope-fzy-native.nvim"

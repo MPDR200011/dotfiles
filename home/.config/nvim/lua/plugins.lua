@@ -26,6 +26,7 @@ return require('packer').startup(function()
     -- autocomplete
     use {'neovim/nvim-lspconfig'}
     use {'nvim-lua/completion-nvim'}
+    use {'norcalli/snippets.nvim'}
 
     -- For colors in css files, very helpful
     use {'ap/vim-css-color'}
