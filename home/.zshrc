@@ -1,9 +1,5 @@
-export CC=/usr/bin/gcc
-export CXX=/usr/bin/g++
-
 # If you come from bash you might have to change your $PATH.
 export PATH=~/.local/bin:/opt/dotnet:$PATH
-
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/mpdr/.oh-my-zsh"
@@ -16,7 +12,7 @@ export PATH=$JAVA_HOME/bin:$PATH
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="avit"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
