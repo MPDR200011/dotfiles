@@ -2,7 +2,7 @@
 # VERSION: 3.0
 SETUVAR __fish_initialized:3100
 SETUVAR __git_plugin_abbreviations:g\x1ega\x1egaa\x1egapa\x1egap\x1egb\x1egba\x1egban\x1egbd\x1egbD\x1egbl\x1egbs\x1egbsb\x1egbsg\x1egbsr\x1egbss\x1egc\x1egc\x21\x1egcn\x21\x1egca\x1egca\x21\x1egcan\x21\x1egcv\x1egcav\x1egcav\x21\x1egcm\x1egcam\x1egscam\x1egcfx\x1egcf\x1egcl\x1egclean\x1egclean\x21\x1egclean\x21\x21\x1egcount\x1egcp\x1egcpa\x1egcpc\x1egd\x1egdca\x1egds\x1egdsc\x1egdw\x1egdwc\x1egignore\x1egf\x1egfa\x1egfm\x1egfo\x1egl\x1egll\x1eglr\x1eglg\x1eglgg\x1eglgga\x1eglo\x1eglog\x1eglom\x1eglod\x1egloo\x1egm\x1egmt\x1egp\x1egp\x21\x1egpo\x1egpo\x21\x1egpv\x1egpv\x21\x1eggp\x21\x1egpu\x1egr\x1egra\x1egrb\x1egrba\x1egrbc\x1egrbi\x1egrbm\x1egrbmi\x1egrbmia\x1egrbd\x1egrbdi\x1egrbdia\x1egrbs\x1egrev\x1egrh\x1egrhh\x1egrm\x1egrmc\x1egrmv\x1egrrm\x1egrs\x1egrset\x1egrss\x1egrup\x1egrv\x1egsh\x1egsd\x1egsr\x1egss\x1egst\x1egsta\x1egstd\x1egstp\x1egsts\x1egsu\x1egsur\x1egsuri\x1egts\x1egtv\x1egsw\x1egswc\x1egunignore\x1egup\x1egwch\x1egco\x1egcb\x1egcod\x1egcom\x1egfb\x1egff\x1egfr\x1egfh\x1egfs\x1egfbs\x1egffs\x1egfrs\x1egfhs\x1egfss\x1egfbt\x1egfft\x1egfrt\x1egfht\x1egfst\x1egfp
-SETUVAR __git_plugin_initialized:Tue\x20Jan\x20\x205\x2010\x3a40\x3a54\x20PM\x20WET\x202021
+SETUVAR __git_plugin_initialized:Fri\x20Mar\x2012\x2012\x3a17\x3a16\x20AM\x20WET\x202021
 SETUVAR _fish_abbr_cfg:fish_config
 SETUVAR _fish_abbr_copy:alacritty
 SETUVAR _fish_abbr_dup:\x24TERMINAL\x20\x26\x20\x26\x26\x20disown
@@ -41,7 +41,7 @@ SETUVAR _fish_abbr_gcm:git\x20commit\x20\x2dm
 SETUVAR _fish_abbr_gcn_21_:git\x20commit\x20\x2dv\x20\x2d\x2dno\x2dedit\x20\x2d\x2damend
 SETUVAR _fish_abbr_gco:git\x20checkout
 SETUVAR _fish_abbr_gcod:git\x20checkout\x20develop
-SETUVAR _fish_abbr_gcom:git\x20checkout\x20master
+SETUVAR _fish_abbr_gcom:git\x20checkout\x20\x28__git\x2edefault_branch\x29
 SETUVAR _fish_abbr_gcount:git\x20shortlog\x20\x2dsn
 SETUVAR _fish_abbr_gcp:git\x20cherry\x2dpick
 SETUVAR _fish_abbr_gcpa:git\x20cherry\x2dpick\x20\x2d\x2dabort
@@ -64,7 +64,7 @@ SETUVAR _fish_abbr_gfft:git\x20flow\x20feature\x20track
 SETUVAR _fish_abbr_gfh:git\x20flow\x20hotfix
 SETUVAR _fish_abbr_gfhs:git\x20flow\x20hotfix\x20start
 SETUVAR _fish_abbr_gfht:git\x20flow\x20hotfix\x20track
-SETUVAR _fish_abbr_gfm:git\x20fetch\x20origin\x20master\x20\x2d\x2dprune\x3b\x20and\x20git\x20merge\x20FETCH_HEAD
+SETUVAR _fish_abbr_gfm:git\x20fetch\x20origin\x20\x28__git\x2edefault_branch\x29\x20\x2d\x2dprune\x3b\x20and\x20git\x20merge\x20FETCH_HEAD
 SETUVAR _fish_abbr_gfo:git\x20fetch\x20origin
 SETUVAR _fish_abbr_gfp:git\x20flow\x20publish
 SETUVAR _fish_abbr_gfr:git\x20flow\x20release
@@ -83,7 +83,7 @@ SETUVAR _fish_abbr_gll:git\x20pull\x20origin
 SETUVAR _fish_abbr_glo:git\x20log\x20\x2d\x2doneline\x20\x2d\x2ddecorate\x20\x2d\x2dcolor
 SETUVAR _fish_abbr_glod:git\x20log\x20\x2d\x2doneline\x20\x2d\x2ddecorate\x20\x2d\x2dcolor\x20develop\x2e\x2e
 SETUVAR _fish_abbr_glog:git\x20log\x20\x2d\x2doneline\x20\x2d\x2ddecorate\x20\x2d\x2dcolor\x20\x2d\x2dgraph
-SETUVAR _fish_abbr_glom:git\x20log\x20\x2d\x2doneline\x20\x2d\x2ddecorate\x20\x2d\x2dcolor\x20master\x2e\x2e
+SETUVAR _fish_abbr_glom:git\x20log\x20\x2d\x2doneline\x20\x2d\x2ddecorate\x20\x2d\x2dcolor\x20\x28__git\x2edefault_branch\x29\x2e\x2e
 SETUVAR _fish_abbr_gloo:git\x20log\x20\x2d\x2dpretty\x3dformat\x3a\x27\x25C\x28yellow\x29\x25h\x20\x25Cred\x25ad\x20\x25Cblue\x25an\x25Cgreen\x25d\x20\x25Creset\x25s\x27\x20\x2d\x2ddate\x3dshort
 SETUVAR _fish_abbr_glr:git\x20pull\x20\x2d\x2drebase
 SETUVAR _fish_abbr_gm:git\x20merge
@@ -101,12 +101,12 @@ SETUVAR _fish_abbr_grb:git\x20rebase
 SETUVAR _fish_abbr_grba:git\x20rebase\x20\x2d\x2dabort
 SETUVAR _fish_abbr_grbc:git\x20rebase\x20\x2d\x2dcontinue
 SETUVAR _fish_abbr_grbd:git\x20rebase\x20develop
-SETUVAR _fish_abbr_grbdi:git\x20rebase\x20master\x20\x2d\x2dinteractive
-SETUVAR _fish_abbr_grbdia:git\x20rebase\x20master\x20\x2d\x2dinteractive\x20\x2d\x2dautosquash
+SETUVAR _fish_abbr_grbdi:git\x20rebase\x20\x28__git\x2edefault_branch\x29\x20\x2d\x2dinteractive
+SETUVAR _fish_abbr_grbdia:git\x20rebase\x20\x28__git\x2edefault_branch\x29\x20\x2d\x2dinteractive\x20\x2d\x2dautosquash
 SETUVAR _fish_abbr_grbi:git\x20rebase\x20\x2d\x2dinteractive
-SETUVAR _fish_abbr_grbm:git\x20rebase\x20master
-SETUVAR _fish_abbr_grbmi:git\x20rebase\x20master\x20\x2d\x2dinteractive
-SETUVAR _fish_abbr_grbmia:git\x20rebase\x20master\x20\x2d\x2dinteractive\x20\x2d\x2dautosquash
+SETUVAR _fish_abbr_grbm:git\x20rebase\x20\x28__git\x2edefault_branch\x29
+SETUVAR _fish_abbr_grbmi:git\x20rebase\x20\x28__git\x2edefault_branch\x29\x20\x2d\x2dinteractive
+SETUVAR _fish_abbr_grbmia:git\x20rebase\x20\x28__git\x2edefault_branch\x29\x20\x2d\x2dinteractive\x20\x2d\x2dautosquash
 SETUVAR _fish_abbr_grbs:git\x20rebase\x20\x2d\x2dskip
 SETUVAR _fish_abbr_grev:git\x20revert
 SETUVAR _fish_abbr_grh:git\x20reset
