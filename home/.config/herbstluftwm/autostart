@@ -161,6 +161,7 @@ hc keybind $Mod-Shift-v spawn pavucontrol
 hc keybind $Mod-Shift-x spawn powermenu
 hc keybind $Mod-d spawn rofi -show run
 hc keybind $Mod-Shift-w spawn rofi -show window
+hc keybind $Mod-Control-s spawn flameshot gui
 
 # theme
 hc attr theme.tiling.reset 1
