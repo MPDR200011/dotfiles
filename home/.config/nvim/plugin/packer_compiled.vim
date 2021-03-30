@@ -136,10 +136,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mpdr/.local/share/nvim/site/pack/packer/start/vim-jsx-pretty"
   },
-  ["vim-polyglot"] = {
-    loaded = true,
-    path = "/home/mpdr/.local/share/nvim/site/pack/packer/start/vim-polyglot"
-  },
   ["vim-rooter"] = {
     loaded = true,
     path = "/home/mpdr/.local/share/nvim/site/pack/packer/start/vim-rooter"
