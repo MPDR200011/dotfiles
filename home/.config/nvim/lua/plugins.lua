@@ -42,4 +42,7 @@ return require('packer').startup(function()
     -- Airline
     use {'vim-airline/vim-airline'}
     use {'vim-airline/vim-airline-themes'}
+
+    -- Firenvim, nvim in browser
+    use { 'glacambre/firenvim', run = function() vim.fn['firenvim#install'](42) end }
 end)
