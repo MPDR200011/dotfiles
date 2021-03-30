@@ -27,3 +27,6 @@ let ayucolor='dark'
 set background=dark
 colorscheme zephyr
 let g:airline_theme='zenburn'
+
+hi Comment gui=italic
+
