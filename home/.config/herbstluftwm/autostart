@@ -14,7 +14,7 @@ xsetroot -solid '#5A8E3A'
 pkill compton
 pkill pasystray
 pkill flameshot
-pkill polychromatic-tray-applet
+pkill polychromatic-t
 
 # Compositor
 picom --config ~/.config/picom.conf -b
