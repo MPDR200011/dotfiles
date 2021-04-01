@@ -1,5 +1,7 @@
 lua require('plugins')
 
+set mouse=a
+
 " Clear keybinds
 nmapc
 imapc
@@ -20,6 +22,9 @@ nnoremap <silent> <C-Left> :vertical resize +3<CR>
 nnoremap <silent> <C-Right> :vertical resize -3<CR>
 nnoremap <A-u> :tabp<CR>
 nnoremap <A-i> :tabn<CR>
+
+nnoremap n nzzzv
+nnoremap n Nzzzv
 
 nnoremap <leader>s :update<CR>
 nnoremap <leader>g :G

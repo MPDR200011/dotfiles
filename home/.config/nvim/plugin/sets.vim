@@ -11,7 +11,6 @@ set signcolumn=yes
 set scrolloff=5
 
 " default settings
-set exrc
 set relativenumber
 set nu
 set nohlsearch
