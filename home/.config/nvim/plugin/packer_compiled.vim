@@ -44,6 +44,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mpdr/.local/share/nvim/site/pack/packer/start/cobalt2.vim"
   },
+  ["colorbuddy.nvim"] = {
+    loaded = true,
+    path = "/home/mpdr/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim"
+  },
   ["completion-nvim"] = {
     loaded = true,
     path = "/home/mpdr/.local/share/nvim/site/pack/packer/start/completion-nvim"
@@ -51,6 +55,10 @@ _G.packer_plugins = {
   dracula = {
     loaded = true,
     path = "/home/mpdr/.local/share/nvim/site/pack/packer/start/dracula"
+  },
+  edge = {
+    loaded = true,
+    path = "/home/mpdr/.local/share/nvim/site/pack/packer/start/edge"
   },
   ["emmet-vim"] = {
     loaded = true,
@@ -80,6 +88,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mpdr/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
   },
+  ["nvim-rdark"] = {
+    loaded = true,
+    path = "/home/mpdr/.local/share/nvim/site/pack/packer/start/nvim-rdark"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/mpdr/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
@@ -103,6 +115,10 @@ _G.packer_plugins = {
   ["snippets.nvim"] = {
     loaded = true,
     path = "/home/mpdr/.local/share/nvim/site/pack/packer/start/snippets.nvim"
+  },
+  sonokai = {
+    loaded = true,
+    path = "/home/mpdr/.local/share/nvim/site/pack/packer/start/sonokai"
   },
   ["telescope-fzy-native.nvim"] = {
     loaded = true,

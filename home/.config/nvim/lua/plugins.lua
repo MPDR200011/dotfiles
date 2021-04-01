@@ -31,6 +31,7 @@ return require('packer').startup(function()
     use {'ap/vim-css-color'}
 
     -- Color Themes
+    use {'tjdevries/colorbuddy.nvim'}
     use {'gruvbox-community/gruvbox'}
     use {'dracula/vim', as = 'dracula'}
     use {'MPDR200011/material.vim', branch = 'main'}
@@ -38,6 +39,10 @@ return require('packer').startup(function()
     use {'ajmwagar/vim-deus'}
     use {'glepnir/zephyr-nvim'}
     use {'herrbischoff/cobalt2.vim'}
+    use {'RishabhRD/nvim-rdark'}
+    use {'sainnhe/sonokai'}
+    use {'sainnhe/edge'}
+    use {'ghifarit53/tokyonight-vim'}
 
     -- Airline
     use {'vim-airline/vim-airline'}
