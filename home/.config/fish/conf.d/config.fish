@@ -20,6 +20,8 @@ end
 abbr -a -U -- ra ranger
 
 set -x PATH "$PATH:$HOME/.gem/ruby/2.7.0/bin:$HOME/.local/bin"
+
+# Android stuff
 set -x ANDROID_HOME "$HOME/Android/Sdk"
 set -x ANDROID_SDK_ROOT "$HOME/Android/Sdk"
 set -x PATH "$PATH:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools"
