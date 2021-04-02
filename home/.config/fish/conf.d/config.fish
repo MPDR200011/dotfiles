@@ -2,6 +2,7 @@
 set fish_greeting
 
 set -x TERMINAL alacritty
+set -x EDITOR nvim
 
 abbr -a -U -- l 'ls -l --group-directories-first'
 abbr -a -U -- la 'ls -la --group-directories-first'
