@@ -24,7 +24,7 @@ nnoremap <A-u> :tabp<CR>
 nnoremap <A-i> :tabn<CR>
 
 nnoremap n nzzzv
-nnoremap n Nzzzv
+nnoremap N Nzzzv
 
 nnoremap <leader>s :update<CR>
 nnoremap <leader>g :G
