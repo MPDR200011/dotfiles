@@ -27,6 +27,8 @@ return require('packer').startup(function()
     use {'nvim-lua/completion-nvim'}
     use {'norcalli/snippets.nvim'}
 
+    use {'iamcco/diagnostic-languageserver'}
+
     -- For colors in css files, very helpful
     use {'ap/vim-css-color'}
 
