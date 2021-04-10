@@ -10,16 +10,9 @@ xmapc
 smapc
 vmapc
 
+lua require('mpdr.init')
+
 "Key Binds
-let g:mapleader=" "
-nnoremap <C-K> <C-W>k
-nnoremap <C-J> <C-W>j
-nnoremap <C-L> <C-W>l
-nnoremap <C-H> <C-W>h
-nnoremap <silent> <C-Up> :resize -3<CR>
-nnoremap <silent> <C-Down> :resize +3<CR>
-nnoremap <silent> <C-Left> :vertical resize +3<CR>
-nnoremap <silent> <C-Right> :vertical resize -3<CR>
 nnoremap <A-u> :tabp<CR>
 nnoremap <A-i> :tabn<CR>
 
@@ -40,6 +33,7 @@ inoremap jj <esc>
 
 tnoremap <A-u> <C-\><C-n>:tabp<CR>
 tnoremap <A-i> <C-\><C-n>:tabn<CR>
+tnoremap JJ <C-\><C-n>
 
 " Syntax hl and line numbers
 syntax enable
