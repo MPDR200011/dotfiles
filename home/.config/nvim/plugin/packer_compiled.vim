@@ -72,6 +72,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mpdr/.local/share/nvim/site/pack/packer/start/gruvbox"
   },
+  harpoon = {
+    loaded = true,
+    path = "/home/mpdr/.local/share/nvim/site/pack/packer/start/harpoon"
+  },
   ["markdown-preview.nvim"] = {
     loaded = true,
     path = "/home/mpdr/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim"
@@ -128,6 +132,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mpdr/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
+  ["tokyonight-vim"] = {
+    loaded = true,
+    path = "/home/mpdr/.local/share/nvim/site/pack/packer/start/tokyonight-vim"
+  },
   ["vim-airline"] = {
     loaded = true,
     path = "/home/mpdr/.local/share/nvim/site/pack/packer/start/vim-airline"
@@ -151,6 +159,10 @@ _G.packer_plugins = {
   ["vim-jsx-pretty"] = {
     loaded = true,
     path = "/home/mpdr/.local/share/nvim/site/pack/packer/start/vim-jsx-pretty"
+  },
+  ["vim-polyglot"] = {
+    loaded = true,
+    path = "/home/mpdr/.local/share/nvim/site/pack/packer/start/vim-polyglot"
   },
   ["vim-rooter"] = {
     loaded = true,

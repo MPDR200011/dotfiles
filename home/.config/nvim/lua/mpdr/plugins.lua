@@ -8,6 +8,10 @@ return require('packer').startup(function()
     use {'mattn/emmet-vim'}
     use {'airblade/vim-rooter'}
     use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
+    use {'sheerun/vim-polyglot'}
+
+    -- harpoon
+    use {'ThePrimeagen/harpoon'}
 
     -- Proper indentation in tsx/jsx files
     use {'maxmellon/vim-jsx-pretty'}
@@ -27,13 +31,12 @@ return require('packer').startup(function()
     use {'nvim-lua/completion-nvim'}
     use {'norcalli/snippets.nvim'}
 
-    use {'iamcco/diagnostic-languageserver'}
-
     -- For colors in css files, very helpful
     use {'ap/vim-css-color'}
 
-    -- Color Themes
+    -- Some themes use colorbuddy so I'm installing it
     use {'tjdevries/colorbuddy.nvim'}
+    -- Color Themes
     use {'gruvbox-community/gruvbox'}
     use {'dracula/vim', as = 'dracula'}
     use {'MPDR200011/material.vim', branch = 'main'}
@@ -46,7 +49,8 @@ return require('packer').startup(function()
     use {'sainnhe/edge'}
     use {'ghifarit53/tokyonight-vim'}
 
-    -- Airline
+    -- Airline 
+    -- TODO: look into alternative, I'm sure there is some new hot plugin for this
     use {'vim-airline/vim-airline'}
     use {'vim-airline/vim-airline-themes'}
 
