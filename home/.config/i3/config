@@ -217,7 +217,7 @@ bindsym $mod+equal exec =
 #powermenu
 bindsym $mod+Shift+x exec powermenu
 
-exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id ~/.config/i3/launch_polybar.sh
 exec_always --no-startup-id ~/polybar-scripts/spotify/launchlistener.sh
 exec_always --no-startup-id nm-applet
 exec_always --no-startup-id pasystray
