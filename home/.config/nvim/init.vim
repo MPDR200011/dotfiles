@@ -38,4 +38,3 @@ tnoremap JJ <C-\><C-n>
 " Syntax hl and line numbers
 syntax enable
 filetype plugin indent on
-
