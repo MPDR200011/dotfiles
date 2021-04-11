@@ -5,7 +5,6 @@ local g = vim.g
 
 opt('o', 'shell', 'fish')
 
-
 g.mapleader = ' '
 g.maplocalleader = ' '
 g.polyglot_disabled = { "autoindent", "sensible" }
@@ -18,4 +17,5 @@ map('n', '<leader>P', '"+P')
 
 require('mpdr.firenvim')
 require('mpdr.lsp')
+require('mpdr.nerdtree')
 require('mpdr.themes')
