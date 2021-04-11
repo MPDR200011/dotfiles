@@ -30,14 +30,14 @@ g.polyglot_disabled = { "autoindent", "sensible" }
 -- Navigate between tabs
 map('n', '<A-u>', ':tabp<CR>')
 map('n', '<A-i>', ':tabn<CR>')
-map('i', '<A-u>', '<C-\><C-n>:tabp<CR>')
-map('i', '<A-i>', '<C-\><C-n>:tabn<CR>')
-map('t', '<A-u>', '<C-\><C-n>:tabp<CR>')
-map('t', '<A-i>', '<C-\><C-n>:tabn<CR>')
+map('i', '<A-u>', '<C-\\><C-n>:tabp<CR>')
+map('i', '<A-i>', '<C-\\><C-n>:tabn<CR>')
+map('t', '<A-u>', '<C-\\><C-n>:tabp<CR>')
+map('t', '<A-i>', '<C-\\><C-n>:tabn<CR>')
 
 -- Easy normal mode shortcuts
 map('i', 'jj', '<esc>')
-map('t', 'JJ', '<C-\><C-n>')
+map('t', 'JJ', '<C-\\><C-n>')
 
 -- Keep cursor centered when searching
 map('n', 'n', 'nzzzv')
