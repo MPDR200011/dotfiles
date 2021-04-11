@@ -15,3 +15,5 @@ map('n', '<leader>Y', '"+yg_', {silent=false})
 map('n', '<leader>y', '"+y')
 map('n', '<leader>p', '"+p')
 map('n', '<leader>P', '"+P')
+
+require('mpdr.themes')
