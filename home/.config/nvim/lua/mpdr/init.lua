@@ -17,4 +17,5 @@ map('n', '<leader>p', '"+p')
 map('n', '<leader>P', '"+P')
 
 require('mpdr.firenvim')
+require('mpdr.lsp')
 require('mpdr.themes')

@@ -1,6 +1,10 @@
-local lspconfig = require('lspconfig');
+local lspconfig = require('lspconfig')
 
-vim.g['completion_confirm_key'] = ''
+local g = vim.g
+local map = require('mpdr.utils').map
+local opt = require('mpdr.utils').opt
+
+g['completion_confirm_key'] = ''
 
 require'snippets'.use_suggested_mappings()
 
@@ -35,3 +39,20 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
     }
 )
 
+map('n', '<leader>ld', ':lua vim.lsp.buf.definition()<CR>')
+map('n', '<leader>li', ':lua vim.lsp.buf.implementation()<CR>')
+map('n', '<leader>lsh', ':lua vim.lsp.buf.signature_help()<CR>')
+map('n', '<leader>lrr', ':lua vim.lsp.buf.references()<CR>')
+map('n', '<leader>lrn', ':lua vim.lsp.buf.rename()<CR>')
+map('n', '<leader>lh', ':lua vim.lsp.buf.hover()<CR>')
+map('n', '<leader>lca', ':lua vim.lsp.buf.code_action()<CR>')
+map('n', '<leader>lsd', ':lua vim.lsp.diagnostic.show_line_diagnostics()<CR>')
+map('n', '<leader>lnd', ':lua vim.lsp.diagnostic.goto_next()<CR>')
+
+-- autocomplete settings
+opt('o', 'completeopt', 'menuone,noinsert,noselect')
+g.completion_matching_strategy_list = { 'exact', 'substring', 'fuzzy' }
+
+-- Use tab to cicle autocomplete sugestions
+map('i', '<tab>', [[pumvisible() ? "\<C-n>" : "\<TAB>"]], {expr=true})
+map('i', '<s-tab>', [[pumvisible() ? "\<C-p>" : "\<C-h>"]], {expr=true})
