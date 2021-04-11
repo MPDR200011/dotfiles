@@ -1,4 +1,6 @@
 local actions = require('telescope.actions')
+local map = require('mpdr.utils').map
+
 -- Global remapping
 ------------------------------
 require('telescope').setup{
@@ -30,3 +32,8 @@ require('telescope').setup{
 }
 
 require('telescope').load_extension('fzy_native')
+
+map('n', '<c-p>', '<cmd>Telescope find_files<cr>')
+map('n', '<leader>fr', '<cmd>Telescope live_grep<cr>')
+map('n', '<leader>fb', '<cmd>Telescope buffers<cr>')
+map('n', '<leader>fh', '<cmd>Telescope help_tags<cr>')
