@@ -10,8 +10,6 @@ xmapc
 smapc
 vmapc
 
-lua require('mpdr.init')
-
 "Key Binds
 nnoremap <A-u> :tabp<CR>
 nnoremap <A-i> :tabn<CR>
@@ -38,3 +36,5 @@ tnoremap JJ <C-\><C-n>
 " Syntax hl and line numbers
 syntax enable
 filetype plugin indent on
+
+lua require('mpdr.init')
