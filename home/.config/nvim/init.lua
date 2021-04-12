@@ -22,10 +22,13 @@ cmd [[xmapc]]
 cmd [[smapc]]
 cmd [[vmapc]]
 
-
 g.mapleader = ' '
 g.maplocalleader = ' '
 g.polyglot_disabled = { "autoindent", "sensible" }
+
+-- Stop the stupid q: menu from appearing
+map('n', 'q:', ':q')
+map('n', 'Q', '<Nop>')
 
 -- Navigate between tabs
 map('n', '<A-u>', ':tabp<CR>')
