@@ -39,15 +39,15 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
     }
 )
 
-map('n', '<leader>ld', ':lua vim.lsp.buf.definition()<CR>')
-map('n', '<leader>li', ':lua vim.lsp.buf.implementation()<CR>')
-map('n', '<leader>lsh', ':lua vim.lsp.buf.signature_help()<CR>')
-map('n', '<leader>lrr', ':lua vim.lsp.buf.references()<CR>')
-map('n', '<leader>lrn', ':lua vim.lsp.buf.rename()<CR>')
-map('n', '<leader>lh', ':lua vim.lsp.buf.hover()<CR>')
-map('n', '<leader>lca', ':lua vim.lsp.buf.code_action()<CR>')
-map('n', '<leader>lsd', ':lua vim.lsp.diagnostic.show_line_diagnostics()<CR>')
-map('n', '<leader>lnd', ':lua vim.lsp.diagnostic.goto_next()<CR>')
+map('n', '<leader>ld', '<Cmd>lua vim.lsp.buf.definition()<CR>')
+map('n', '<leader>li', '<Cmd>lua vim.lsp.buf.implementation()<CR>')
+map('n', '<leader>lsh', '<Cmd>lua vim.lsp.buf.signature_help()<CR>')
+map('n', '<leader>lrr', '<Cmd>lua vim.lsp.buf.references()<CR>')
+map('n', '<leader>lrn', '<Cmd>lua vim.lsp.buf.rename()<CR>')
+map('n', '<leader>lh', '<Cmd>lua vim.lsp.buf.hover()<CR>')
+map('n', '<leader>lca', '<Cmd>lua vim.lsp.buf.code_action()<CR>')
+map('n', '<leader>lsd', '<Cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>')
+map('n', '<leader>lnd', '<Cmd>lua vim.lsp.diagnostic.goto_next()<CR>')
 
 -- autocomplete settings
 opt('o', 'completeopt', 'menuone,noinsert,noselect')

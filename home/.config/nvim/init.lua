@@ -27,7 +27,6 @@ g.maplocalleader = ' '
 g.polyglot_disabled = { "autoindent", "sensible" }
 
 -- Stop the stupid q: menu from appearing
-map('n', 'q:', ':q')
 map('n', 'Q', '<Nop>')
 
 -- Navigate between tabs
@@ -46,11 +45,11 @@ map('t', 'JJ', '<C-\\><C-n>')
 map('n', 'n', 'nzzzv')
 map('n', 'N', 'Nzzzv')
 
-map('n', '<leader>s', ':update<CR>')
-map('n', '<leader>g', ':G')
+map('n', '<leader>s', '<Cmd>update<CR>')
+map('n', '<leader>gs', '<Cmd>G<CR>')
 
 -- Create a terminal
-map('n', '<leader>cte', ':tabe<CR>:terminal<CR>')
+map('n', '<leader>cte', '<Cmd>tabe<CR><Cmd>terminal<CR>')
 
 -- Move selection by one line and keep it indented, thanks ThePrimeagen for the
 -- tip

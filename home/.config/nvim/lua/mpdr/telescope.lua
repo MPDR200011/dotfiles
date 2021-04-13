@@ -33,7 +33,7 @@ require('telescope').setup{
 
 require('telescope').load_extension('fzy_native')
 
-map('n', '<c-p>', '<cmd>Telescope find_files<cr>')
-map('n', '<leader>fr', '<cmd>Telescope live_grep<cr>')
-map('n', '<leader>fb', '<cmd>Telescope buffers<cr>')
-map('n', '<leader>fh', '<cmd>Telescope help_tags<cr>')
+map('n', '<c-p>', '<Cmd>Telescope find_files<CR>')
+map('n', '<leader>fr', '<Cmd>Telescope live_grep<CR>')
+map('n', '<leader>fb', '<Cmd>Telescope buffers<CR>')
+map('n', '<leader>fh', '<Cmd>Telescope help_tags<CR>')
