@@ -55,8 +55,13 @@ return require('packer').startup(function()
 
     -- Airline 
     -- TODO: look into alternative, I'm sure there is some new hot plugin for this
-    use {'vim-airline/vim-airline'}
-    use {'vim-airline/vim-airline-themes'}
+    use {
+        'glepnir/galaxyline.nvim',
+        config = function() require('mpdr.galaxyline') end,
+        requires = {'kyazdani42/nvim-web-devicons', opt = true}
+    }
+    -- use {'vim-airline/vim-airline'}
+    -- use {'vim-airline/vim-airline-themes'}
 
     -- Firenvim, nvim in browser
     use { 'glacambre/firenvim', run = function() vim.fn['firenvim#install'](42) end }
