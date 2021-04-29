@@ -9,6 +9,8 @@ return require('packer').startup(function()
     use {'airblade/vim-rooter'}
     use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
     use {'sheerun/vim-polyglot'}
+    use {'ThePrimeagen/git-worktree.nvim'}
+    use {'akinsho/nvim-toggleterm.lua'}
 
     -- harpoon
     use {'ThePrimeagen/harpoon'}
