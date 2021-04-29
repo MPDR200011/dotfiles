@@ -1,13 +1,13 @@
-local lspconfig = require('lspconfig')
-
 local g = vim.g
 local map = require('mpdr.utils').map
 local opt = require('mpdr.utils').opt
 
 g['completion_confirm_key'] = ''
 
-require'snippets'.use_suggested_mappings()
+local snippets = require('snippets')
+local lspconfig = require('lspconfig')
 
+snippets.use_suggested_mappings()
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true;
 
@@ -16,6 +16,7 @@ lspconfig.clangd.setup{
 }
 
 lspconfig.tsserver.setup {
+    capabilities = capabilities,
     on_attach = require'completion'.on_attach,
     root_dir = lspconfig.util.root_pattern('tsconfig.json'),
 }
@@ -56,3 +57,24 @@ g.completion_matching_strategy_list = { 'exact', 'substring', 'fuzzy' }
 -- Use tab to cicle autocomplete sugestions
 map('i', '<tab>', [[pumvisible() ? "\<C-n>" : "\<TAB>"]], {expr=true})
 map('i', '<s-tab>', [[pumvisible() ? "\<C-p>" : "\<C-h>"]], {expr=true})
+
+-- Snippets
+local U = require('snippets.utils');
+snippets.snippets = {
+    _global = {
+        todo = "TODO(mpdr): ";
+    };
+    typescriptreact = {
+        ["newComponent"] = U.match_indentation [[
+import React from 'react';
+
+const $1: React.FC = () => {
+    return (
+        <>
+        </>
+    );
+};
+
+export default $1;]]
+    };
+}
