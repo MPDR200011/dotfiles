@@ -14,8 +14,8 @@ cmd [[let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"]]
 g.deus_termcolors=256
 
 -- Material Theme settings
-g.material_theme_style='ocean'
-g.material_terminal_italics = 1
+g.material_style = 'deep ocean'
+g.material_italic_comments = 1
 
 -- Gruvbox settings
 g.gruvbox_bold=0
@@ -32,7 +32,7 @@ g.sonokai_disable_italic_comment = 1
 
 -- Setting actual theme
 opt('o', 'background', 'dark')
-cmd [[colorscheme nvim-rdark]]
+cmd [[colorscheme material]]
 g.airline_theme='zenburn'
 
 cmd [[hi Comment gui=italic]]

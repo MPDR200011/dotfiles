@@ -39,7 +39,7 @@ return require('packer').startup(function()
     -- Color Themes
     use {'gruvbox-community/gruvbox'}
     use {'dracula/vim', as = 'dracula'}
-    use {'MPDR200011/material.vim', branch = 'main'}
+    use {'marko-cerovac/material.nvim', branch = 'pure-lua'}
     use {'ayu-theme/ayu-vim'}
     use {'ajmwagar/vim-deus'}
     use {'glepnir/zephyr-nvim'}
