@@ -109,6 +109,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
+    # family: Iosevka Term
     # family: mononoki Nerd Font
     # family: TerminessTTF Nerd Font
     family: UbuntuMono Nerd Font
