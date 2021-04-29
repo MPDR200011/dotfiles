@@ -12,6 +12,9 @@ return require('packer').startup(function()
     use {'ThePrimeagen/git-worktree.nvim'}
     use {'akinsho/nvim-toggleterm.lua'}
 
+    -- vimwiki
+    use {'vimwiki/vimwiki'}
+
     -- harpoon
     use {'ThePrimeagen/harpoon'}
 
