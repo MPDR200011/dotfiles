@@ -66,17 +66,22 @@ return require('packer').startup(function()
     use {'RishabhRD/nvim-rdark'}
     use {'sainnhe/sonokai'}
     use {'sainnhe/edge'}
-    use {'ghifarit53/tokyonight-vim'}
+    use {'folke/tokyonight.nvim'}
+    use {'tomasiser/vim-code-dark'}
+    use {'rafamadriz/neon'}
+    use {'novakne/kosmikoa.nvim'}
 
     -- Airline 
     -- TODO: look into alternative, I'm sure there is some new hot plugin for this
+    -- use {'vim-airline/vim-airline'}
+    -- use {'vim-airline/vim-airline-themes'}
+
     use {
         'glepnir/galaxyline.nvim',
+        branch = 'main',
         config = function() require('mpdr.galaxyline') end,
         requires = {'kyazdani42/nvim-web-devicons', opt = true}
     }
-    -- use {'vim-airline/vim-airline'}
-    -- use {'vim-airline/vim-airline-themes'}
 
     -- Firenvim, nvim in browser
     use { 'glacambre/firenvim', run = function() vim.fn['firenvim#install'](42) end }

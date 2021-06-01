@@ -30,9 +30,17 @@ g.sonokai_style = 'andromeda'
 g.sonokai_enable_italic = 1
 g.sonokai_disable_italic_comment = 1
 
+--Tokyonight settings
+vim.g.tokyonight_style = "night"
+
+-- Neon settings
+vim.g.neon_style = "dark"
+vim.g.neon_italic_keyword = true
+vim.g.neon_italic_function = true
+
 -- Setting actual theme
 opt('o', 'background', 'dark')
-cmd [[colorscheme material]]
+cmd [[colorscheme codedark]]
 g.airline_theme='zenburn'
 
 cmd [[hi Comment gui=italic]]
