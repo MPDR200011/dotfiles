@@ -4,7 +4,8 @@ return require('packer').startup(function()
     use {'tpope/vim-surround' }
     use {'tpope/vim-fugitive'}
     use {'jiangmiao/auto-pairs'}
-    use {'preservim/nerdtree'}
+    use {'preservim/nerdtree'} -- remove?
+    use {'kyazdani42/nvim-tree.lua'}
     use {'mattn/emmet-vim'}
     use {'airblade/vim-rooter'}
     use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
