@@ -1,8 +1,15 @@
 return require('packer').startup(function()
     use {'wbthomason/packer.nvim'}
+
     -- Editor tools 
     use {'tpope/vim-surround' }
-    use {'tpope/vim-fugitive'}
+    -- use {'tpope/vim-fugitive'} -- remove?
+    use {
+        'TimUntersberger/neogit',
+        requires = {
+          'sindrets/diffview.nvim'
+        }
+    }
     use {'jiangmiao/auto-pairs'}
     use {'preservim/nerdtree'} -- remove?
     use {'kyazdani42/nvim-tree.lua'}
