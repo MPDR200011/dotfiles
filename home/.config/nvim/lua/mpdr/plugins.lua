@@ -46,6 +46,7 @@ return require('packer').startup(function()
     use {'neovim/nvim-lspconfig'}
     use {'nvim-lua/completion-nvim'}
     use {'norcalli/snippets.nvim'}
+    use {'glepnir/lspsaga.nvim'}
 
     -- For colors in css files, very helpful
     use {'ap/vim-css-color'}

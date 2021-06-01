@@ -78,3 +78,7 @@ const $1: React.FC = () => {
 export default $1;]]
     };
 }
+
+local saga = require('lspsaga')
+
+saga.init_lsp_saga { }
