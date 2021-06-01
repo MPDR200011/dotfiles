@@ -13,6 +13,16 @@ return require('packer').startup(function()
     use {'ThePrimeagen/git-worktree.nvim'}
     use {'akinsho/nvim-toggleterm.lua'}
 
+    use {
+        'lewis6991/spellsitter.nvim',
+        config = function()
+            require('spellsitter').setup({
+                hl = 'SpellBad',
+                captures = {},
+            })
+        end
+    }
+
     -- vimwiki
     use {'vimwiki/vimwiki'}
 
