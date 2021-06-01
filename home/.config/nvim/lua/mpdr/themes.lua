@@ -2,7 +2,6 @@ local opt = require('mpdr.utils').opt
 local g = vim.g
 local cmd = vim.cmd
 
-opt('o', 't_Co', '256')
 opt('o', 'termguicolors', true)
 
 cmd [[let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"]]
