@@ -85,7 +85,7 @@ font-1 = "Material Design Icons:size=14:antialias=true;2"
 
 modules-left = i3 spotify
 modules-center = xwindow 
-modules-right = covid filesystem backlight-acpi pulseaudio xkeyboard cpu memory battery temperature date 
+modules-right = covid backlight-acpi pulseaudio xkeyboard battery temperature date 
 
 tray-position = right
 tray-padding = 2
