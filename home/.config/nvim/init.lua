@@ -25,6 +25,7 @@ cmd [[vmapc]]
 g.mapleader = ' '
 g.maplocalleader = ' '
 g.polyglot_disabled = { "autoindent", "sensible" }
+g.guifont = "JetBrains Mono:h16"
 
 -- Stop the stupid q: menu from appearing
 map('n', 'Q', '<Nop>')
@@ -45,11 +46,13 @@ map('t', 'JJ', '<C-\\><C-n>')
 map('n', 'n', 'nzzzv')
 map('n', 'N', 'Nzzzv')
 
-map('n', '<leader>s', '<Cmd>update<CR>')
-map('n', '<leader>gs', '<Cmd>G<CR>')
+-- Keep mouse position when joining lines
+map('n', 'J', 'mzJ`z')
 
--- Create a terminal
-map('n', '<leader>cte', '<Cmd>tabe<CR><Cmd>terminal<CR>')
+map('n', '<leader>s', '<Cmd>update<CR>')
+
+-- Git status
+map('n', '<leader>gs', '<Cmd>G<CR>')
 
 -- Move selection by one line and keep it indented, thanks ThePrimeagen for the
 -- tip
@@ -62,6 +65,18 @@ map('n', '<leader>Y', '"+yg_', {silent=false})
 map('n', '<leader>y', '"+y')
 map('n', '<leader>p', '"+p')
 map('n', '<leader>P', '"+P')
+
+-- Copy from cursor to end of line
+map('n', 'Y', 'y$')
+
+function undo_breakpoint(character)
+    map('i', character, character .. '<C-g>u')
+end
+
+undo_breakpoint('.')
+undo_breakpoint(',')
+undo_breakpoint('?')
+undo_breakpoint('!')
 
 require('mpdr.firenvim')
 require('mpdr.harpoon')

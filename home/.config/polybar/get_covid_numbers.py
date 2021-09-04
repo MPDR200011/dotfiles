@@ -18,4 +18,4 @@ active = data['active']
 cases = data['todayCases']
 recovered = data['todayRecovered']
 
-print(f"Active Cases: {data['active']} ({cases - recovered})")
+print(f"Active Cases: {active} ({cases - recovered})")

@@ -640,6 +640,6 @@ format-prefix = 󰂧
 format-underline = #fd0000
 interval = 3600
 
-exec = ~/.config/polybar/get_covid_numbers.py Portugal
+exec = ~/.config/polybar/get_covid_numbers.py Ireland
 
 ; vim:ft=dosini

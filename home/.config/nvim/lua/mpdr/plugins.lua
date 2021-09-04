@@ -2,7 +2,8 @@ return require('packer').startup(function()
     use {'wbthomason/packer.nvim'}
 
     -- Editor tools 
-    use {'tpope/vim-surround' }
+    -- use {'tpope/vim-surround' }
+    use {'blackCauldron7/surround.nvim'}
     -- use {'tpope/vim-fugitive'} -- remove?
     use {
         'TimUntersberger/neogit',
@@ -11,7 +12,7 @@ return require('packer').startup(function()
         }
     }
     use {'jiangmiao/auto-pairs'}
-    use {'preservim/nerdtree'} -- remove?
+    -- use {'preservim/nerdtree'} -- remove?
     use {'kyazdani42/nvim-tree.lua'}
     use {'mattn/emmet-vim'}
     use {'airblade/vim-rooter'}
@@ -49,11 +50,13 @@ return require('packer').startup(function()
     use {'nvim-telescope/telescope.nvim'}
     use {'nvim-telescope/telescope-fzy-native.nvim'}
 
-    -- autocomplete
+    -- lsp-stuff
     use {'neovim/nvim-lspconfig'}
     use {'nvim-lua/completion-nvim'}
     use {'norcalli/snippets.nvim'}
     use {'glepnir/lspsaga.nvim'}
+    use {'folke/lsp-colors.nvim'}
+
 
     -- For colors in css files, very helpful
     use {'ap/vim-css-color'}
@@ -64,7 +67,7 @@ return require('packer').startup(function()
     use {'gruvbox-community/gruvbox'}
     use {'dracula/vim', as = 'dracula'}
     use {'yonlu/omni.vim'}
-    use {'marko-cerovac/material.nvim', branch = 'pure-lua'}
+    use {'marko-cerovac/material.nvim'}
     use {'bluz71/vim-moonfly-colors'}
     use {'ayu-theme/ayu-vim'}
     use {'ajmwagar/vim-deus'}

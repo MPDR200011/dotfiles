@@ -39,7 +39,7 @@ vim.g.neon_italic_function = true
 
 -- Setting actual theme
 opt('o', 'background', 'dark')
-cmd [[colorscheme codedark]]
+cmd [[colorscheme tokyonight]]
 g.airline_theme='zenburn'
 
 cmd [[hi Comment gui=italic]]
