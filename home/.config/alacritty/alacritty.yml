@@ -110,9 +110,9 @@ font:
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
     # family: Iosevka Term
-    # family: mononoki Nerd Font
+    family: mononoki Nerd Font
     # family: TerminessTTF Nerd Font
-    family: UbuntuMono Nerd Font
+    # family: UbuntuMono Nerd Font
     # family: Jetbrains Mono
 
     # The `style` can be specified to pick a specific face.
