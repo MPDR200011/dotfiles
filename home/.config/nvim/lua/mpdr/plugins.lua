@@ -6,7 +6,7 @@ return require('packer').startup(function()
     use {
         "blackCauldron7/surround.nvim",
         config = function()
-            require('surround').setup {mappings_style = 'sandwich'}
+            require('surround').setup {mappings_style = 'surround'}
         end
     }
     -- use {'tpope/vim-fugitive'} -- remove?
