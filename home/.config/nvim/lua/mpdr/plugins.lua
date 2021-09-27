@@ -10,12 +10,15 @@ return require('packer').startup(function()
         end
     }
     -- use {'tpope/vim-fugitive'} -- remove?
+
+    -- Git
     use {
         'TimUntersberger/neogit',
         requires = {
           'sindrets/diffview.nvim'
         }
     }
+
     use {'jiangmiao/auto-pairs'}
     -- use {'preservim/nerdtree'} -- remove?
     use {'kyazdani42/nvim-tree.lua'}
