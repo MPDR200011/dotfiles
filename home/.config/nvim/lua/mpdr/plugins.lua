@@ -3,7 +3,12 @@ return require('packer').startup(function()
 
     -- Editor tools 
     -- use {'tpope/vim-surround' }
-    use {'blackCauldron7/surround.nvim'}
+    use {
+        "blackCauldron7/surround.nvim",
+        config = function()
+            require('surround').setup {mappings_style = 'sandwich'}
+        end
+    }
     -- use {'tpope/vim-fugitive'} -- remove?
     use {
         'TimUntersberger/neogit',
