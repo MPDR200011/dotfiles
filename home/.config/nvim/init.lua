@@ -85,6 +85,8 @@ require('mpdr.neogit')
 require('mpdr.nvimtree')
 require('mpdr.telescope')
 require('mpdr.worktree')
+require('mpdr.surround')
 require('mpdr.themes')
 require('mpdr.toggleterm')
 require('mpdr.treesitter')
+

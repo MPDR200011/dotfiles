@@ -4,10 +4,7 @@ return require('packer').startup(function()
     -- Editor tools 
     -- use {'tpope/vim-surround' }
     use {
-        "blackCauldron7/surround.nvim",
-        config = function()
-            require('surround').setup {mappings_style = 'surround'}
-        end
+        "blackCauldron7/surround.nvim"
     }
     -- use {'tpope/vim-fugitive'} -- remove?
 
