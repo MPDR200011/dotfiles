@@ -40,7 +40,4 @@ set -x XDG_CONFIG_DIRS "/etc/xdg"
 set -x GNUPGHOME "$XDG_CONFIG_HOME/gnupg"
 set -x CCACHE_CONFIGPATH "$XDG_CONFIG_HOME/ccache"
 
-direnv hook fish | source
-
-source ~/.asdf/asdf.fish
 # File cleanup
