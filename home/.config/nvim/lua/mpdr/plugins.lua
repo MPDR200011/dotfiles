@@ -80,6 +80,9 @@ return require('packer').startup(function()
     use {'tomasiser/vim-code-dark'}
     use {'rafamadriz/neon'}
     use {'novakne/kosmikoa.nvim'}
+    use {'mcchrish/zenbones.nvim'}
+    use {'EdenEast/nightfox.nvim'}
+
 
     -- Airline 
     -- TODO: look into alternative, I'm sure there is some new hot plugin for this
