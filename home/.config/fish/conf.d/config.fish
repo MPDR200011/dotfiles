@@ -20,7 +20,7 @@ end
 
 abbr -a -U -- ra ranger
 
-set -x PATH "$PATH:$HOME/.gem/ruby/2.7.0/bin:$HOME/.local/bin"
+set -x PATH "$PATH:$HOME/.gem/ruby/2.7.0/bin:$HOME/.local/bin:$HOME/bin"
 
 # Android stuff
 set -x ANDROID_HOME "$HOME/Android/Sdk"
@@ -40,4 +40,3 @@ set -x XDG_CONFIG_DIRS "/etc/xdg"
 set -x GNUPGHOME "$XDG_CONFIG_HOME/gnupg"
 set -x CCACHE_CONFIGPATH "$XDG_CONFIG_HOME/ccache"
 
-# File cleanup
