@@ -89,9 +89,7 @@ return require('packer').startup(function()
     -- use {'vim-airline/vim-airline-themes'}
 
     use {
-        'glepnir/galaxyline.nvim',
-        branch = 'main',
-        config = function() require('mpdr.galaxyline') end,
+        'shadmansaleh/lualine.nvim',
         requires = {'kyazdani42/nvim-web-devicons', opt = true}
     }
 
