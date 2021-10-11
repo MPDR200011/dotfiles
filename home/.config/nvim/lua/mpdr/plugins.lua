@@ -59,7 +59,6 @@ return require('packer').startup(function()
     use {'neovim/nvim-lspconfig'}
     use {'nvim-lua/completion-nvim'}
     use {'norcalli/snippets.nvim'}
-    use {'glepnir/lspsaga.nvim'}
     use {'folke/lsp-colors.nvim'}
 
 
@@ -75,16 +74,11 @@ return require('packer').startup(function()
     use {'marko-cerovac/material.nvim'}
     use {'bluz71/vim-moonfly-colors'}
     use {'ayu-theme/ayu-vim'}
-    use {'ajmwagar/vim-deus'}
-    use {'glepnir/zephyr-nvim'}
-    use {'herrbischoff/cobalt2.vim'}
-    use {'RishabhRD/nvim-rdark'}
     use {'sainnhe/sonokai'}
     use {'sainnhe/edge'}
     use {'folke/tokyonight.nvim'}
     use {'tomasiser/vim-code-dark'}
     use {'rafamadriz/neon'}
-    use {'novakne/kosmikoa.nvim'}
     use {'mcchrish/zenbones.nvim'}
     use {'EdenEast/nightfox.nvim'}
 
