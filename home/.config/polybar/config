@@ -27,44 +27,10 @@ primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
 
-[bar/herbsluftwm]
-monitor = ${env:MONITOR:eDP-1}
-width = 100%
-height = 24
-radius = 0
-fixed-center = false
-
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-line-size = 3
-line-color = #f00
-
-padding-left = 0
-padding-right = 0
-
-module-margin-left = 1
-module-margin-right = 2
-
-font-0 = "Noto Sans:pixelsize=10"
-font-1 = "Material Design Icons:size=14:antialias=true;2"
-
-modules-left = ewmh bspwm i3 spotify
-modules-center = xwindow 
-modules-right = covid filesystem backlight-acpi pulseaudio xkeyboard cpu memory battery temperature date 
-
-tray-position = right
-tray-padding = 2
-tray-transparent = true
-
-cursor-click = pointer
-cursor-scroll = ns-resize
-enable-ipc = true
-
 [bar/i3]
 monitor = ${env:MONITOR:eDP-1}
 width = 100%
-height = 24
+height = 35
 radius = 0
 fixed-center = false
 
@@ -80,8 +46,8 @@ padding-right = 0
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = "Noto Sans:pixelsize=10"
-font-1 = "Material Design Icons:size=14:antialias=true;2"
+font-0 = "Noto Sans:pixelsize=16"
+font-1 = "Material Design Icons:size=20:antialias=true;2"
 
 modules-left = i3 spotify
 modules-center = xwindow 
@@ -90,6 +56,7 @@ modules-right = covid backlight-acpi pulseaudio xkeyboard battery temperature da
 tray-position = right
 tray-padding = 2
 tray-transparent = true
+tray-maxsize = 35
 
 cursor-click = pointer
 cursor-scroll = ns-resize
