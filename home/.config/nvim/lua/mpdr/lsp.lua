@@ -4,31 +4,52 @@ local opt = require('mpdr.utils').opt
 
 g['completion_confirm_key'] = ''
 
-local snippets = require('snippets')
+local cmp = require'cmp'
+
+cmp.setup({
+    snippet = {
+        expand = function(args)
+            -- For `ultisnips` user.
+            -- vim.fn["UltiSnips#Anon"](args.body)
+        end,
+    },
+    mapping = {
+        ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+        ['<C-f>'] = cmp.mapping.scroll_docs(4),
+        ['<C-Space>'] = cmp.mapping.complete(),
+        ['<C-e>'] = cmp.mapping.close(),
+        ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    },
+    sources = {
+        { name = 'nvim_lsp' },
+
+        -- { name = 'ultisnips' },
+
+        { name = 'buffer' },
+    }
+})
+
 local lspconfig = require('lspconfig')
 
-snippets.use_suggested_mappings()
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true;
+require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 lspconfig.clangd.setup{
-    on_attach = require'completion'.on_attach,
+    capabilities = capabilities
 }
 
 lspconfig.tsserver.setup {
     capabilities = capabilities,
-    on_attach = require'completion'.on_attach,
     root_dir = lspconfig.util.root_pattern('tsconfig.json'),
 }
 
 lspconfig.cssls.setup{
     capabilities = capabilities,
-    on_attach = require'completion'.on_attach,
     root_dir = lspconfig.util.root_pattern('package.json', 'Gemfile'),
 }
 
 lspconfig.pylsp.setup {
-    on_attach = require'completion'.on_attach,
+    capabilities = capabilities
 }
 
 vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
@@ -47,27 +68,6 @@ g.completion_matching_strategy_list = { 'exact', 'substring', 'fuzzy' }
 -- Use tab to cicle autocomplete sugestions
 -- map('i', '<tab>', [[pumvisible() ? "\<C-n>" : "\<TAB>"]], {expr=true})
 -- map('i', '<s-tab>', [[pumvisible() ? "\<C-p>" : "\<C-h>"]], {expr=true})
-
--- Snippets
-local U = require('snippets.utils');
-snippets.snippets = {
-    _global = {
-        todo = "TODO(mpdr): ";
-    };
-    typescriptreact = {
-        ["newComponent"] = U.match_indentation [[
-import React from 'react';
-
-const $1: React.FC = () => {
-    return (
-        <>
-        </>
-    );
-};
-
-export default $1;]]
-    };
-}
 
 map('n', '<leader>ld', '<Cmd>lua vim.lsp.buf.definition()<CR>')
 map('n', '<leader>li', '<Cmd>lua vim.lsp.buf.implementation()<CR>')
