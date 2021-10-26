@@ -189,9 +189,13 @@ exec_always pkill pasystray
 exec_always pkill flameshot
 
 # System settings
-exec_always xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Natural Scrolling Enabled" 1
-exec_always xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Tapping Enabled" 1
-exec_always xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Disable While Typing Enabled" 0
+exec_always xinput set-prop "MSFT0001:00 06CB:CE78 Touchpad" "libinput Natural Scrolling Enabled" 1
+exec_always xinput set-prop "MSFT0001:00 06CB:CE78 Touchpad" "libinput Tapping Enabled" 1
+exec_always xinput set-prop "MSFT0001:00 06CB:CE78 Touchpad" "libinput Disable While Typing Enabled" 0
+
+# set external mouse sensitivity
+exec_always xinput set-prop 9 185 0.800000, 0.000000, 0.000000, 0.000000, 0.800000, 0.000000, 0.000000, 0.000000, 1.000000
+
 exec_always xset r rate 300 30
 
 exec_always setxkbmap -layout "us,pt" -option "grp:alt_space_toggle" -option ctrl:nocaps
