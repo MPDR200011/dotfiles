@@ -6,7 +6,6 @@ return require('packer').startup(function()
     use {
         "blackCauldron7/surround.nvim"
     }
-    -- use {'tpope/vim-fugitive'} -- remove?
 
     -- Git
     use {
@@ -17,7 +16,6 @@ return require('packer').startup(function()
     }
 
     use {'jiangmiao/auto-pairs'}
-    -- use {'preservim/nerdtree'} -- remove?
     use {'kyazdani42/nvim-tree.lua'}
     use {'mattn/emmet-vim'}
     use {'airblade/vim-rooter'}
@@ -38,6 +36,8 @@ return require('packer').startup(function()
 
     -- vimwiki
     use {'vimwiki/vimwiki'}
+
+    use {'kristijanhusak/orgmode.nvim'}
 
     -- harpoon
     use {'ThePrimeagen/harpoon'}
