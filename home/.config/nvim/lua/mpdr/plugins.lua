@@ -92,7 +92,7 @@ return require('packer').startup(function()
     -- use {'vim-airline/vim-airline-themes'}
 
     use {
-        'shadmansaleh/lualine.nvim',
+        'nvim-lualine/lualine.nvim',
         requires = {'kyazdani42/nvim-web-devicons', opt = true}
     }
 
