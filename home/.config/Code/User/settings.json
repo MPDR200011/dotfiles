@@ -57,7 +57,7 @@
     "gitlens.currentLine.enabled": false,
     "sqltools.useNodeRuntime": true,
     "editor.codeLens": false,
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 2,
     "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -93,4 +93,5 @@
     },
     "editor.fontSize": 16,
     "workbench.statusBar.visible": true,
+    "workbench.colorTheme": "Default Dark+",
 }
