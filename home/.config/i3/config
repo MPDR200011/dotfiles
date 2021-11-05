@@ -193,9 +193,6 @@ exec_always xinput set-prop "MSFT0001:00 06CB:CE78 Touchpad" "libinput Natural S
 exec_always xinput set-prop "MSFT0001:00 06CB:CE78 Touchpad" "libinput Tapping Enabled" 1
 exec_always xinput set-prop "MSFT0001:00 06CB:CE78 Touchpad" "libinput Disable While Typing Enabled" 0
 
-# set external mouse sensitivity
-exec_always xinput set-prop 9 185 0.800000, 0.000000, 0.000000, 0.000000, 0.800000, 0.000000, 0.000000, 0.000000, 1.000000
-
 exec_always xset r rate 300 30
 
 exec_always setxkbmap -layout "us,pt" -option "grp:alt_space_toggle" -option ctrl:nocaps
@@ -209,8 +206,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 
 # Touchpad controls
 bindsym XF86TouchpadToggle exec ~/scripts/touchpad.sh # toggle touchpad
