@@ -19,6 +19,8 @@ cmp.setup({
         ['<C-Space>'] = cmp.mapping.complete(),
         ['<C-e>'] = cmp.mapping.close(),
         ['<CR>'] = cmp.mapping.confirm({ select = true }),
+        ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' }),
+        ['<S-Tab>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 's' }),
     },
     sources = {
         { name = 'nvim_lsp' },
@@ -36,7 +38,8 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 lspconfig.clangd.setup{
-    capabilities = capabilities
+    capabilities = capabilities,
+    root_dir = lspconfig.util.root_pattern("compile_commands.json", "compile_flags.txt", ".git")
 }
 
 lspconfig.tsserver.setup {
@@ -65,10 +68,6 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
 -- autocomplete settings
 opt('o', 'completeopt', 'menuone,noinsert,noselect')
 g.completion_matching_strategy_list = { 'exact', 'substring', 'fuzzy' }
-
--- Use tab to cicle autocomplete sugestions
--- map('i', '<tab>', [[pumvisible() ? "\<C-n>" : "\<TAB>"]], {expr=true})
--- map('i', '<s-tab>', [[pumvisible() ? "\<C-p>" : "\<C-h>"]], {expr=true})
 
 map('n', '<leader>ld', '<Cmd>lua vim.lsp.buf.definition()<CR>')
 map('n', '<leader>li', '<Cmd>lua vim.lsp.buf.implementation()<CR>')
