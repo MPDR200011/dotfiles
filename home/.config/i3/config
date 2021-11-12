@@ -238,7 +238,7 @@ exec_always --no-startup-id blueman-applet
 exec redshift-qt
 exec --no-startup-id polychromatic-tray-applet
 
-exec_always --no-startup-id feh --bg-scale ~/WHAREHOUSE/Coises/Imagens/Backgrounds/re\ creators\ wallpaper.jpg
+exec_always --no-startup-id feh --bg-scale ~/Stuff/WHAREHOUSE/Coises/Imagens/Backgrounds/re\ creators\ wallpaper.jpg
 
 # Window management
 for_window [class="^.*"] border pixel 2
