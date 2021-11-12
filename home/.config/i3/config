@@ -197,6 +197,9 @@ exec_always xset r rate 300 30
 
 exec_always setxkbmap -layout "us,pt" -option "grp:alt_space_toggle" -option ctrl:nocaps
 
+# turn off annoying bell
+exec_always xset -b
+
 # suspend button
 bindsym XF86Sleep exec betterlockscreen -s blur
 
