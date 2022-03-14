@@ -3,9 +3,7 @@ return require('packer').startup(function()
 
     -- Editor tools 
     -- use {'tpope/vim-surround' }
-    use {
-        "blackCauldron7/surround.nvim"
-    }
+    use { 'echasnovski/mini.nvim', branch = 'stable' }
 
     -- Git
     use {

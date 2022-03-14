@@ -48,7 +48,7 @@ require('nightfox').setup({
     comments = "italic", -- change style of comments to be italic
   },
   inverse = {
-    match_paren = true, -- inverse the highlighting of match_parens
+    match_paren = false, -- inverse the highlighting of match_parens
   },
   hlgroups = {
     TSPunctDelimiter = { fg = "${red}" }, -- Override a highlight group with the color red

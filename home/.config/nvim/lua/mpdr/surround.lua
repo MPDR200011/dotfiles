@@ -1,3 +1,1 @@
-require('surround').setup {
-    mappings_style = "surround"
-}
+require('mini.surround').setup({ })

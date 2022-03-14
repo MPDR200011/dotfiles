@@ -4,8 +4,6 @@ local map = utils.map
 local cmd = vim.cmd
 local g = vim.g
 
-require('mpdr.plugins')
-
 opt('o', 'shell', 'fish')
 
 opt('o', 'mouse', 'a')
@@ -24,8 +22,10 @@ cmd [[vmapc]]
 
 g.mapleader = ' '
 g.maplocalleader = ' '
-g.polyglot_disabled = { "autoindent", "sensible" }
+g.polyglot_disabled = { 'autoindent', 'sensible' }
 g.guifont = "JetBrains Mono:h16"
+
+require('mpdr.plugins')
 
 -- Stop the stupid q: menu from appearing
 map('n', 'Q', '<Nop>')
