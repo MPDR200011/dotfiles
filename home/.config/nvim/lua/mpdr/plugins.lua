@@ -82,6 +82,7 @@ return require('packer').startup(function()
     use {'rafamadriz/neon'}
     use {'mcchrish/zenbones.nvim'}
     use {'EdenEast/nightfox.nvim'}
+    use {'rebelot/kanagawa.nvim'}
 
 
     -- Airline 
