@@ -42,24 +42,24 @@ vim.g.neon_italic_keyword = true
 vim.g.neon_italic_function = true
 
 -- Nigthfox settings
-require('nightfox').setup({
-  options = {
-    styles = {
-      comments = "italic", -- change style of comments to be italic
-    },
-    inverse = {
-      match_paren = false, -- inverse the highlighting of match_parens
-    }
-  },
-  groups = {
-    TSPunctDelimiter = { fg = "${red}" }, -- Override a highlight group with the color red
-    LspCodeLens = { bg = "#000000", style = "italic" },
-  }
-})
+-- require('nightfox').setup({
+--   options = {
+--     styles = {
+--       comments = "italic", -- change style of comments to be italic
+--     },
+--     inverse = {
+--       match_paren = false, -- inverse the highlighting of match_parens
+--     }
+--   },
+--   groups = {
+--     TSPunctDelimiter = { fg = "${red}" }, -- Override a highlight group with the color red
+--     LspCodeLens = { bg = "#000000", style = "italic" },
+--   }
+-- })
 
 -- Setting actual theme
 opt('o', 'background', 'dark')
-cmd [[colorscheme kanagawa]]
+cmd [[colorscheme tokyonight]]
 g.airline_theme='zenburn'
 
 cmd [[hi Comment gui=italic]]

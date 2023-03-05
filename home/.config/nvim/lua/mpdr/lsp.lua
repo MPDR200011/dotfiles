@@ -35,7 +35,7 @@ cmp.setup({
 local lspconfig = require('lspconfig')
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-require('cmp_nvim_lsp').update_capabilities(capabilities)
+require('cmp_nvim_lsp').default_capabilities = capabilities
 
 lspconfig.clangd.setup{
     capabilities = capabilities,

@@ -20,7 +20,7 @@ return require('packer').startup(function()
     use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
     use {'sheerun/vim-polyglot'}
     use {'ThePrimeagen/git-worktree.nvim'}
-    use {'akinsho/nvim-toggleterm.lua'}
+    use {'akinsho/toggleterm.nvim'}
 
     use {
         'lewis6991/spellsitter.nvim',
@@ -34,8 +34,6 @@ return require('packer').startup(function()
 
     -- vimwiki
     use {'vimwiki/vimwiki'}
-
-    use {'kristijanhusak/orgmode.nvim'}
 
     -- harpoon
     use {'ThePrimeagen/harpoon'}
