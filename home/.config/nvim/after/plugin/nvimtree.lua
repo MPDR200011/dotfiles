@@ -1,4 +1,3 @@
-local map = require('mpdr.utils').map
 local g = vim.g
 local cmd = vim.cmd
 
@@ -137,7 +136,7 @@ g.nvim_tree_icons = {
     }
 }
 
-map('n', '<leader>n', ':NvimTreeToggle<CR>')
+vim.keymap.set('n', '<leader>n', ':NvimTreeToggle<CR>')
 
 -- a list of groups can be found at `:help nvim_tree_highlight`
 cmd [[ highlight NvimTreeFolderIcon guibg=blue ]]

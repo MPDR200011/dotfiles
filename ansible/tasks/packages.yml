@@ -1,0 +1,22 @@
+- name: Install packages
+  ansible.builtin.apt:
+    pkg:
+      - git
+      - tmux
+      - make
+      - cmake
+      - unzip
+      - npm
+  become: true
+
+- name: Symlink tmux config
+  ansible.builtin.file:
+    src: "{{ dotfiles_path }}/home/.tmux.conf"
+    dest: $HOME/.tmux.conf
+    state: link
+
+- name: Symlink git config
+  ansible.builtin.file:
+    src: "{{ dotfiles_path }}/home/.gitconfig"
+    dest: $HOME/.gitconfig
+    state: link

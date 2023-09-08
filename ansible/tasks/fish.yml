@@ -1,0 +1,26 @@
+- name: Install fish
+  ansible.builtin.apt:
+    name: fish
+
+- name: Clone oh-my-fish repo
+  git:
+    repo: 'https://github.com/oh-my-fish/oh-my-fish'
+    dest: '/tmp/omf'
+    clone: true
+    update: true
+    force: true
+
+- name: Install OMF
+  ansible.builtin.shell:
+    cmd: /tmp/omf/bin/install -y --offline --noninteractive
+
+- name: Remove existing fish config
+  ansible.builtin.file:
+    path: $HOME/.config/fish
+    state: absent
+
+- name: Symlink dotfiles fish config
+  ansible.builtin.file:
+    src: "{{ dotfiles_path }}/home/.config/fish"
+    dest: $HOME/.config/fish 
+    state: link

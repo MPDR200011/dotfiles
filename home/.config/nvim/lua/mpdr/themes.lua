@@ -1,8 +1,5 @@
-local opt = require('mpdr.utils').opt
 local g = vim.g
 local cmd = vim.cmd
-
-opt('o', 'termguicolors', true)
 
 cmd [[let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"]]
 cmd [[let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"]]
@@ -58,9 +55,8 @@ vim.g.neon_italic_function = true
 -- })
 
 -- Setting actual theme
-opt('o', 'background', 'dark')
-cmd [[colorscheme tokyonight]]
-g.airline_theme='zenburn'
+vim.opt.background = "dark"
+vim.cmd.colorscheme('tokyonight')
 
-cmd [[hi Comment gui=italic]]
+vim.api.nvim_set_hl(0, 'Comment', { italic=true })
 

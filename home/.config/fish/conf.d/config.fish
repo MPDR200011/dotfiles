@@ -14,6 +14,10 @@ abbr -a -U -- xo xdg-open
 abbr -a -U -- mirrors sudo reflector --protocol https --protocol http --latest 50 --number 50 --sort rate --save /etc/pacman.d/mirrorlist
 abbr -a -U -- dup '$TERMINAL & && disown'
 
+function run_ansible_tasks
+    ansible -m ansible.builtin.include_tasks -a $argv[1] -e dotfiles_path="$HOME/dotfiles" -K localhost  
+end
+
 function ranger
     command ranger --choosedir={$HOME}/.rangerdir $argv; set LASTDIR (cat {$HOME}/.rangerdir); cd "$LASTDIR"
 end

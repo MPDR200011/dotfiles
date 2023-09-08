@@ -1,9 +1,39 @@
 return require('packer').startup(function()
-    use {'wbthomason/packer.nvim'}
+    use({'wbthomason/packer.nvim'})
 
-    -- Editor tools 
-    -- use {'tpope/vim-surround' }
-    use { 'echasnovski/mini.nvim', branch = 'stable' }
+    -- telescope
+    use({
+        'nvim-telescope/telescope.nvim', tag='0.1.2', 
+        requires={{'nvim-lua/plenary.nvim'}}
+    })
+    use({'nvim-telescope/telescope-fzy-native.nvim'})
+
+    -- treesitter
+    use({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
+    use('nvim-treesitter/playground')
+
+    -- harpoon
+    use({'ThePrimeagen/harpoon'})
+
+    -- undotree
+    use({'mbbill/undotree'})
+
+    -- lsp
+    use({
+      'VonHeikemen/lsp-zero.nvim',
+      branch = 'v2.x',
+      requires = {
+        -- LSP Support
+        {'neovim/nvim-lspconfig'},             -- Required
+        {'williamboman/mason.nvim'},           -- Optional
+        {'williamboman/mason-lspconfig.nvim'}, -- Optional
+
+        -- Autocompletion
+        {'hrsh7th/nvim-cmp'},     -- Required
+        {'hrsh7th/cmp-nvim-lsp'}, -- Required
+        {'L3MON4D3/LuaSnip'},     -- Required
+      }
+    })
 
     -- Git
     use {
@@ -15,54 +45,12 @@ return require('packer').startup(function()
 
     use {'jiangmiao/auto-pairs'}
     use {'kyazdani42/nvim-tree.lua'}
-    use {'mattn/emmet-vim'}
+
     use {'airblade/vim-rooter'}
-    use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
-    use {'sheerun/vim-polyglot'}
-    use {'ThePrimeagen/git-worktree.nvim'}
     use {'akinsho/toggleterm.nvim'}
 
-    use {
-        'lewis6991/spellsitter.nvim',
-        config = function()
-            require('spellsitter').setup({
-                hl = 'SpellBad',
-                captures = {},
-            })
-        end
-    }
-
-    -- vimwiki
-    use {'vimwiki/vimwiki'}
-
-    -- harpoon
-    use {'ThePrimeagen/harpoon'}
-
-    -- Proper indentation in tsx/jsx files
-    use {'maxmellon/vim-jsx-pretty'}
-
-    -- treesitter
-    use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-    use {'p00f/nvim-ts-rainbow'}
-
-    -- telescope
-    use {'nvim-lua/popup.nvim'}
-    use {'nvim-lua/plenary.nvim'}
-    use {'nvim-telescope/telescope.nvim'}
-    use {'nvim-telescope/telescope-fzy-native.nvim'}
-
-    -- lsp-stuff
-    use {'neovim/nvim-lspconfig'}
-    use {'hrsh7th/cmp-nvim-lsp'}
-    use {'hrsh7th/cmp-buffer'}
-    use {'hrsh7th/nvim-cmp'}
-    -- use {'SirVer/ultisnips'}
-    -- use {'quangnguyen30192/cmp-nvim-ultisnips'}
-    use {'folke/lsp-colors.nvim'}
 
 
-    -- For colors in css files, very helpful
-    use {'ap/vim-css-color'}
 
     -- Some themes use colorbuddy so I'm installing it
     use {'tjdevries/colorbuddy.nvim'}
@@ -81,12 +69,6 @@ return require('packer').startup(function()
     use {'mcchrish/zenbones.nvim'}
     use {'EdenEast/nightfox.nvim'}
     use {'rebelot/kanagawa.nvim'}
-
-
-    -- Airline 
-    -- TODO: look into alternative, I'm sure there is some new hot plugin for this
-    -- use {'vim-airline/vim-airline'}
-    -- use {'vim-airline/vim-airline-themes'}
 
     use {
         'nvim-lualine/lualine.nvim',
