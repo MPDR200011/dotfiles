@@ -56,13 +56,8 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("n", "<leader>lca", function() vim.lsp.buf.code_action() end, opts)
 
   --vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
+
 end)
-
-lsp.setup()
-
-vim.diagnostic.config({
-    virtual_text = true
-})
 
 function MyTelescopeLspCodeActions()
   local ivy_theme = require('telescope.themes').get_ivy()
@@ -73,6 +68,22 @@ end
 
 -- map('n', '<leader>lsd', [[<Cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ border = 'single' })<CR>]])
 -- map('n', '<leader>lnd', '<Cmd>lua vim.lsp.diagnostic.goto_next()<CR>')
+
+require('lspconfig').lua_ls.setup {
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = {'vim', 'use'},
+            },
+        },
+    },
+}
+
+lsp.setup()
+
+vim.diagnostic.config({
+    virtual_text = true
+})
 
 vim.lsp.handlers["textDocument/hover"] =
   vim.lsp.with(vim.lsp.handlers.hover, {
@@ -88,13 +99,3 @@ vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
   }
 )
 
-require('lspconfig').lua_ls.setup {
-    settings = {
-        Lua = {
-            diagnostics = {
-                -- Get the language server to recognize the `vim` global
-                globals = {'vim'},
-            },
-        },
-    },
-}

@@ -36,5 +36,5 @@ vim.keymap.set('n', '<leader>fr', function()
     builtin.grep_string({ search = vim.fn.input("Grep >") })
 end);
 
-vim.kemap.set('n', '<leader>fb', builtin.buffers, {})
-vim.kemap.set('n', '<leader>ft', builtin.treesitter, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>ft', builtin.treesitter, {})

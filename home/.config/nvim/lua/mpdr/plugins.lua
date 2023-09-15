@@ -36,20 +36,26 @@ return require('packer').startup(function()
     })
 
     -- Git
-    use {
-        'TimUntersberger/neogit',
+    use({
+        "NeogitOrg/neogit",
+        dependencies = {
+            "nvim-lua/plenary.nvim",         -- required
+            "nvim-telescope/telescope.nvim", -- optional
+            "sindrets/diffview.nvim",        -- optional
+            "ibhagwan/fzf-lua",              -- optional
+        },
+        config = true
+    })
+
+    use({
+        'echasnovski/mini.surround',
         requires = {
-          'sindrets/diffview.nvim'
-        }
-    }
-
-    use {'jiangmiao/auto-pairs'}
+            {'echasnovski/mini.nvim'}
+        },
+        as = "surround"
+    })
     use {'kyazdani42/nvim-tree.lua'}
-
-    use {'airblade/vim-rooter'}
     use {'akinsho/toggleterm.nvim'}
-
-
 
 
     -- Some themes use colorbuddy so I'm installing it
