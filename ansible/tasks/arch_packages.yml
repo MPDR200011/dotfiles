@@ -1,0 +1,35 @@
+- name: Update keyring
+  community.general.pacman:
+    name: archlinux-keyring
+    state: latest
+    update_cache: true
+  become: true
+
+- name: pacman -Syu
+  community.general.pacman:
+    update_cache: true
+    upgrade: true
+  become: true
+
+- name: Install packages
+  community.general.pacman:
+    name:
+      - base-devel
+      - openssh
+      - git
+      - cmake
+      - npm
+      - unzip
+      - reflector
+      - fish
+  become: true
+
+- name: Backup mirrors
+  ansible.builtin.shell:
+    cmd: cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
+  become: true
+
+- name: Rank mirrors
+  ansible.builtin.shell:
+    cmd: reflector --country Ireland,Portugal,France,Germany --sort age > /etc/pacman.d/mirrorlist
+  become: true

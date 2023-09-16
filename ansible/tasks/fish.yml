@@ -1,7 +1,3 @@
-- name: Install fish
-  ansible.builtin.apt:
-    name: fish
-
 - name: Clone oh-my-fish repo
   git:
     repo: 'https://github.com/oh-my-fish/oh-my-fish'
