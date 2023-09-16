@@ -4,15 +4,11 @@ set fish_greeting
 set -x TERMINAL alacritty
 set -x EDITOR nvim
 
-abbr -a -U -- l 'ls -l --group-directories-first'
-abbr -a -U -- la 'ls -la --group-directories-first'
-abbr -a -U -- pf 'cd ~/WHAREHOUSE/Programacao'
-abbr -a -U -- sshfeuphome 'sshfs up201707329@yoda.fe.up.pt: ~/feup-home'
-abbr -a -U -- umountfeuphome 'fusermount3 -u ~/feup-home'
-abbr -a -U -- v nvim
-abbr -a -U -- xo xdg-open
-abbr -a -U -- mirrors sudo reflector --protocol https --protocol http --latest 50 --number 50 --sort rate --save /etc/pacman.d/mirrorlist
-abbr -a -U -- dup '$TERMINAL & && disown'
+abbr -a -- l 'ls -l --group-directories-first'
+abbr -a -- la 'ls -la --group-directories-first'
+abbr -a -- v nvim
+abbr -a -- xo xdg-open
+abbr -a -- dup '$TERMINAL & && disown'
 
 function run_ansible_tasks
     ansible -m ansible.builtin.include_tasks -a $argv[1] -e dotfiles_path="$HOME/dotfiles" -K localhost  
@@ -22,7 +18,7 @@ function ranger
     command ranger --choosedir={$HOME}/.rangerdir $argv; set LASTDIR (cat {$HOME}/.rangerdir); cd "$LASTDIR"
 end
 
-abbr -a -U -- ra ranger
+abbr -a -- ra ranger
 
 set -x PATH "$PATH:$HOME/.gem/ruby/2.7.0/bin:$HOME/.local/bin:$HOME/bin"
 
