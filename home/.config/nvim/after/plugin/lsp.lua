@@ -7,6 +7,7 @@ lsp.ensure_installed({
     'eslint',
     'clangd',
     'lua_ls',
+    'svelte'
 })
 
 
