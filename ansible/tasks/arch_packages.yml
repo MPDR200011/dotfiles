@@ -22,6 +22,7 @@
       - unzip
       - reflector
       - fish
+      - inetutils
   become: true
 
 - name: Backup mirrors
