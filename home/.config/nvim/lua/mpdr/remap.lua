@@ -6,7 +6,7 @@ vim.cmd [[xmapc]]
 vim.cmd [[smapc]]
 vim.cmd [[vmapc]]
 
-vim.g.mapleader = " "
+vim.keymap.set('n', '<leader>n', '<cmd>Neotree toggle<cr>')
 
 -- Navigate between tabs
 vim.keymap.set('n', '<A-u>', ':tabp<CR>')
