@@ -23,6 +23,9 @@
       - reflector
       - fish
       - inetutils
+      - tmux
+      - ripgrep
+      - fd
   become: true
 
 - name: Backup mirrors

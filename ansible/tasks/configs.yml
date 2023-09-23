@@ -3,3 +3,10 @@
     src: "{{ dotfiles_path }}/home/.gitconfig"
     dest: $HOME/.gitconfig 
     state: link
+
+- name: tmux config
+  ansible.builtin.file:
+    src: "{{ dotfiles_path }}/home/.tmux.conf"
+    dest: $HOME/.tmux.con 
+    state: link
+
