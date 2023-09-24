@@ -30,6 +30,7 @@ let g:clipboard = {
 
 require("lazy").setup({
     { import = "plugins" },
+    { import = "plugins.themes" },
 
     -- telescope
     { 'nvim-telescope/telescope-fzy-native.nvim' },
@@ -37,7 +38,7 @@ require("lazy").setup({
     -- treesitter
     'nvim-treesitter/playground',
 
-    -- Some themes  colorbuddy so I'm installing it
+    -- Some themes require colorbuddy so I'm installing it
     { 'tjdevries/colorbuddy.nvim' },
     -- Color Themes
     { 'gruvbox-community/gruvbox' },
@@ -53,7 +54,7 @@ require("lazy").setup({
     { 'rafamadriz/neon' },
     { 'mcchrish/zenbones.nvim' },
     { 'EdenEast/nightfox.nvim' },
-    { 'rebelot/kanagawa.nvim' }
+    { 'rebelot/kanagawa.nvim' },
 }, {
     defaults = {
         lazy = false

@@ -22,7 +22,8 @@ return {
             'eslint',
             'clangd',
             'lua_ls',
-            'svelte'
+            'svelte',
+            'zls'
         })
 
 

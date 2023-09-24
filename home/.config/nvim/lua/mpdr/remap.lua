@@ -1,12 +1,5 @@
--- Clear keybinds
-vim.cmd [[nmapc]]
-vim.cmd [[imapc]]
-vim.cmd [[tmapc]]
-vim.cmd [[xmapc]]
-vim.cmd [[smapc]]
-vim.cmd [[vmapc]]
-
 vim.keymap.set('n', '<leader>n', '<cmd>Neotree toggle<cr>')
+vim.keymap.set('n', '<c-\\>', vim.cmd.ToggleTerm, {})
 
 -- Navigate between tabs
 vim.keymap.set('n', '<A-u>', ':tabp<CR>')
