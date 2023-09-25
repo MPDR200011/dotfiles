@@ -7,7 +7,7 @@ cmd [[let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"]]
 -- Settings for themes I normally use
 
 -- Deus settings
-g.deus_termcolors=256
+g.deus_termcolors = 256
 
 -- Material Theme settings
 g.material_style = "deep ocean"
@@ -18,12 +18,12 @@ require('material').setup({
 })
 
 -- Gruvbox settings
-g.gruvbox_bold=0
-g.gruvbox_italic=1
-g.gruvbox_contrast_dark='hard'
+g.gruvbox_bold = 0
+g.gruvbox_italic = 1
+g.gruvbox_contrast_dark = 'hard'
 
 -- Ayu settings
-g.ayucolor='dark'
+g.ayucolor = 'dark'
 
 -- Sonokai settings
 g.sonokai_style = 'andromeda'
@@ -58,5 +58,5 @@ vim.g.neon_italic_function = true
 vim.opt.background = "dark"
 vim.cmd.colorscheme('catppuccin')
 
-vim.api.nvim_set_hl(0, 'Comment', { italic=true })
-vim.api.nvim_set_hl(0, 'Cursor', { reverse = true })
+vim.api.nvim_set_hl(0, 'Comment', { italic = true })
+vim.api.nvim_set_hl(0, 'Cursor', { fg='white' })
