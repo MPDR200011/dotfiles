@@ -3,5 +3,8 @@ return {
     dependencies = {
         { 'echasnovski/mini.nvim' }
     },
-    name = "surround"
+    name = "surround",
+    config = function ()
+        require("mini.surround").setup({})
+    end,
 }

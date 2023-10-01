@@ -1,6 +1,7 @@
 {
   "LuaSnip": { "branch": "master", "commit": "c5fb16a934892086d4ba01bac48b77c65435025e" },
   "ayu-vim": { "branch": "master", "commit": "0745635421688ce777f663d13531996cb4da6514" },
+  "catppuccin": { "branch": "main", "commit": "3d9a5ed556e289bce6c1fb0af89ec838360641b2" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "44b16d11215dce86f253ce0c30949813c0a90765" },
   "colorbuddy.nvim": { "branch": "master", "commit": "cdb5b0654d3cafe61d2a845e15b2b4b0e78e752a" },
   "diffview.nvim": { "branch": "main", "commit": "a111d19ccceac6530448d329c63f998f77b5626e" },
@@ -22,6 +23,7 @@
   "neon": { "branch": "main", "commit": "7765aaa7d1cd3804176140644640766e4411c766" },
   "nightfox.nvim": { "branch": "main", "commit": "ee3525fdfbe2ed81270a336ccbe62f433165357b" },
   "nui.nvim": { "branch": "main", "commit": "c8de23342caf8d50b15d6b28368d36a56a69d76f" },
+  "nvim-autopairs": { "branch": "master", "commit": "de4f7138a68d5d5063170f2182fd27faf06b0b54" },
   "nvim-cmp": { "branch": "main", "commit": "5dce1b778b85c717f6614e3f4da45e9f19f54435" },
   "nvim-lspconfig": { "branch": "master", "commit": "ede4114e1fd41acb121c70a27e1b026ac68c42d6" },
   "nvim-treesitter": { "branch": "master", "commit": "af6b3ecea9b3cff18b9244027e23e7f2c34ebdd5" },
