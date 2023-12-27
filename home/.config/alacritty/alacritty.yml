@@ -109,11 +109,11 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    # family: Iosevka Term
-    # family: mononoki Nerd Font
+    # family: Iosevka Term Nerd Font
+    family: mononoki Nerd Font
     # family: TerminessTTF Nerd Font
     # family: UbuntuMono Nerd Font
-    family: Jetbrains Mono
+    # family: JetbrainsMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
@@ -152,7 +152,7 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 12
+  size: 16
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -186,39 +186,37 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
-# Colors (iTerm 2 default theme)
+# Nightfox Alacritty Colors
+# Style: carbonfox
+# Upstream: https://github.com/edeneast/nightfox.nvim/raw/main/extra/carbonfox/nightfox_alacritty.yml
 colors:
   # Default colors
   primary:
-    background: '0x101421'
-    foreground: '0xfffbf6'
-
-  # Cursor colors
-  cursor:
-    text: '0xFFFFFF'
-    cursor: '0xFF261E'
-
+    background: '0x161616'
+    foreground: '0xf2f4f8'
   # Normal colors
   normal:
-    black:   '0x2e2e2e'
-    red:     '0xeb4129'
-    green:   '0xabe047'
-    yellow:  '0xf6c744'
-    blue:    '0x47a0f3'
-    magenta: '0x7b5cb0'
-    cyan:    '0x64dbed'
-    white:   '0xe5e9f0'
-
+    black:   '0x282828'
+    red:     '0xee5396'
+    green:   '0x25be6a'
+    yellow:  '0x08bdba'
+    blue:    '0x78a9ff'
+    magenta: '0xbe95ff'
+    cyan:    '0x33b1ff'
+    white:   '0xdfdfe0'
   # Bright colors
   bright:
-    black:   '0x565656'
-    red:     '0xec5357'
-    green:   '0xc0e17d'
-    yellow:  '0xf9da6a'
-    blue:    '0x49a4f8'
-    magenta: '0xa47de9'
-    cyan:    '0x99faf2'
-    white:   '0xffffff'
+    black:   '0x484848'
+    red:     '0xf16da6'
+    green:   '0x46c880'
+    yellow:  '0x2dc7c4'
+    blue:    '0x8cb6ff'
+    magenta: '0xc8a5ff'
+    cyan:    '0x52bdff'
+    white:   '0xe4e4e5'
+  indexed_colors:
+    - { index: 16, color: '0x3ddbd9' }
+    - { index: 17, color: '0xff7eb6' }
   # Dim colors
   #
   # If the dim colors are not set, they will be calculated automatically based
