@@ -25,7 +25,7 @@
 
 - name: Remove existing neovim config
   ansible.builtin.file:
-    path: $HOME/.config/fish
+    path: $HOME/.config/nvim
     state: absent
 
 - name: Symlink dotfiles neovim config
@@ -33,10 +33,4 @@
     src: "{{ dotfiles_path }}/home/.config/nvim"
     dest: $HOME/.config/nvim 
     state: link
-
-- name: Install packer.nvim
-  ansible.builtin.git:
-    repo: https://github.com/wbthomason/packer.nvim
-    dest: $HOME/.local/share/nvim/site/pack/packer/start/packer.nvim
-    depth: 1
 
