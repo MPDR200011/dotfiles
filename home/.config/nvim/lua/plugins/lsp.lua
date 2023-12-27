@@ -23,7 +23,9 @@ return {
             'clangd',
             'lua_ls',
             'svelte',
-            'zls'
+            'zls',
+            'rust_analyzer',
+            'gopls'
         })
 
 
@@ -64,6 +66,7 @@ return {
 
             vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
             vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
+            vim.keymap.set('n', '<leader>lsd', function() vim.lsp.diagnostic.show_line_diagnostics({ border = 'single' })end,opts)
 
 
             vim.keymap.set("n", "<leader>lrr", function() vim.lsp.buf.references() end, opts)
@@ -81,10 +84,6 @@ return {
             ivy_theme ['layout_config']['height'] = 10
             require('telescope.builtin').lsp_code_actions(ivy_theme)
         end
-        -- map('n', '<Leader>lca', ':lua MyTelescopeLspCodeActions()<CR>')
-
-        -- map('n', '<leader>lsd', [[<Cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ border = 'single' })<CR>]])
-        -- map('n', '<leader>lnd', '<Cmd>lua vim.lsp.diagnostic.goto_next()<CR>')
 
         require('lspconfig').lua_ls.setup {
             settings = {
