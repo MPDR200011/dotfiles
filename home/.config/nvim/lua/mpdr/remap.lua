@@ -1,4 +1,4 @@
-vim.keymap.set('n', '<leader>n', '<cmd>Neotree toggle<cr>')
+vim.keymap.set('n', '<leader>n', '<cmd>Neotree reveal=true toggle=true <cr>')
 vim.keymap.set('n', '<c-\\>', vim.cmd.ToggleTerm, {})
 
 -- Navigate between tabs
