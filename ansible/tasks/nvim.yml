@@ -44,3 +44,13 @@
     dest: $HOME/.config/nvim 
     state: link
 
+- name: Install packages needed by plugins
+  ansible.builtin.dnf:
+    name:
+      - ripgrep
+      - lua
+      - luarocks
+      - tree-sitter
+      - fd
+    state: latest
+  become: true

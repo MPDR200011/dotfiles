@@ -14,12 +14,6 @@ function run_ansible_tasks
     ansible -m ansible.builtin.include_tasks -a $argv[1] -e dotfiles_path="$HOME/dotfiles" -K localhost  
 end
 
-function ranger
-    command ranger --choosedir={$HOME}/.rangerdir $argv; set LASTDIR (cat {$HOME}/.rangerdir); cd "$LASTDIR"
-end
-
-abbr -a -- ra ranger
-
 set -x PATH "$PATH:$HOME/.gem/ruby/2.7.0/bin:$HOME/.local/bin:$HOME/bin"
 
 # Android stuff
