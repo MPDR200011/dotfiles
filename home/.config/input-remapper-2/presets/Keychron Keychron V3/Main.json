@@ -1,0 +1,15 @@
+[
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 58,
+                "origin_hash": "67ca0f996bb304eab79f9074d88752fc"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "Control_L",
+        "name": "CapsLock",
+        "mapping_type": "key_macro"
+    }
+]
