@@ -7,7 +7,7 @@
 
 - name: Configure Brave repository
   ansible.builtin.shell:
-    cmd: dnf config-manager addrepo --id=brave-browser --set=name='Brave Browser' --set=baseurl='https://brave-browser-rpm-release.s3.brave.com/$basearch'
+    cmd: dnf config-manager addrepo --add-or-replace --id=brave-browser --set=name='Brave Browser' --set=baseurl='https://brave-browser-rpm-release.s3.brave.com/$basearch'
   become: true
 
 - name: RPM import brave
