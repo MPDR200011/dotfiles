@@ -16,3 +16,4 @@
     name: input-remapper
     enabled: true
     state: started
+  become: true
