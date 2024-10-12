@@ -1,0 +1,11 @@
+- name: Install tmux
+  ansible.builtin.dnf:
+    name: tmux
+    state: latest
+  become: true
+
+- name: tmux config
+  ansible.builtin.file:
+    src: "{{ dotfiles_path }}/home/.tmux.conf"
+    dest: $HOME/.tmux.conf
+    state: link

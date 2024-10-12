@@ -1,0 +1,11 @@
+- name: Install alacritty
+  ansible.builtin.dnf:
+    name: alacritty
+    state: latest
+  become: true
+
+- name: alacritty config
+  ansible.builtin.file:
+    src: "{{ dotfiles_path }}/home/.config/alacritty"
+    dest: $HOME/.config/alacritty
+    state: link

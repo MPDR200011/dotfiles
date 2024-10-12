@@ -1,3 +1,9 @@
+- name: Install fish
+  ansible.builtin.dnf:
+    name: fish
+    state: latest
+  become: true
+
 - name: Clone oh-my-fish repo
   git:
     repo: 'https://github.com/oh-my-fish/oh-my-fish'

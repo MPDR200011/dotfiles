@@ -1,3 +1,13 @@
+- name: Install required packages for build
+  ansible.builtin.dnf:
+    name:
+      - git
+      - make
+      - cmake
+      - gcc
+    state: latest
+  become: true
+
 - name: Clone neovim
   ansible.builtin.git:
     repo: https://github.com/neovim/neovim.git
