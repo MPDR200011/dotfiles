@@ -1,0 +1,33 @@
+- name: Setup Fedora Workstation
+  hosts:
+    localhost
+  tasks: 
+    - name: Install Flatpak
+      import_tasks: ../tasks/setup_flatpak.yml
+
+    - name: Install ans setup fish 
+      import_tasks: ../tasks/brave_dnf.yml
+      
+    - name: Install and setup NVIM
+      import_tasks: ../tasks/nvim.yml
+
+    - name: Install TMUX
+      import_tasks: ../tasks/tmux.yml
+
+    - name: Install and setup GIT
+      import_tasks: ../tasks/git.yml
+
+    - name: Install and setup Alacritty
+      import_tasks: ../tasks/alacritty.yml
+
+    - name: Install Brave
+      import_tasks: ../tasks/brave_dnf.yml
+
+    - name: Install and setup Input Remapper
+      import_tasks: ../tasks/input-remapper.yml
+
+    - name: Install Spotify
+      import_tasks: ../tasks/spotify.yml
+
+    - name: Install TMUX
+      import_tasks: ../tasks/tmux.yml
