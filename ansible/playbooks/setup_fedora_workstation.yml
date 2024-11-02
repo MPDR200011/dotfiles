@@ -6,7 +6,7 @@
       import_tasks: ../tasks/setup_flatpak.yml
 
     - name: Install ans setup fish 
-      import_tasks: ../tasks/brave_dnf.yml
+      import_tasks: ../tasks/fish.yml
       
     - name: Install and setup NVIM
       import_tasks: ../tasks/nvim.yml
