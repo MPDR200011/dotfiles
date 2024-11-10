@@ -1,6 +1,7 @@
 {
     "version": "2.0.1",
     "autoload": {
-        "Keychron Keychron V3": "Main"
+        "Keychron Keychron V3": "Main",
+        "AT Translated Set 2 keyboard": "Preset"
     }
 }
