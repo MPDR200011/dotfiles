@@ -53,11 +53,11 @@ y = 0
 style = "Italic"
 
 [font.normal]
-family = "mononoki Nerd Font"
-# family = "Iosevka Term Nerd Font
-# family = "TerminessTTF Nerd Font
-# family = "UbuntuMono Nerd Font
-# family = "JetbrainsMono Nerd Font
+# family = "mononoki"
+# family = "Iosevka Term"
+# family = "TerminessTTF"
+# family = "UbuntuMono"
+family = "JetbrainsMono"
 
 [font.offset]
 x = 0
