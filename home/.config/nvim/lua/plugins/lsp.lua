@@ -18,14 +18,7 @@ return {
         lsp.preset("recommended")
 
         lsp.ensure_installed({
-            'ts_ls',
-            'eslint',
-            'clangd',
             'lua_ls',
-            'svelte',
-            'zls',
-            'rust_analyzer',
-            'gopls'
         })
 
 
