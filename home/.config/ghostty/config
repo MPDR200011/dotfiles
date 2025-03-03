@@ -7,3 +7,5 @@ font-family = JetBrainsMono Nerd Font
 font-size = 14
 
 theme = carbonfox
+
+app-notifications = no-clipboard-copy
