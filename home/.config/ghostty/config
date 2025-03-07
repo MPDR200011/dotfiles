@@ -3,7 +3,8 @@ term = xterm-256color
 cursor-style = block
 shell-integration-features = no-cursor
 
-font-family = JetBrainsMono Nerd Font
+font-family = Geist Mono
+font-feature = -liga
 font-size = 14
 
 theme = carbonfox
