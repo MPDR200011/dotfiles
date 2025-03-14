@@ -1,7 +1,5 @@
-vim.keymap.set('n', '<leader>t', '<cmd>Neotree action=focus toggle=true reveal=true<cr>')
-vim.keymap.set('n', '<leader>nb', '<cmd>Neotree action=show source=buffers position=right toggle=true<cr>')
-vim.keymap.set('n', '<c-\\>', vim.cmd.ToggleTerm, {})
-
+-- Stop the stupid q: menu from appearing
+vim.keymap.set('n', 'Q', '<Nop>')
 vim.keymap.set('n', 'q:', '<nop>')
 vim.keymap.set('n', 'Q:', '<nop>')
 
@@ -44,9 +42,6 @@ vim.keymap.set('n', '<leader>Y', '"+Y')
 vim.keymap.set('n', 'Y', 'y$')
 
 vim.keymap.set("i", "<C-c>", "<Esc>")
-
--- Stop the stupid q: menu from appearing
-vim.keymap.set('n', 'Q', '<Nop>')
 
 -- Easy normal mode shortcuts
 vim.keymap.set('i', 'jj', '<esc>')
