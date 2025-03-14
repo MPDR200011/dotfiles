@@ -35,9 +35,6 @@ vim.keymap.set('x', '<leader>p', '"_dP')
 -- Save shortcut
 vim.keymap.set('n', '<leader>s', '<Cmd>update<CR>')
 
--- Git status
-vim.keymap.set('n', '<leader>gs', '<Cmd>G<CR>')
-
 -- Saner clipboard commands
 vim.keymap.set('v', '<leader>y', '"+y')
 vim.keymap.set('n', '<leader>y', '"+y')
