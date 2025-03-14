@@ -1,6 +1,5 @@
 -- Stop the stupid q: menu from appearing
 vim.keymap.set('n', 'Q', '<Nop>')
-vim.keymap.set('n', 'q:', '<nop>')
 vim.keymap.set('n', 'Q:', '<nop>')
 
 -- Navigate between tabs
