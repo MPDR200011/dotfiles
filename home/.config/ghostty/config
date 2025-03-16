@@ -3,9 +3,11 @@ term = xterm-256color
 cursor-style = block
 shell-integration-features = no-cursor
 
-font-family = Geist Mono
+font-family = Monaspace Neon Var
 font-feature = -liga
 font-size = 14
+
+font-variation = wght=400
 
 theme = carbonfox
 
