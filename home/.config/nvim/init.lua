@@ -15,7 +15,7 @@ vim.g.maplocalleader = " "
 vim.g.mapleader = " "
 
 if vim.fn.has('macunix') then
-    vim.api.nvim_set_option("clipboard", "unnamed")
+    vim.opt.clipboard = "unnamedplus"
 else
     vim.cmd [[
     let g:clipboard = {
