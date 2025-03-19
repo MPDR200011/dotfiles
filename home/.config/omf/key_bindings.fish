@@ -1,3 +1,3 @@
-bind --user ctrl-f 'tmux-sessionizer'
-bind --user -M insert ctrl-f 'tmux-sessionizer'
+bind --user \cf 'tmux-sessionizer'
+bind --user -M insert \cf 'tmux-sessionizer'
 
