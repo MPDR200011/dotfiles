@@ -7,7 +7,8 @@ font-family = Monaspace Neon Var
 font-feature = -liga
 font-size = 14
 
-font-variation = wght=400
+font-variation = wght=300
+font-variation = wdth=100
 
 theme = carbonfox
 
