@@ -10,7 +10,6 @@ return {
         -- Autocompletion
         {'hrsh7th/nvim-cmp'},     -- Required
         {'hrsh7th/cmp-nvim-lsp'}, -- Required
-        {'L3MON4D3/LuaSnip'},     -- Required
     },
     config = function ()
         local lsp = require('lsp-zero')
@@ -20,8 +19,6 @@ return {
         lsp.ensure_installed({
             'lua_ls',
         })
-
-
 
         local cmp = require('cmp')
         local cmp_select = {behavior = cmp.SelectBehavior.Select}
@@ -92,18 +89,17 @@ return {
             virtual_text = true
         })
 
-        vim.lsp.handlers["textDocument/hover"] =
-        vim.lsp.with(vim.lsp.handlers.hover, {
+        vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
             -- Use a sharp border with `FloatBorder` highlights
             border = "single",
         })
 
         -- enable border for signature
         vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
-        vim.lsp.handlers.signature_help,
-        {
-            border = "single",
-        }
+            vim.lsp.handlers.signature_help,
+            {
+                border = "single",
+            }
         )
 
     end
