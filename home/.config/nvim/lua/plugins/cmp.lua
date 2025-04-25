@@ -12,8 +12,8 @@ return {
             -- preset = 'default',
             ['<C-p>'] = {"select_prev"},
             ['<C-n>'] = {"select_next"},
-            ['<Tab>'] = {"accept", "snippet_forward"},
-            ['S-<Tab>'] = {"snippet_backward"},
+            ['<Tab>'] = {"accept", "snippet_forward", "fallback"},
+            ['S-<Tab>'] = {"snippet_backward", "fallback"},
             ["<C-Space>"] = { function(cmp) cmp.show({ providers = { 'snippets' } }) end },
         },
 
