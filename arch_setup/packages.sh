@@ -1,10 +1,18 @@
 #!/bin/sh
 
-sudo pacman -Syyu
-sudo pacman -S base-devel git man-db inetutils
-
+# Desktop Setup
 cd $HOME
 mkdir $HOME/personal
+mkdir $HOME/.config/gnupg/
+
+sudo pacman -Syyu
+sudo pacman -S \
+    base-devel git man-db \
+    xorg-xrdb \
+    inetutils \
+    fish tmux ghostty nvim \
+    ansible waybar pavucontrol \
+    bluez bluez-utils bluetui
 
 git clone https://github.com/MPDR200011/dotfiles $HOME/personal/dotfiles
 
@@ -14,14 +22,16 @@ ln -s $DOTFILES_DIR/home/.config/fish/ $HOME/.config/fish/
 ln -s $DOTFILES_DIR/home/.config/omf/ $HOME/.config/omf/
 ln -s $DOTFILES_DIR/home/.config/ghostty/ $HOME/.config/ghostty/
 ln -s $DOTFILES_DIR/home/.config/hypr/ $HOME/.config/hypr/
+ln -s $DOTFILES_DIR/home/.config/fontconfig/ $HOME/.config/fontconfig/
 
 ln -s $DOTFILES_DIR/home/.gitconfig $HOME/.gitconfig
 ln -s $DOTFILES_DIR/home/.tmux.conf $HOME/.tmux.conf
 
 # Setup more tools
+sudo pacman -S fzf
+
 INSTALL_SCRIPTS=$DOTFILES_DIR/arch_setup
 
-sudo pacman -S fish tmux ghostty ansible nvim
 $INSTALL_SCRIPTS/install_yay.sh
 $INSTALL_SCRIPTS/install_omf.sh
 
@@ -31,11 +41,10 @@ $INSTALL_SCRIPTS/setup_git.sh
 chsh -s /usr/bin/fish
 
 # Setup fonts
-# TODO
-
+sudo pacman -S otf-monaspace ttf-monaspace-variable
 
 # Applications
-yay -S yay brave-bin
+yay -S brave-bin 1password
 sudo pacman -S spotify-launcher discord
 
 
