@@ -3,12 +3,11 @@ term = xterm-256color
 cursor-style = block
 shell-integration-features = no-cursor
 
-font-family = Monaspace Neon Var
+font-family = Monaspace Neon
 font-feature = -liga
 font-size = 12
 
-font-variation = wght=400
-font-variation = wdth=100
+adjust-cell-height = 20%
 
 theme = carbonfox
 
