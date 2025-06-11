@@ -52,20 +52,13 @@ require("lazy").setup({
     -- Some themes require colorbuddy so I'm installing it
     { 'tjdevries/colorbuddy.nvim' },
     -- Color Themes
-    { 'gruvbox-community/gruvbox' },
+    { 'xiantang/darcula-dark.nvim' },
     { 'dracula/vim',                name = 'dracula' },
-    { 'yonlu/omni.vim' },
     { 'marko-cerovac/material.nvim' },
     { 'bluz71/vim-moonfly-colors' },
     { 'ayu-theme/ayu-vim' },
-    { 'sainnhe/sonokai' },
-    { 'sainnhe/edge' },
-    { 'folke/tokyonight.nvim' },
     { 'tomasiser/vim-code-dark' },
     { 'rafamadriz/neon' },
-    { 'mcchrish/zenbones.nvim' },
-    { 'EdenEast/nightfox.nvim' },
-    { 'rebelot/kanagawa.nvim' },
     {
         "navarasu/onedark.nvim",
         priority = 1000, -- make sure to load this before all the other start plugins
