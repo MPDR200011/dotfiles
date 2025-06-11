@@ -7,6 +7,7 @@ mkdir $HOME/.config/gnupg/
 
 sudo pacman -Syyu
 sudo pacman -S \
+    hyprlock \
     base-devel git man-db \
     xorg-xrdb \
     inetutils \
