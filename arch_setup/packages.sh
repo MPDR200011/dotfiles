@@ -15,7 +15,7 @@ sudo pacman -S \
     ansible waybar pavucontrol \
     bluez bluez-utils bluetui
 
-git clone https://github.com/MPDR200011/dotfiles $HOME/personal/dotfiles
+cd $DOTFILES_DIR && git remote set-url origin git@github.com:MPDR200011/dotfiles.git && cd $HOME
 
 # link configs
 ln -s $DOTFILES_DIR/home/.config/nvim/ $HOME/.config/nvim/
