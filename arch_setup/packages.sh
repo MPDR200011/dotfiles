@@ -26,6 +26,7 @@ ln -s $DOTFILES_DIR/home/.config/fontconfig/ $HOME/.config/fontconfig/
 
 ln -s $DOTFILES_DIR/home/.gitconfig $HOME/.gitconfig
 ln -s $DOTFILES_DIR/home/.tmux.conf $HOME/.tmux.conf
+ln -s $DOTFILES_DIR/home/.Xresources $HOME/.Xresources
 
 # Setup more tools
 sudo pacman -S fzf
