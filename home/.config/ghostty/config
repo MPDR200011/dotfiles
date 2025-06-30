@@ -8,11 +8,11 @@ shell-integration-features = no-cursor
 
 adjust-cursor-thickness = 2
 
-font-family = Monaspace Neon
+font-family = MonaspiceNe Nerd Font Propo
 font-feature = -liga
 font-size = 12
 
-adjust-cell-height = 20%
+adjust-cell-height = 25%
 
 theme = Abernathy
 
