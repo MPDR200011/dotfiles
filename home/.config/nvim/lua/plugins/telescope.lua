@@ -23,7 +23,6 @@ return {
                         ["<C-n>"] = false,
                         ["<C-j>"] = actions.move_selection_next,
                         ["<C-k>"] = actions.move_selection_previous,
-                        ["<C-q>"] = actions.close -- aditional close bind
                     },
                 },
             },
