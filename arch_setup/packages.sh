@@ -13,7 +13,8 @@ sudo pacman -S \
     inetutils \
     fish tmux ghostty nvim \
     ansible waybar pavucontrol \
-    bluez bluez-utils bluetui font-manager
+    bluez bluez-utils bluetui font-manager \
+    kwallet kwalletmanager
 
 cd $DOTFILES_DIR && git remote set-url origin git@github.com:MPDR200011/dotfiles.git && cd $HOME
 
