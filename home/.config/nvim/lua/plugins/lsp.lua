@@ -75,6 +75,7 @@ return {
         vim.lsp.enable("gopls")
         vim.lsp.enable("ts_ls")
         vim.lsp.enable("phpactor")
+        vim.lsp.enable("kotlin_lsp")
 
     end
 }
