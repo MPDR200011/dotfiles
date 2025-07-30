@@ -47,7 +47,7 @@ $INSTALL_SCRIPTS/setup_git.sh
 chsh -s /usr/bin/fish
 
 # Setup fonts
-sudo pacman -S otf-monaspace ttf-monaspace-variable
+sudo pacman -S otf-monaspace ttf-monaspace-variable noto-fonts-emoji
 
 # Applications
 yay -S brave-bin 1password
