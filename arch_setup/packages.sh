@@ -28,6 +28,7 @@ ln -s $DOTFILES_DIR/home/.config/ghostty/ $HOME/.config/ghostty/
 ln -s $DOTFILES_DIR/home/.config/hypr/ $HOME/.config/hypr/
 ln -s $DOTFILES_DIR/home/.config/fontconfig/ $HOME/.config/fontconfig/
 ln -s $DOTFILES_DIR/home/.config/dunst/ $HOME/.config/dunst/
+ln -s $DOTFILES_DIR/home/.config/waybar/ $HOME/.config/waybar/
 
 ln -s $DOTFILES_DIR/home/.gitconfig $HOME/.gitconfig
 ln -s $DOTFILES_DIR/home/.tmux.conf $HOME/.tmux.conf
