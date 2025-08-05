@@ -10,7 +10,10 @@ set -x XDG_CONFIG_DIRS "/etc/xdg"
 set -x GNUPGHOME "$XDG_CONFIG_HOME/gnupg"
 set -x CCACHE_CONFIGPATH "$XDG_CONFIG_HOME/ccache"
 
-set -x PATH "$PATH:$HOME/.gem/ruby/2.7.0/bin:$HOME/.local/bin:$HOME/bin"
+set -x PATH "$PATH:$HOME/.gem/ruby/2.7.0/bin"
+set -x PATH "$PATH:$HOME/.local/bin"
+set -x PATH "$PATH:$HOME/.local/bin/scripts"
+set -x PATH "$PATH:$HOME/bin"
 
 # Android stuff
 set -x ANDROID_HOME "/opt/android-sdk"
