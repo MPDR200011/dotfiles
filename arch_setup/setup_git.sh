@@ -1,7 +1,8 @@
 #!/bin/sh
 
+set -x
 
-ANSIBLE_DIR=$1
+ANSIBLE_DIR=$DOTFILES_DIR/ansible
 
 mkdir $HOME/.ssh/
 

@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -x
+
 if [ -z "${DOTFILES_DIR}" ]; then
 	echo "Define DOTFILES_DIR first"
 	exit 1
@@ -20,7 +22,9 @@ sudo pacman -S \
     fish tmux ghostty nvim \
     ansible waybar pavucontrol \
     bluez bluez-utils bluetui font-manager \
-    kwallet kwalletmanager
+    kwallet kwalletmanager \
+    nerd-fonts 
+    
 
 # link configs
 ln -s $DOTFILES_DIR/home/.config/nvim $HOME/.config/nvim
@@ -47,7 +51,7 @@ $INSTALL_SCRIPTS/install_omf.sh
 echo "Setting up git stuff"
 $INSTALL_SCRIPTS/setup_git.sh
 
-chsh -s /usr/bin/fish
+sudo chsh -s /usr/bin/fish
 
 # Setup fonts
 sudo pacman -S otf-monaspace ttf-monaspace-variable noto-fonts-emoji
