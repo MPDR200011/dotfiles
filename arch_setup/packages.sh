@@ -1,8 +1,12 @@
 #!/bin/sh
 
+if [ -z "${DOTFILES_DIR}" ]; then
+	echo "Define DOTFILES_DIR first"
+	exit 1
+fi
+
 # Desktop Setup
 cd $HOME
-mkdir $HOME/personal
 mkdir $HOME/.config/gnupg/
 
 sudo pacman -Syyu
@@ -18,17 +22,15 @@ sudo pacman -S \
     bluez bluez-utils bluetui font-manager \
     kwallet kwalletmanager
 
-cd $DOTFILES_DIR && git remote set-url origin git@github.com:MPDR200011/dotfiles.git && cd $HOME
-
 # link configs
-ln -s $DOTFILES_DIR/home/.config/nvim/ $HOME/.config/nvim/
-ln -s $DOTFILES_DIR/home/.config/fish/ $HOME/.config/fish/
-ln -s $DOTFILES_DIR/home/.config/omf/ $HOME/.config/omf/
-ln -s $DOTFILES_DIR/home/.config/ghostty/ $HOME/.config/ghostty/
-ln -s $DOTFILES_DIR/home/.config/hypr/ $HOME/.config/hypr/
-ln -s $DOTFILES_DIR/home/.config/fontconfig/ $HOME/.config/fontconfig/
-ln -s $DOTFILES_DIR/home/.config/dunst/ $HOME/.config/dunst/
-ln -s $DOTFILES_DIR/home/.config/waybar/ $HOME/.config/waybar/
+ln -s $DOTFILES_DIR/home/.config/nvim $HOME/.config/nvim
+ln -s $DOTFILES_DIR/home/.config/fish $HOME/.config/fish
+ln -s $DOTFILES_DIR/home/.config/omf $HOME/.config/omf
+ln -s $DOTFILES_DIR/home/.config/ghostty $HOME/.config/ghostty
+ln -s $DOTFILES_DIR/home/.config/hypr $HOME/.config/hypr
+ln -s $DOTFILES_DIR/home/.config/fontconfig $HOME/.config/fontconfig
+ln -s $DOTFILES_DIR/home/.config/dunst $HOME/.config/dunst
+ln -s $DOTFILES_DIR/home/.config/waybar $HOME/.config/waybar
 
 ln -s $DOTFILES_DIR/home/.gitconfig $HOME/.gitconfig
 ln -s $DOTFILES_DIR/home/.tmux.conf $HOME/.tmux.conf
