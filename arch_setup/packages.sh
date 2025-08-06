@@ -23,7 +23,6 @@ sudo pacman -S \
     ansible waybar pavucontrol \
     bluez bluez-utils bluetui font-manager \
     kwallet kwalletmanager \
-    nerd-fonts 
     
 
 # link configs
@@ -55,7 +54,7 @@ $INSTALL_SCRIPTS/setup_git.sh
 sudo chsh -s /usr/bin/fish
 
 # Setup fonts
-sudo pacman -S otf-monaspace ttf-monaspace-variable noto-fonts-emoji
+sudo pacman -S otf-monaspace ttf-monaspace-variable noto-fonts-emoji nerd-fonts noto-fonts
 
 # Applications
 yay -S brave-bin 1password
