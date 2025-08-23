@@ -23,6 +23,7 @@ sudo pacman -S \
     ansible waybar pavucontrol \
     bluez bluez-utils bluetui font-manager \
     kwallet kwalletmanager \
+    ripgrep \
     
 
 # link configs

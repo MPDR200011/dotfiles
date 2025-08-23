@@ -1,7 +1,7 @@
 return {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.2',
-    dependencies = { { 'nvim-lua/plenary.nvim' } },
+    dependencies = { { 'nvim-lua/plenary.nvim' }, { 'nvim-telescope/telescope-fzy-native.nvim' } },
     config = function()
         local actions = require('telescope.actions')
         local builtin = require('telescope.builtin')
@@ -34,12 +34,10 @@ return {
             },
         }
 
+        require('telescope').load_extension('fzy_native')
+
         vim.keymap.set('n', '<C-p>', builtin.git_files, {})
-
-        vim.keymap.set('n', '<leader>fr', function()
-            builtin.grep_string({ search = vim.fn.input("Grep >") })
-        end)
-
+        vim.keymap.set('n', '<leader>fr', builtin.live_grep, {})
         vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
         vim.keymap.set('n', '<leader>ft', builtin.treesitter, {})
     end
