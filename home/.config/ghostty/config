@@ -8,7 +8,8 @@ shell-integration-features = no-cursor
 
 adjust-cursor-thickness = 2
 
-font-family = MonaspiceNe Nerd Font Propo
+# font-family = MonaspiceNe Nerd Font Propo
+font-family = Geist Mono Medium
 font-feature = -liga
 font-size = 12
 

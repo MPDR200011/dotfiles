@@ -56,10 +56,16 @@ $INSTALL_SCRIPTS/setup_git.sh
 sudo chsh -s /usr/bin/fish
 
 # Setup fonts
-sudo pacman -S otf-monaspace ttf-monaspace-variable noto-fonts-emoji nerd-fonts noto-fonts
+sudo pacman -S \
+    otf-monaspace \
+    ttf-monaspace-variable \
+    noto-fonts-emoji \
+    nerd-fonts \
+    noto-fonts \
+    ttf-roboto
 
 # Applications
 yay -S brave-bin 1password
 sudo pacman -S spotify-launcher discord
 
-
+yay -S pwvucontrol
