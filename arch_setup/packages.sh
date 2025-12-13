@@ -13,18 +13,38 @@ mkdir $HOME/.config/gnupg/
 
 sudo pacman -Syyu
 sudo pacman -S \
+    uwsm \
+    qt5-wayland \
+    qt6-wayland \
+    xdg-desktop-portal-hyprland \
+    hyprpolkitagent \
+    pipewire \
+    wireplumber \
+    dunst \
+    waybar \
+    pavucontrol \
+    bluetui \
+    ansible \
     reflector \
     hyprlock \
     unzip \
-    base-devel git man-db \
+    base-devel \
+    git \
+    man-db \
     xorg-xrdb \
     inetutils \
-    fish tmux ghostty nvim \
-    ansible waybar pavucontrol \
-    bluez bluez-utils bluetui font-manager \
-    kwallet kwalletmanager \
+    fish \
+    tmux \
+    ghostty \
+    nvim \
     ripgrep \
+    bluez \
+    bluez-utils \
+    font-manager \
+    kwallet \
+    kwalletmanager \
     
+systemctl --user enable --now hyprpolkitagent.service
 
 # link configs
 ln -s $DOTFILES_DIR/home/.config/nvim $HOME/.config/nvim
