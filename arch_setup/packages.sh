@@ -84,6 +84,9 @@ sudo pacman -S \
     noto-fonts \
     ttf-roboto
 
+yay -S \
+    ttf-segoe-ui-variable
+
 # Applications
 yay -S brave-bin 1password
 sudo pacman -S spotify-launcher discord
