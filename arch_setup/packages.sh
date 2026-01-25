@@ -43,7 +43,14 @@ sudo pacman -S \
     font-manager \
     kwallet \
     kwalletmanager \
-    
+
+# Tools to manage fans
+sudo pacman -S \
+    lm_sensors
+
+yay -S \
+    coolercontrol \
+
 systemctl --user enable --now hyprpolkitagent.service
 
 # link configs

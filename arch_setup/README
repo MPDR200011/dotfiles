@@ -1,0 +1,4 @@
+## Fan control
+```
+cp ./root/etc/modules-load.d/nct6775.conf /etc/modules-load.d/nct6775.conf
+```
