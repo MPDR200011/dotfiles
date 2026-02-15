@@ -5,6 +5,7 @@ cursor-color = #ff0000
 cursor-opacity = 1
 cursor-style-blink = false
 shell-integration-features = no-cursor
+copy-on-select = false
 
 adjust-cursor-thickness = 2
 
