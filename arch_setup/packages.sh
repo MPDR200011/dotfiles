@@ -13,6 +13,7 @@ mkdir $HOME/.config/gnupg/
 
 sudo pacman -Syyu
 sudo pacman -S \
+    cpio \
     uwsm \
     qt5-wayland \
     qt6-wayland \
@@ -76,6 +77,7 @@ INSTALL_SCRIPTS=$DOTFILES_DIR/arch_setup
 $INSTALL_SCRIPTS/install_yay.sh
 $INSTALL_SCRIPTS/install_omf.sh
 $INSTALL_SCRIPTS/setup_scripts.sh
+$INSTALL_SCRIPTS/setup_hyprland.sh
 
 echo "Setting up git stuff"
 $INSTALL_SCRIPTS/setup_git.sh
