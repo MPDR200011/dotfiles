@@ -24,7 +24,7 @@ vim.g.neon_italic_function = true
 
 -- Setting actual theme
 vim.opt.background = "dark"
-vim.cmd.colorscheme('onedark')
+vim.cmd.colorscheme('dracula')
 
 vim.api.nvim_set_hl(0, 'Comment', { italic = true })
 vim.api.nvim_set_hl(0, 'Cursor', { fg='white' })

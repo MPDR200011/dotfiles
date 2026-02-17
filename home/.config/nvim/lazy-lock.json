@@ -7,6 +7,7 @@
   "darcula-dark.nvim": { "branch": "main", "commit": "5e8edf8b2aff3bf3d5110799713d29649cb87bbb" },
   "diffview.nvim": { "branch": "main", "commit": "4516612fe98ff56ae0415a259ff6361a89419b0a" },
   "dracula": { "branch": "master", "commit": "d4b0823100c702af127cba8dd5595a8f599041ec" },
+  "dracula.nvim": { "branch": "main", "commit": "ae752c13e95fb7c5f58da4b5123cb804ea7568ee" },
   "fzf-lua": { "branch": "main", "commit": "7d66cd81cf485fb17c22d82021cc166ce332a14c" },
   "harpoon": { "branch": "harpoon2", "commit": "ed1f853847ffd04b2b61c314865665e1dadf22c7" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
@@ -33,6 +34,5 @@
   "toggleterm.nvim": { "branch": "main", "commit": "9a88eae817ef395952e08650b3283726786fb5fb" },
   "undotree": { "branch": "master", "commit": "28f2f54a34baff90ea6f4a735ef1813ad875c743" },
   "vim-code-dark": { "branch": "master", "commit": "4624dc223bf574aa9a731c2383c579847303c380" },
-  "vim-moonfly-colors": { "branch": "master", "commit": "21d24c3e2b31386f14fadd8c114c5d0673b878c2" },
-  "zen-mode.nvim": { "branch": "main", "commit": "8564ce6d29ec7554eb9df578efa882d33b3c23a7" }
+  "vim-moonfly-colors": { "branch": "master", "commit": "21d24c3e2b31386f14fadd8c114c5d0673b878c2" }
 }
