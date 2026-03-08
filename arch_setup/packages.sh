@@ -21,6 +21,7 @@ sudo pacman -S \
     hyprpolkitagent \
     pipewire \
     wireplumber \
+    wiremix \
     dunst \
     waybar \
     pavucontrol \
