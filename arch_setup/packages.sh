@@ -92,6 +92,7 @@ sudo pacman -S \
     noto-fonts-emoji \
     nerd-fonts \
     noto-fonts \
+    noto-fonts-cjk \
     ttf-roboto
 
 yay -S \
