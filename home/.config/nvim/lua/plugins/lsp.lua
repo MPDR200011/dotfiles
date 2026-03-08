@@ -78,5 +78,6 @@ return {
         vim.lsp.enable("kotlin_lsp")
         vim.lsp.enable("phpactor")
         vim.lsp.enable("pyrefly")
+        vim.lsp.enable("ruff")
     end
 }
