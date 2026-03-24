@@ -9,13 +9,15 @@ copy-on-select = false
 
 adjust-cursor-thickness = 2
 
-font-family = Lilex Nerd Font
+# font-family = Lilex Nerd Font
+font-family = UbuntoMono Nerd Font Mono
 # font-family = MonaspiceNe Nerd Font
 # font-family = Geist Mono Medium
-font-style = Medium
+font-style = Regular
 font-feature = -liga
 font-size = 13
 
+adjust-cell-width = 5%
 adjust-cell-height = 30%
 
 theme = Abernathy
