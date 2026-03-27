@@ -60,7 +60,9 @@ require("lazy").setup({
     { 'tomasiser/vim-code-dark' },
     { 'rafamadriz/neon' },
     { 'nyoom-engineering/oxocarbon.nvim' },
-    { "EdenEast/nightfox.nvim" },
+    { 'EdenEast/nightfox.nvim' },
+    { 'folke/tokyonight.nvim' },
+    { 'rebelot/kanagawa.nvim'},
     {
         "navarasu/onedark.nvim",
         priority = 1000, -- make sure to load this before all the other start plugins
