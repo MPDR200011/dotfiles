@@ -101,5 +101,3 @@ yay -S \
 # Applications
 yay -S brave-bin 1password zen-browser-bin
 sudo pacman -S spotify-launcher discord
-
-yay -S pwvucontrol
