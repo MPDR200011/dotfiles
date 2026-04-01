@@ -101,3 +101,7 @@ yay -S \
 # Applications
 yay -S brave-bin 1password zen-browser-bin
 sudo pacman -S spotify-launcher discord
+
+# Power management
+sudo pacman -S acpid python-pyqt5
+yay -S laptop-mode-tools
