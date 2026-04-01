@@ -93,7 +93,7 @@
     },
     "clock": {
         "interval": 1,
-        "timezone": "GMT",
+        "timezone": "Europe/Lisbon",
         "format": "<span color='#BF00FF'>  </span> {:%m/%d %H:%M} ",
         "tooltip": true,
         "tooltip-format": "{:%m/%d, %A}"
