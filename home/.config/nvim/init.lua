@@ -47,7 +47,7 @@ require("lazy").setup({
     { 'nvim-telescope/telescope-fzy-native.nvim' },
 
     -- treesitter
-    'nvim-treesitter/playground',
+    -- 'nvim-treesitter/playground',
 
     -- Some themes require colorbuddy so I'm installing it
     { 'tjdevries/colorbuddy.nvim' },

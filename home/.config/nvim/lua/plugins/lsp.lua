@@ -57,18 +57,18 @@ return {
             virtual_text = true
         })
 
-        vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-            -- Use a sharp border with `FloatBorder` highlights
-            border = "single",
-        })
+        -- vim.lsp.handlers["textDocument/hover"] = vim.lsp.buf.with(vim.lsp.handlers.hover, {
+        --     -- Use a sharp border with `FloatBorder` highlights
+        --     border = "single",
+        -- })
 
         -- enable border for signature
-        vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
-            vim.lsp.handlers.signature_help,
-            {
-                border = "single",
-            }
-        )
+        -- vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.buf.with(
+        --     vim.lsp.handlers.signature_help,
+        --     {
+        --         border = "single",
+        --     }
+        -- )
 
         vim.lsp.enable("clangd")
         vim.lsp.enable("lua_ls")
