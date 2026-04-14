@@ -39,6 +39,7 @@ sudo pacman -S \
     tmux \
     ghostty \
     nvim \
+    tree-sitter-cli \
     ripgrep \
     bluez \
     bluez-utils \
