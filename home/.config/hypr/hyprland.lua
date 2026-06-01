@@ -1,0 +1,6 @@
+require("config.monitors")
+require("config.env")
+require("config.settings")
+require("config.autostart")
+require("config.binds")
+require("config.rules")
