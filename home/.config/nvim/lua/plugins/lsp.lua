@@ -70,6 +70,7 @@ return {
         --     }
         -- )
 
+        vim.lsp.enable("rust-analyzer")
         vim.lsp.enable("clangd")
         vim.lsp.enable("lua_ls")
         vim.lsp.enable("zls")
