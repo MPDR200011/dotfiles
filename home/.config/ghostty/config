@@ -9,17 +9,21 @@ copy-on-select = false
 
 adjust-cursor-thickness = 2
 
-# font-family = Lilex Nerd Font
-font-family = UbuntoMono Nerd Font Mono
+font-family = Lilex Nerd Font Mono
+# font-family = UbuntoMono Nerd Font Mono
 # font-family = MonaspiceNe Nerd Font
 # font-family = Geist Mono Medium
 font-style = Regular
 font-feature = -liga
 font-size = 13
 
-adjust-cell-width = 5%
-adjust-cell-height = 30%
+# adjust-cell-width = 5%
+adjust-cell-height = 15%
 
+background-opacity = 0.8
+background-blur = true
 theme = Abernathy
 
 app-notifications = no-clipboard-copy
+
+confirm-close-surface = false
