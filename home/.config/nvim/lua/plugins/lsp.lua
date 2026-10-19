@@ -81,5 +81,6 @@ return {
         vim.lsp.enable("phpactor")
         vim.lsp.enable("pyrefly")
         vim.lsp.enable("ruff")
+        vim.lsp.enable("fish-lsp")
     end
 }
