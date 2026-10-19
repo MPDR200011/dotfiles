@@ -1,31 +1,58 @@
-#!/usr/bin/env bash
+#!/usr/bin/env python3
 
-# Credits @ThePrimeagen
+import os
+import subprocess
+import sys
+from pathlib import Path
 
-if [[ $# -eq 1 ]]; then
-    selected=$1
-else
-    selected=$(find ~/personal ~/ -mindepth 1 -maxdepth 1 -type d | fzf)
-fi
+SEARCH_ROOTS = [Path.home() / "crusoe", Path.home() / "personal", Path.home()]
 
-if [[ -z $selected ]]; then
-    exit 0
-fi
 
-selected_name=$(basename "$selected" | tr . _)
-tmux_running=$(pgrep tmux)
+def tmux(*args, **kwargs):
+    return subprocess.run(["tmux", *args], **kwargs)
 
-if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
-    tmux new-session -s $selected_name -c $selected
-    exit 0
-fi
 
-if ! tmux has-session -t=$selected_name 2> /dev/null; then
-    tmux new-session -ds $selected_name -c $selected
-fi
+def has_session(name):
+    return tmux("has-session", f"-t={name}", stderr=subprocess.DEVNULL).returncode == 0
 
-if [[ -z $TMUX ]]; then
-    tmux attach -t $selected_name
-else
-    tmux switch-client -t $selected_name
-fi
+
+def candidates():
+    for root in SEARCH_ROOTS:
+        try:
+            entries = sorted(root.iterdir())
+        except OSError:
+            continue
+        for entry in entries:
+            if entry.is_dir() and not entry.is_symlink():
+                yield str(entry)
+
+
+def pick():
+    result = subprocess.run(
+        ["fzf"],
+        input="\n".join(candidates()),
+        stdout=subprocess.PIPE,
+        text=True,
+    )
+    return result.stdout.strip()
+
+
+def main():
+    selected = sys.argv[1] if len(sys.argv) > 1 else pick()
+    if not selected:
+        return 0
+
+    name = Path(selected).name.replace(".", "_")
+
+    if not has_session(name):
+        tmux("new-session", "-d", "-s", name, "-c", selected, check=True)
+
+    if os.environ.get("TMUX"):
+        tmux("switch-client", "-t", name, check=True)
+    else:
+        os.execvp("tmux", ["tmux", "attach", "-t", name])
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
