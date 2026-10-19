@@ -75,6 +75,17 @@ gaps.outer.bottom =     0
 gaps.outer.top =        0
 gaps.outer.right =      0
 
+on-window-detected = [
+    {
+        if = 'test %{app-bundle-id} = com.tinyspeck.slackmacgap',
+        run = ['move-node-to-workspace M']
+    },
+    {
+        if = 'test %{app-bundle-id} = com.spotify.client',
+        run = ['move-node-to-workspace 9']
+    }
+]
+
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 # 'main' binding mode must be always presented
@@ -136,6 +147,8 @@ gaps.outer.right =      0
     alt-9 = 'workspace 9'
     alt-0 = 'workspace 0'
     alt-m = 'workspace M'
+    alt-n = 'workspace N'
+    alt-o = 'workspace O'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
     alt-shift-1 = 'move-node-to-workspace 1'
@@ -149,10 +162,12 @@ gaps.outer.right =      0
     alt-shift-9 = 'move-node-to-workspace 9'
     alt-shift-0 = 'move-node-to-workspace 0'
     alt-shift-m = 'move-node-to-workspace M'
+    alt-shift-n = 'move-node-to-workspace N'
+    alt-shift-o = 'move-node-to-workspace O'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
-    alt-shift-l = 'move-workspace-to-monitor --wrap-around next'
-    alt-shift-h = 'move-workspace-to-monitor --wrap-around prev'
+    alt-shift-period = 'move-workspace-to-monitor --wrap-around next'
+    alt-shift-comma = 'move-workspace-to-monitor --wrap-around prev'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#mode
     alt-shift-semicolon = 'mode service'
@@ -173,13 +188,3 @@ gaps.outer.right =      0
     alt-shift-k = ['join-with up', 'mode main']
     alt-shift-l = ['join-with right', 'mode main']
 
-on-window-detected = [
-    {
-        if = 'test %{app-bundle-id} = com.tinyspeck.slackmacgap',
-        run = ['move-node-to-workspace M']
-    },
-    {
-        if = 'test %{app-bundle-id} = com.spotify.client',
-        run = ['move-node-to-workspace 0']
-    }
-]
